@@ -1,8 +1,8 @@
 # Setup
 title:               GenoCat.tools
-tagline:             'A Jekyll theme'
-description:         'A database of genomic visualization tools.'
-url:                 'http://127.0.0.1:4000'
+tagline:             'Hundreds of ways to visualize genomic data'
+description:         'A database and taxonomy for genomic visualization tools'
+url:                 ''
 baseurl:             ''
 paginate:            5
 permalink:           pretty
