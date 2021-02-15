@@ -2,10 +2,61 @@
 //
 // Super small header above the content for site name and short description.
 
+.wrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.header {
+  background: var(--geno-800);
+}
+
+.footer {
+  background: lightgreen;
+}
+
+.main {
+  text-align: left;
+  background: grey;
+}
+
+.aside-1 {
+  background: gold;
+}
+
+.aside-2 {
+  background: hotpink;
+}
+.aside-3 {
+  background: tomato;
+}
+
+.aside { flex: 1 0 0; }
+
+@media all and (min-width: 600px) {
+  .header { flex: 3 0 0; }
+}
+
+@media all and (min-width: 800px) {
+  .main    {  order: 5;}
+  .aside-1 { order: 2; } 
+  .aside-2 { order: 3; }
+  .aside-3 { order: 4; }
+  .footer  { order: 6; }
+}
+
 .masthead {
   padding-top: var(--spacer);
   padding-bottom: var(--spacer);
   margin-bottom: var(--spacer-3);
+  background-color: var(--geno-800);
 }
 
 .masthead-title {

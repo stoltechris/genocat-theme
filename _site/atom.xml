@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>GenoCat Theme</title>
- <link href="http://127.0.0.1:4000/atom.xml" rel="self"/>
- <link href="http://127.0.0.1:4000/"/>
- <updated>2021-02-14T12:41:21-05:00</updated>
- <id>http://127.0.0.1:4000</id>
+ <title>GenoCat.tools</title>
+ <link href="/atom.xml" rel="self"/>
+ <link href="/"/>
+ <updated>2021-02-14T21:32:24-05:00</updated>
+ <id></id>
  <author>
    <name>Gehlenborg Lab</name>
    <email>nils@hms.harvard.edu</email>
