@@ -13,10 +13,18 @@
   padding: 10px;
   flex: 1 100%;
   font-variation-settings: 'CASL' 0, 'CRSV' 0;
+  transition: ease-in-out 0.4s all;
 }
 
 .header {
   background: var(--geno-800);
+  flex-shrink: 0;
+  height: 18vw;
+}
+
+.functions { 
+  display: flex; 
+  flex-flow: row wrap;
 }
 
 .footer {
@@ -66,17 +74,52 @@
 }
 
 @media all and (min-width: 500px) {
-  .header { flex: 3 1 0; }
+  .header { 
+    flex: 3 1 0; 
+    height: 10vw;
+  }
+  .sidebar {
+    top: 10.1vw;
+  }
+  .sidebar-toggle {
+    top: 4.5vw;
+  }
 }
 
-@media all and (min-width: 800px) {
-  .main    {  order: 5;}
-  .aside-1 { order: 2; } 
+@media all and (min-width: 860px) {
+  .header { 
+    flex: 2 1 0; 
+    height: 7vw;
+  }
+  .sidebar { top: 7.1vw; }
+  .sidebar-toggle { top: 3.5vw; }
+  .aside { margin: auto; }
+  .main    { order: 5; }
+  .aside-1 { 
+    order: 2; 
+
+    &:focus {
+      flex: 2 0 0;
+    }
+  } 
   .aside-2 { order: 3; }
   .aside-3 { order: 4; }
   .footer  { order: 6; }
 }
 
+@media all and (min-width: 1400px) {
+  .header { 
+    flex: 1 1 0; 
+    height: 6vw;
+  }
+  .sidebar {
+    top: 6.1vw;
+  }
+  .sidebar-toggle {
+    top: 2.5vw;
+  }
+  .aside-1:focus { flex: 1 0 0; }
+}
 .masthead {
   padding-top: var(--spacer);
   padding-bottom: var(--spacer);
