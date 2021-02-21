@@ -22,7 +22,7 @@
 
   <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Recursive:wght,CASL@300..800,1&display=swap"> -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV@-15..0,300..800,0..1,0..1&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Recursive:wght,CASL,CRSV@300..800,0..1,0..1&display=swap">
 
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
   <link rel="shortcut icon" href="/public/favicon.ico">
@@ -46,7 +46,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Archive" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Gehlenborg Lab"},"url":"/archive/","headline":"Archive","description":"A database and taxonomy for genomic visualization tools","@type":"WebPage","@context":"https://schema.org"}</script>
+{"url":"/archive/","headline":"Archive","author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"A database and taxonomy for genomic visualization tools","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -62,9 +62,9 @@
 
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
-  <div class="sidebar-item">
+  <!-- <div class="sidebar-item">
     <p>A database and taxonomy for genomic visualization tools</p>
-  </div>
+  </div> -->
 
   <nav class="sidebar-nav">
     <a class="sidebar-nav-item" href="/">Home</a>
@@ -89,16 +89,22 @@
     
       
         
+          <a class="sidebar-nav-item active" href="/archive/">Archive</a>
+        
       
     
       
     
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/taxonomy_page/">Taxonomy</a>
+        
       
     
 
-    <a class="sidebar-nav-item" href="/archive/v1.0.0.zip">Download</a>
-    <a class="sidebar-nav-item" href="">GitHub project</a>
-    <span class="sidebar-nav-item">Currently v1.0.0</span>
+    <!-- <span class="sidebar-nav-item">Currently v1.0.0</span> -->
   </nav>
 
   <div class="sidebar-item">
@@ -112,22 +118,25 @@
     <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
          content to avoid any CSS collisions with our real content. -->
     <div class="wrapper">
-      <header class="header">
-        <a href="/" title="Home"><img src="/public/header.svg"/></a>
-      </header>
-      <!-- <div class="functions"> -->
-        <input class="aside aside-1" type="search" placeholder="SEARCH"/>
-        <aside class="aside aside-2">SORT</aside>
-        <aside class="aside aside-3">FILTER</aside>
-      <!-- </div> -->
-
+      <div class="head">
+        <header class="logo">
+          <a href="/" title="Home"><img src="/public/header.svg"/></a>
+        </header>
+        <!-- <div class="functions"> -->
+          <input class="aside aside-1" type="search" placeholder="SEARCH"/>
+          <aside class="aside aside-2">SORT</aside>
+          <aside class="aside aside-3">FILTER</aside>
+        <!-- </div> -->
+      </div>
       <article class="main content">
-        <h2>Headline</h2>
-        <p>Content: Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
-        <h1 id="archive">Archive</h1>
+         <div class="page">
+  <h1 class="page-title">Archive</h1>
+  <h1 id="archive">Archive</h1>
 
 <p>Browse all posts by month and year.</p>
 
+
+</div>
 
       </article>
       <footer class="footer">Footer</footer>

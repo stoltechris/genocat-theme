@@ -16,10 +16,9 @@
 .page-title,
 .post-title {
   color: var(--heading-color);
-}
-.page-title,
-.post-title {
+  font-weight: 800;
   margin-top: 0;
+  font-variation-settings: 'CASL' 0, 'CRSV' 0;
 }
 .post-title a {
   color: inherit;
