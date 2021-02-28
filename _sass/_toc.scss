@@ -14,3 +14,156 @@
     font-weight: 500;
   }
 }
+
+//sort and filter
+.column {
+  float: left;
+  width: 50%;
+  padding: 20px;
+  border: 0.1rem solid #DCDCDC;
+}
+
+input, textarea, select {
+  border: 0.1rem solid #DCDCDC;
+}
+
+[type=checkbox] + label, [type=radio] + label {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+[type=radio] + label::before {
+  height: 1rem;
+  width: 1rem;
+}
+
+[type=checkbox] + label::before {
+  height: 1rem;
+  line-height: 0.5rem;
+  margin-top: 0.5em;
+  width: 1rem;
+}
+
+.loader {
+position: relative;
+border: 5px solid #f3f3f3;
+border-radius: 50%;
+border-top: 5px solid #3498db;
+width: 30px;
+height: 30px;
+margin-bottom: 2px;
+display: show;
+animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+ 0% { transform: rotate(0deg); }
+ 100% { transform: rotate(360deg); }
+}
+
+.hide-loader{
+display:none;
+}
+
+.filterDiv {
+        background-color: #FFFFFF;
+        border-radius: 0px;
+        border: 1px solid #F5F5F5;
+        line-height: 50px;
+        text-align: left;
+        display: none;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.2);
+        position: relative;
+        width: 315px;
+        height: 225px;
+        break-inside: avoid;
+
+        }
+
+.imag {
+  max-width: 200px;
+}
+
+.filterDiv:hover {
+  box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.2);
+}
+/* "show" class is added to filtered elements */
+.show {
+          display: block;
+        }
+/* Style the "+" button that is used to open and close the collapsible content */
+.collapsible {
+          background-color: transparent;
+          color: #444;
+          cursor: pointer;
+          border: none;
+          font-size: 20px;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          /* padding-right: 2px; */
+        }
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+          background-color:  white;
+          opacity: 0.5;
+          color: #444;
+          border: none;
+        }
+
+.contents {
+          text-align: left;
+          border: 2px solid #F5F5F5;
+          font-size: 15px;
+          display: none;
+          background-color: white;
+          position: absolute;
+          min-width: 160px;
+          box-shadow: 16px 8px 16px 8px rgba(0,0,0,0.2);
+          padding: 12px 16px;
+          z-index: 1;
+        }
+.button {
+          background-color: white;
+          border: 2px solid black;
+          padding: 0.5px 10px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          margin: 2px 1px;
+          border-radius: 15px;
+          /* font-size: 10px; */
+        }
+.button:hover{
+      background-color: white;
+      color: black;
+      }
+/* button colors */
+.layout {
+          border-color: var(--border-color);
+          color: var(--color);
+        }
+
+.layout:hover {
+          background-color: var(--border-color);
+          color: white;
+        }
+.items {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-auto-flow: row;
+        grid-gap: 10px;
+}
+
+.left {
+  width: 30%;
+}
+.right {
+  width: 70%;
+  background-color: #F5F5F5;
+}
