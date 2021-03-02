@@ -3,27 +3,14 @@ layout: page
 title: About
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+# Hundreds of ways to visualize genomic data.
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+This site provides a database of genomic visualization tools. Each tool has been sorted and grouped based on various attributes, and this website has been designed to help you find what you’re looking for. Our review article on genomic visualization tools can be found [here](https://arxiv.org/pdf/1905.02853.pdf).
 
-There are currently two themes built on Poole:
+## Contributing
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+GenoCAT is a crowdsourced resource. Data visualization tool developers can [add their own tools](/submission/) to GenoCAT or edit any errors users may come across when browsing through tool pages. 
 
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](https://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Atom](https://atom.io)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/hms-dbmi/genocat/issues/new) or [ask us on Twitter](https://twitter.com/ngehlenborg).
 
 Thanks for reading!
