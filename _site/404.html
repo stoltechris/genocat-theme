@@ -51,6 +51,7 @@
 
 
   
+  
 </head>
 
 
@@ -90,6 +91,8 @@
       
     
       
+    
+      
         
           <a class="sidebar-nav-item" href="/search_page/">Search</a>
         
@@ -121,19 +124,19 @@
 </div>
 
 
-    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
-         content to avoid any CSS collisions with our real content. -->
     <div class="wrapper">
       <div class="head">
         <header class="logo">
           <a href="/" title="Home"><img src="/public/header.svg"/></a>
         </header>
         <!-- <div class="functions"> -->
-          <input class="aside aside-1" type="search" placeholder="SEARCH"/>
+          <input class="aside aside-1" type="search" id="mySearch" onkeyup="search()" placeholder="SEARCH"/>
           <aside class="aside aside-2">SORT</aside>
           <aside class="aside aside-3">FILTER</aside>
         <!-- </div> -->
       </div>
+      
+
       <article class="main content">
          <div class="page">
   <h1 class="page-title">404: Page not found</h1>
@@ -144,8 +147,26 @@
       <footer class="footer">Footer</footer>
     </div>     
     
-
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+    <script>
+
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+
+    </script>
 
   </body>
 </html>

@@ -1,4 +1,5 @@
 function sortByName() {
+  var loader = document.getElementById("loader");
   var list, i, switching, b, shouldSwitch;
   list = document.getElementsByClassName("filterDiv");
   switching = true;
@@ -30,6 +31,7 @@ function sortByRecency() {
 }
 
 function getPubYear(b, switching, years) {
+  var loader = document.getElementById("loader");
   var i, myvar, words, j, pub_year, year;
   jQuery.get('../scholar_data.txt', function(data) {
     while (switching) {
@@ -65,6 +67,7 @@ function sortByCitation() {
 }
 
 function getCiteCount(counts, b, switching) {
+  var loader = document.getElementById("loader");
   var myvar, words, i, citeCount, j;
   jQuery.get('../scholar_data.txt', function(data) {
     while (switching) {

@@ -58,7 +58,7 @@ function checkbox_filter(tags) {
       j++;
     }
   }
-  document.getElementById("demo").innerHTML = num + " results";
+  document.getElementById("demo").innerHTML = num + " result" + (num > 1 ? "s" : "");
 }
 
 // var myCollection = document.getElementsByClassName("filterDiv ");

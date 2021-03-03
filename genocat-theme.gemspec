@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Christian Stolte"]
   spec.email         = ["christian.stolte@gmail.com"]
 
-  spec.summary       = "New genocat.tools theme, based on Lanyon by Mark Otto http://lanyon.getpoole.com"
+  spec.summary       = "New genocat.tools theme, with sliding sidebar nav based on Lanyon by Mark Otto http://lanyon.getpoole.com"
   spec.homepage      = "https://github.com/stoltechris/genocat-theme"
   spec.license       = "MIT"
 

@@ -45,15 +45,17 @@ input, textarea, select {
 }
 
 .loader {
-position: relative;
-border: 5px solid #f3f3f3;
-border-radius: 50%;
-border-top: 5px solid #3498db;
-width: 30px;
-height: 30px;
-margin-bottom: 2px;
-display: show;
-animation: spin 2s linear infinite;
+  position: absolute;
+  border: 5px solid rgba(200,200,200,0.2);
+  border-radius: 50%;
+  border-top: 5px solid #3498db;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 2px;
+  display: block;
+  top: 7.4rem;
+  left: 6rem;
+  animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
@@ -63,6 +65,9 @@ animation: spin 2s linear infinite;
 
 .hide-loader{
 display:none;
+}
+#demo {
+  margin-top: 7rem;
 }
 
 .filterDiv {
