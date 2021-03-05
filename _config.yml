@@ -36,3 +36,9 @@ sass:
 # Custom vars
 version:             1.0.0
 # google_analytics_id: #UA-XXXX-Y
+
+collections:
+  tools:
+      output: true
+  attributes:
+      output: true

@@ -51,6 +51,7 @@
 
 
   
+  
 </head>
 
 
@@ -88,13 +89,21 @@
       
     
       
+    
+      
+    
+      
         
-          <a class="sidebar-nav-item" href="/archive/">Archive</a>
+          <a class="sidebar-nav-item" href="/search_page/">Search</a>
         
       
     
       
     
+      
+        
+          <a class="sidebar-nav-item" href="/submission/">Contribute a tool!</a>
+        
       
     
       
@@ -115,39 +124,312 @@
 </div>
 
 
-    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
-         content to avoid any CSS collisions with our real content. -->
     <div class="wrapper">
       <div class="head">
         <header class="logo">
           <a href="/" title="Home"><img src="/public/header.svg"/></a>
         </header>
         <!-- <div class="functions"> -->
-          <input class="aside aside-1" type="search" placeholder="SEARCH"/>
+          <input class="aside aside-1" type="search" id="mySearch" onkeyup="search()" placeholder="SEARCH"/>
           <aside class="aside aside-2">SORT</aside>
           <aside class="aside aside-3">FILTER</aside>
         <!-- </div> -->
       </div>
-      <article class="main content">
-         <div class="posts">
-  
+      <p id="demo"></p>
+      <div class="loader hide-loader" id="loader"></div>
+
+      <div class="sort">
+  <input type="radio" id="byName" name="sort" checked/><label for="byName">Sort by name</label>
+  <input type="radio" id="byYear" name="sort"/><label for="byYear">Sort by year (most recent)</label>
+  <input type="radio" id="byCitation" name = "sort"/> <label for="byCitation">Sort by citation count</label>
+</div>
+<div class="filter column left">
+  User Preferences
+  <details>
+    <summary>Usage Format</summary>
+    <input type="checkbox" id="web application" name = "access_format"/><label for="web application">Web Application</label>
+    <input type="checkbox" id="standalone app" name = "access_format"/><label for="standalone app">Standalone App</label>
+    <input type="checkbox" id="programming library" name = "access_format"/><label for="programming library">Programming Library </label>
+  </details>
+  <details>
+    <summary>License</summary>
+    <input type="checkbox" id="open source" name = "license_form"/><label for="open source">Open Source</label>
+    <input type="checkbox" id="commercial" name = "license_form"/><label for="commercial">Commercial</label>
+    <input type="checkbox" id="unknown" name = "license_form"/><label for="unknown">Unknown </label>
+  </details>
+  <details>
+  <summary>Input File Formats</summary>
+  <input type="checkbox" id="notapplicable" name = "supported_files"/><label for="notapplicable">None</label>
+  <input type="checkbox" id="bed" name = "supported_files"/><label for="bed">BED</label>
+  <input type="checkbox" id="fasta" name = "supported_files"/><label for="fasta">FASTA </label>
+  <input type="checkbox" id="sambamcram" name = "supported_files"/><label for="sambamcram">SAM/BAM/CRAM </label>
+  <input type="checkbox" id="vcf" name = "supported_files"/><label for="vcf">VCF</label>
+  <input type="checkbox" id="txttab" name = "supported_files"/><label for="txttab">txt/tab </label>
+  <input type="checkbox" id="other" name = "supported_files"/><label for="other">Other</label>
+</details>
+  <br>
+  Data Taxonomy
+  <details>
+    <summary>Interconnection</summary>
+    <input type="checkbox" id="no" name="interconnection_type"/> <label for="no">None </label>
+    <input type="checkbox" id="within" name="interconnection_type"/><label for="within">Within </label>
+    <input type="checkbox" id="between" name="interconnection_type"/><label for="between">Between </label>
+  </details>
+  <details>
+    <summary>Feature Type</summary>
+    <input type="checkbox" id="segment sparse" name="feature_type"/> <label for="segment sparse">Segment Sparse </label>
+    <input type="checkbox" id="segment contiguous" name="feature_type"/><label for="segment contiguous">Segment Contiguous </label>
+    <input type="checkbox" id="point sparse" name="feature_type"/><label for="point sparse">Point Sparse </label>
+    <input type="checkbox" id="point contiguous" name="feature_type"/><label for="point contiguous">Point Contiguous </label>
+  </details>
+  <br>
+  Coordinate System
+  <details>
+    <summary>Layout</summary>
+    <input type="checkbox" id="circular" name = "layout"/> <label for="circular">Circular </label>
+    <input type="checkbox" id="linear" name = "layout"/> <label for="linear">Linear </label>
+    <input type="checkbox" id="spacefilling" name = "layout"/> <label for="spacefilling">Space Filling </label>
+    <input type="checkbox" id="spatial" name = "layout"/> <label for="spatial">Spatial </label>
+  </details>
+  <details>
+    <summary>Partition</summary>
+    <input type="checkbox" id="contiguous" name = "partition"/> <label for="contiguous">Contiguous </label>
+    <input type="checkbox" id="segregated" name = "partition"/> <label for="segregated">Segregated </label>
+  </details>
+  <details>
+    <summary>Abstraction</summary>
+    <input type="checkbox" id="noab" name = "abstraction"/> <label for="noab"> None </label>
+    <input type="checkbox" id="partialab" name = "abstraction"/> <label for="partialab"> Partial </label>
+    <input type="checkbox" id="completeab" name = "abstraction"/> <label for="completeab"> Complete </label>
+  </details>
+  <details>
+    <summary>Arrangement</summary>
+    <input type="checkbox" id="linear parallel" name = "arrangement"/> <label for="linear parallel"> Linear Parallel </label>
+    <input type="checkbox" id="linear serial" name = "arrangement"/> <label for="linear serial"> Linear Serial </label>
+    <input type="checkbox" id="linear orthogonal" name = "arrangement"/> <label for="linear orthogonal"> Linear Orthogonal </label>
+    <input type="checkbox" id="circular parallel" name = "arrangement"/> <label for="circular parallel"> Circular Parallel </label>
+    <input type="checkbox" id="circular serial" name = "arrangement"/> <label for="circular serial"> Circular Serial </label>
+  </details>
+  <br>
+  View Configurations
+  <details>
+    <summary>View</summary>
+    <input type="checkbox" id="single-view" name = "view"/> <label for="single-view"> Single </label>
+    <input type="checkbox" id="multiple-view" name = "view"/> <label for="multiple-view"> Multiple </label>
+  </details>
+  <details>
+    <summary>Scale</summary>
+    <input type="checkbox" id="single-scale" name = "scale"/> <label for="single-scale"> Single </label>
+    <input type="checkbox" id="multiple-scale" name = "scale"/> <label for="multiple-scale"> Multiple </label>
+  </details>
+  <details>
+    <summary>Focus</summary>
+    <input type="checkbox" id="single-focus" name = "focus"/> <label for="single-focus"> Single </label>
+    <input type="checkbox" id="multiple-focus" name = "focus"/> <label for="multiple-focus"> Multiple </label>
+  </details>
+</details>
 </div>
 
-<div class="pagination">
+      <article class="main content">
+         <div class = "items">
+
   
-    <span class="pagination-item older">Older</span>
+        <div class="filterDiv 10.1093/nar/gkv476 notapplicable segregated noab no segment sparsepoint sparse unknown within web application spatial single-focus single-view single-scale">
+          <h4><a href="/tools/3d_genome_browser/">3D Genome Browser</a></h4>
+            <a href="/tools/3d_genome_browser/"><img src = "/assets/3D_Genome_Browser.jpg" height = "125px" class = "imag"></a>
+  
+          <button class="collapsible">+</button>
+            <div class="content">
+  
+              <p>Cited by: 3</p>
+              <p>Paper Publication Year: 2015</p>
+              <p>License: unknown</p>
+  
+              <p>
+                
+                <a href="/tools/3d_genome_browser/" class="button layout" style="--border-color: #0C0032; --color: #0C0032;">web application</a>
+                    
+                    <hr/>
+              </p>
+            <p>
+  
+              
+                 <a href="/attributes/layout.html" class="button layout" style="--border-color: #CC79A7; --color: #CC79A7;">spatial</a>
+              
+              
+                 <a href="/attributes/views.html" class="button layout" style="--border-color: #A4B3B6; --color: #A4B3B6;">single view</a>
+              
+              
+                 <a href="/attributes/scales.html" class="button layout" style="--border-color: #56B4E9; --color: #56B4E9;">single scale</a>
+              
+              
+                 <a href="/attributes/focus.html" class="button layout" style="--border-color: #F0E442; --color: #F0E442;">single focus</a>
+              
+            </p>
+            <hr/>
+            
+                <a href = "http://3dgb.cs.mcgill.ca/" target="_blank" class="button layout" style="--border-color: royalblue; --color: royalblue;">User Documentation Available</a>
+            
+            </div>
+          </p>
+        </div>
   
   
-    <span class="pagination-item newer">Newer</span>
+        <div class="filterDiv 10.1007/s40484-017-0091-8 txttabbed contiguous noab no segment sparsesegment contiguouspoint sparsepoint contiguous unknown no web applicationstandalone app spatial single-focus single-view single-scale">
+          <h4><a href="/tools/3dviewer/">3dViewer</a></h4>
+            <a href="/tools/3dviewer/"><img src = "/assets/3dviewer.png" height = "125px" class = "imag"></a>
   
-</div>
+          <button class="collapsible">+</button>
+            <div class="content">
+  
+              <p>Cited by: 6</p>
+              <p>Paper Publication Year: 2017</p>
+              <p>License: unknown</p>
+  
+              <p>
+                
+                <a href="/tools/3dviewer/" class="button layout" style="--border-color: #0C0032; --color: #0C0032;">web application</a>
+                    
+                <a href="/tools/3dviewer/" class="button layout" style="--border-color: #0C0032; --color: #0C0032;">standalone app</a>
+                    
+                    <hr/>
+              </p>
+            <p>
+  
+              
+                 <a href="/attributes/layout.html" class="button layout" style="--border-color: #CC79A7; --color: #CC79A7;">spatial</a>
+              
+              
+                 <a href="/attributes/views.html" class="button layout" style="--border-color: #A4B3B6; --color: #A4B3B6;">single view</a>
+              
+              
+                 <a href="/attributes/scales.html" class="button layout" style="--border-color: #56B4E9; --color: #56B4E9;">single scale</a>
+              
+              
+                 <a href="/attributes/focus.html" class="button layout" style="--border-color: #F0E442; --color: #F0E442;">single focus</a>
+              
+            </p>
+            <hr/>
+            
+                <a href = "http://bioinfo.au.tsinghua.edu.cn/member/nadhir/HiC3DViewer/static/data/UserManual.pdf" target="_blank" class="button layout" style="--border-color: royalblue; --color: royalblue;">User Documentation Available</a>
+            
+            </div>
+          </p>
+        </div>
+  
+  
+        <div class="filterDiv 10.1186/1471-2105-13-2 notapplicable  ab no  open source no standalone app linear multiple-focus multiple-view multiple-scale">
+          <h4><a href="/tools/abrowse/">ABrowse</a></h4>
+            <a href="/tools/abrowse/"><img src = "/assets/abrowse.png" height = "125px" class = "imag"></a>
+  
+          <button class="collapsible">+</button>
+            <div class="content">
+  
+              <p>Cited by: 19</p>
+              <p>Paper Publication Year: 2012</p>
+              <p>License: open source</p>
+  
+              <p>
+                
+                <a href="/tools/abrowse/" class="button layout" style="--border-color: #0C0032; --color: #0C0032;">standalone app</a>
+                    
+                    <hr/>
+              </p>
+            <p>
+  
+              
+                 <a href="/attributes/layout.html" class="button layout" style="--border-color: #CC79A7; --color: #CC79A7;">linear</a>
+              
+              
+                 <a href="/attributes/views.html" class="button layout" style="--border-color: #A4B3B6; --color: #A4B3B6;">multiple view</a>
+              
+              
+                 <a href="/attributes/scales.html" class="button layout" style="--border-color: #56B4E9; --color: #56B4E9;">multiple scale</a>
+              
+              
+                 <a href="/attributes/focus.html" class="button layout" style="--border-color: #F0E442; --color: #F0E442;">multiple focus</a>
+              
+            </p>
+            <hr/>
+            
+            </div>
+          </p>
+        </div>
+  
+  
+        <div class="filterDiv 10.1093/bioinformatics/btu531 fastaother segregated partialab no point contiguous open source between standalone app linear single-focus single-view single-scale">
+          <h4><a href="/tools/aliview/">AliView</a></h4>
+            <a href="/tools/aliview/"><img src = "/assets/aliview.png" height = "125px" class = "imag"></a>
+  
+          <button class="collapsible">+</button>
+            <div class="content">
+  
+              <p>Cited by: 606</p>
+              <p>Paper Publication Year: 2014</p>
+              <p>License: open source</p>
+  
+              <p>
+                
+                <a href="/tools/aliview/" class="button layout" style="--border-color: #0C0032; --color: #0C0032;">standalone app</a>
+                    
+                    <hr/>
+              </p>
+            <p>
+  
+              
+                 <a href="/attributes/layout.html" class="button layout" style="--border-color: #CC79A7; --color: #CC79A7;">linear</a>
+              
+              
+                 <a href="/attributes/views.html" class="button layout" style="--border-color: #A4B3B6; --color: #A4B3B6;">single view</a>
+              
+              
+                 <a href="/attributes/scales.html" class="button layout" style="--border-color: #56B4E9; --color: #56B4E9;">single scale</a>
+              
+              
+                 <a href="/attributes/focus.html" class="button layout" style="--border-color: #F0E442; --color: #F0E442;">single focus</a>
+              
+            </p>
+            <hr/>
+            
+                <a href = "http://ormbunkar.se/aliview/#TOP_HELP" target="_blank" class="button layout" style="--border-color: royalblue; --color: royalblue;">User Documentation Available</a>
+            
+            </div>
+          </p>
+        </div>
+  
+  
+  
+  </div>
+
 
       </article>
       <footer class="footer">Footer</footer>
     </div>     
     
-
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="/scripts/onClick.js"></script>
+    <script src = "/scripts/filter.js"></script>
+    <script src="/scripts/search_bar.js"></script>
+    <script src="/scripts/sortBy.js"></script>
+    <script>
+
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+
+    </script>
 
   </body>
 </html>

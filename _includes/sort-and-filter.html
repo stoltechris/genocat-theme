@@ -1,0 +1,91 @@
+<div class="sort">
+  <input type="radio" id="byName" name="sort" checked/><label for="byName">Sort by name</label>
+  <input type="radio" id="byYear" name="sort"/><label for="byYear">Sort by year (most recent)</label>
+  <input type="radio" id="byCitation" name = "sort"/> <label for="byCitation">Sort by citation count</label>
+</div>
+<div class="filter column left">
+  User Preferences
+  <details>
+    <summary>Usage Format</summary>
+    <input type="checkbox" id="web application" name = "access_format"/><label for="web application">Web Application</label>
+    <input type="checkbox" id="standalone app" name = "access_format"/><label for="standalone app">Standalone App</label>
+    <input type="checkbox" id="programming library" name = "access_format"/><label for="programming library">Programming Library </label>
+  </details>
+  <details>
+    <summary>License</summary>
+    <input type="checkbox" id="open source" name = "license_form"/><label for="open source">Open Source</label>
+    <input type="checkbox" id="commercial" name = "license_form"/><label for="commercial">Commercial</label>
+    <input type="checkbox" id="unknown" name = "license_form"/><label for="unknown">Unknown </label>
+  </details>
+  <details>
+  <summary>Input File Formats</summary>
+  <input type="checkbox" id="notapplicable" name = "supported_files"/><label for="notapplicable">None</label>
+  <input type="checkbox" id="bed" name = "supported_files"/><label for="bed">BED</label>
+  <input type="checkbox" id="fasta" name = "supported_files"/><label for="fasta">FASTA </label>
+  <input type="checkbox" id="sambamcram" name = "supported_files"/><label for="sambamcram">SAM/BAM/CRAM </label>
+  <input type="checkbox" id="vcf" name = "supported_files"/><label for="vcf">VCF</label>
+  <input type="checkbox" id="txttab" name = "supported_files"/><label for="txttab">txt/tab </label>
+  <input type="checkbox" id="other" name = "supported_files"/><label for="other">Other</label>
+</details>
+  <br>
+  Data Taxonomy
+  <details>
+    <summary>Interconnection</summary>
+    <input type="checkbox" id="no" name="interconnection_type"/> <label for="no">None </label>
+    <input type="checkbox" id="within" name="interconnection_type"/><label for="within">Within </label>
+    <input type="checkbox" id="between" name="interconnection_type"/><label for="between">Between </label>
+  </details>
+  <details>
+    <summary>Feature Type</summary>
+    <input type="checkbox" id="segment sparse" name="feature_type"/> <label for="segment sparse">Segment Sparse </label>
+    <input type="checkbox" id="segment contiguous" name="feature_type"/><label for="segment contiguous">Segment Contiguous </label>
+    <input type="checkbox" id="point sparse" name="feature_type"/><label for="point sparse">Point Sparse </label>
+    <input type="checkbox" id="point contiguous" name="feature_type"/><label for="point contiguous">Point Contiguous </label>
+  </details>
+  <br>
+  Coordinate System
+  <details>
+    <summary>Layout</summary>
+    <input type="checkbox" id="circular" name = "layout"/> <label for="circular">Circular </label>
+    <input type="checkbox" id="linear" name = "layout"/> <label for="linear">Linear </label>
+    <input type="checkbox" id="spacefilling" name = "layout"/> <label for="spacefilling">Space Filling </label>
+    <input type="checkbox" id="spatial" name = "layout"/> <label for="spatial">Spatial </label>
+  </details>
+  <details>
+    <summary>Partition</summary>
+    <input type="checkbox" id="contiguous" name = "partition"/> <label for="contiguous">Contiguous </label>
+    <input type="checkbox" id="segregated" name = "partition"/> <label for="segregated">Segregated </label>
+  </details>
+  <details>
+    <summary>Abstraction</summary>
+    <input type="checkbox" id="noab" name = "abstraction"/> <label for="noab"> None </label>
+    <input type="checkbox" id="partialab" name = "abstraction"/> <label for="partialab"> Partial </label>
+    <input type="checkbox" id="completeab" name = "abstraction"/> <label for="completeab"> Complete </label>
+  </details>
+  <details>
+    <summary>Arrangement</summary>
+    <input type="checkbox" id="linear parallel" name = "arrangement"/> <label for="linear parallel"> Linear Parallel </label>
+    <input type="checkbox" id="linear serial" name = "arrangement"/> <label for="linear serial"> Linear Serial </label>
+    <input type="checkbox" id="linear orthogonal" name = "arrangement"/> <label for="linear orthogonal"> Linear Orthogonal </label>
+    <input type="checkbox" id="circular parallel" name = "arrangement"/> <label for="circular parallel"> Circular Parallel </label>
+    <input type="checkbox" id="circular serial" name = "arrangement"/> <label for="circular serial"> Circular Serial </label>
+  </details>
+  <br>
+  View Configurations
+  <details>
+    <summary>View</summary>
+    <input type="checkbox" id="single-view" name = "view"/> <label for="single-view"> Single </label>
+    <input type="checkbox" id="multiple-view" name = "view"/> <label for="multiple-view"> Multiple </label>
+  </details>
+  <details>
+    <summary>Scale</summary>
+    <input type="checkbox" id="single-scale" name = "scale"/> <label for="single-scale"> Single </label>
+    <input type="checkbox" id="multiple-scale" name = "scale"/> <label for="multiple-scale"> Multiple </label>
+  </details>
+  <details>
+    <summary>Focus</summary>
+    <input type="checkbox" id="single-focus" name = "focus"/> <label for="single-focus"> Single </label>
+    <input type="checkbox" id="multiple-focus" name = "focus"/> <label for="multiple-focus"> Multiple </label>
+  </details>
+</details>
+</div>

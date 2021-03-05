@@ -18,16 +18,23 @@
           <aside class="aside aside-3">FILTER</aside>
         <!-- </div> -->
       </div>
-      
+      <p id="demo"></p>
+      <div class="loader hide-loader" id="loader"></div>
 
-      <article class="main content page">
+      {% include sort-and-filter.html %}
+
+      <article class="main content">
          {{ content }}
       </article>
       <footer class="footer">Footer</footer>
     </div>     
     
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="{{site.baseurl}}/scripts/onClick.js"></script>
+    <script src = "{{site.baseurl}}/scripts/filter.js"></script>
+    <script src="{{site.baseurl}}/scripts/search_bar.js"></script>
+    <script src="{{site.baseurl}}/scripts/sortBy.js"></script>
     <script>
 
     var coll = document.getElementsByClassName("collapsible");

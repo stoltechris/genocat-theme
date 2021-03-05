@@ -1,0 +1,94 @@
+---
+layout: page
+title:  Feature Type
+categories: attributes
+---
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  background-color: white;
+  grid-gap: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  color:black;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+}
+</style>
+</head>
+Features can be of different types. Those that only cover one nucleotide are defined as point features while features covering more than one nucleotide are segment features. While there can be gaps between features in sparse sets, contiguous feature sets cover the entire genome.
+<br>
+<div>
+  <h1><a id="Point Sparse"></a>Point Sparse</h1>
+
+    <img src = "{{site.baseurl}}/icons/ps.png" width="200" align = "left">
+    <br><br><br><br><br><br><br>
+    <div class="grid-container">
+      {% for post in site.tools %}
+        {% for items in post.feature_type %}
+          {% if items == "point sparse" %}
+          <a class="grid-item" href ="{{site.baseurl}}{{ post.url}}">{{post.title}}<img src = "{{site.baseurl}}{{ post.image }}" height="150"></a>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </div>
+</div>
+<br><br><br><br>
+
+
+<div>
+  <h1><a id="Segment Sparse"></a>Segment Sparse</h1>
+
+    <img src = "{{site.baseurl}}/icons/ss.png" width="200" align = "left">
+    <br><br><br><br><br><br><br>
+    <div class="grid-container">
+      {% for post in site.tools %}
+        {% for items in post.feature_type %}
+          {% if items == "segment sparse" %}
+          <a class="grid-item" href ="{{site.baseurl}}{{ post.url}}">{{post.title}}<img src = "{{site.baseurl}}{{ post.image }}" height="150"></a>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+</div>
+<br><br><br><br>
+
+<div>
+  <h1><a id="Point Contiguous"></a>Point Contiguous</h1>
+
+    <img src = "{{site.baseurl}}/icons/pc.png" width="200" align = "left">
+    <br><br><br><br><br><br><br><br>
+    <div class="grid-container">
+      {% for post in site.tools %}
+        {% for items in post.feature_type %}
+          {% if items == "point contiguous" %}
+          <a class="grid-item" href ="{{site.baseurl}}{{ post.url}}">{{post.title}}<img src = "{{site.baseurl}}{{ post.image }}" height="150"></a>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+</div>
+<br><br><br><br>
+
+<div>
+  <h1><a id="Segment Contiguous"></a>Segment Contiguous</h1>
+
+    <img src = "{{site.baseurl}}/icons/sc.png" width="200" align = "left">
+    <br><br><br><br><br><br><br><br>
+    <div class="grid-container">
+      {% for post in site.tools %}
+        {% for items in post.feature_type %}
+          {% if items == "segment contiguous" %}
+          <a class="grid-item" href ="{{site.baseurl}}{{ post.url}}">{{post.title}}<img src = "{{site.baseurl}}{{ post.image }}" height="150"></a>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+</div>
+<br><br>

@@ -5,10 +5,15 @@
 
 .page,
 .post {
+  background-color: var(--page-bg);
   margin-bottom: 4em;
 
   li + li {
     margin-top: .25rem;
+  }
+
+  p {
+    color: var(--geno-800);
   }
 }
 
@@ -60,7 +65,7 @@
     text-decoration: none;
 
     small {
-      color: var(--gray-600);
+      color: var(--geno-600);
     }
   }
 }
