@@ -1,48 +1,26 @@
-# genocat-theme
+# GenoCAT
 
-Jekyll theme for GenoCat.tools
+GenoCAT uses Jekyll plugins beyond those supported by GitHub Pages.
+Instead, when the master branch is updated, Travis builds `_site` and pushes it
+to the appropriate S3 bucket. For local development:
 
-
-## Installation
-
-Add this line to your Jekyll site's `Gemfile`:
-
-```ruby
-gem "genocat-theme"
 ```
-
-And add this line to your Jekyll site's `_config.yml`:
-
-```yaml
-theme: genocat-theme
+$ gem install bundler
+$ bundle install
+$ bundle exec jekyll serve
 ```
+Jekyll source code for [genocat.tools](http://genocat.tools/). 
 
-And then execute:
+(Need to set up your own Travis/Jekyll/S3 site? See [generate-static-site](https://github.com/hms-dbmi/generate-static-site).)
 
-    $ bundle
+## Adding New Tools
 
-Or install it yourself as:
+If you would like to contribute and add a tool to GenoCAT, fork our repository on Github. Using template.md, create a markdown file for your tool and upload it into `_tools`. In `assets`, upload a screenshot of your tool and make sure the "images: " frontmatter in your markdown file has the correct path (ex. /assets/imagename.png). Create a new branch for your commit and start a pull request to the staging branch.
 
-    $ gem install genocat-theme
+## CSV to yaml
 
-## Usage
-
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `genocat-theme.gemspec` accordingly.
-
-## License
-
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
+Adding tools from a CSV file should not be done frequently and should only be done with the master CSV file. To add or edit tools from a CSV file, update or replace the data.csv file and run the following:
+```
+$ cd csv_to_yaml
+$ python csv_to_yaml.py
+```
