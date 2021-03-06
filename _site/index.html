@@ -129,21 +129,19 @@
         <header class="logo">
           <a href="/" title="Home"><img src="/public/header.svg"/></a>
         </header>
-        <!-- <div class="functions"> -->
-          <input class="aside aside-1" type="search" id="mySearch" onkeyup="search()" placeholder="SEARCH"/>
-          <aside class="aside aside-2">SORT</aside>
-          <aside class="aside aside-3">FILTER</aside>
-        <!-- </div> -->
+          <input class="aside aside-1" type="search" id="mySearch" onkeyup="search()" onClick="goToSearch()" placeholder="SEARCH"/>
+          <aside class="aside aside-2"><a href="/#sort" >SORT</a></aside>
+          <aside class="aside aside-3"><a href="/#filter" >FILTER</a></aside>
       </div>
-      <p id="demo"></p>
+      <p id="results"></p>
       <div class="loader hide-loader" id="loader"></div>
 
-      <div class="sort">
+      <div id="sort">
   <input type="radio" id="byName" name="sort" checked/><label for="byName">Sort by name</label>
   <input type="radio" id="byYear" name="sort"/><label for="byYear">Sort by year (most recent)</label>
   <input type="radio" id="byCitation" name = "sort"/> <label for="byCitation">Sort by citation count</label>
 </div>
-<div class="filter column left">
+<div class="column left" id="filter">
   User Preferences
   <details>
     <summary>Usage Format</summary>
@@ -4572,7 +4570,9 @@
     <script src="/scripts/search_bar.js"></script>
     <script src="/scripts/sortBy.js"></script>
     <script>
-
+    function goToSearch(){
+      window.location = "/#search"
+    } 
     var coll = document.getElementsByClassName("collapsible");
     var i;
 

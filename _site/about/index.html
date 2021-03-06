@@ -129,11 +129,9 @@
         <header class="logo">
           <a href="/" title="Home"><img src="/public/header.svg"/></a>
         </header>
-        <!-- <div class="functions"> -->
-          <input class="aside aside-1" type="search" id="mySearch" onkeyup="search()" placeholder="SEARCH"/>
-          <aside class="aside aside-2">SORT</aside>
-          <aside class="aside aside-3">FILTER</aside>
-        <!-- </div> -->
+          <input class="aside aside-1" type="search" id="mySearch" onClick="goToSearch()" placeholder="SEARCH"/>
+          <aside class="aside aside-2"><a href="/#sort" >SORT</a></aside>
+          <aside class="aside aside-3"><a href="/#filter" >FILTER</a></aside>
       </div>
       
 
@@ -142,7 +140,7 @@
   <h1 class="page-title">About</h1>
   <h1 id="hundreds-of-ways-to-visualize-genomic-data">Hundreds of ways to visualize genomic data.</h1>
 
-<p>This site provides a database of genomic visualization tools. Each tool has been sorted and grouped based on various attributes, and this website has been designed to help you find what you’re looking for. Our review article on genomic visualization tools can be found <a href="https://arxiv.org/pdf/1905.02853.pdf">here</a>.</p>
+<p>This site provides a database of genomic visualization tools. Each tool has been sorted and grouped based on various attributes, and this website has been designed to help you find what you’re looking for. Our review article on genomic visualization tools (<em>Tasks, Techniques, and Tools for Genomic Data Visualization</em>) can be found <a href="https://arxiv.org/pdf/1905.02853.pdf">here</a>.</p>
 
 <h2 id="contributing">Contributing</h2>
 
@@ -150,7 +148,11 @@
 
 <p>Have questions or suggestions? Feel free to <a href="https://github.com/hms-dbmi/genocat/issues/new">open an issue on GitHub</a> or <a href="https://twitter.com/ngehlenborg">ask us on Twitter</a>.</p>
 
-<p>Thanks for reading!</p>
+<h3 id="credits">Credits</h3>
+
+<p>The paper was written by Sabrina Nusrat, Theresa Harbig, and Nils Gehlenborg. The original structure of the website was set up by Justine Shih and Claudia Meyer. The current site was designed and developed by Christian Stolte.</p>
+
+<h3 id="thanks-for-reading">Thanks for reading!</h3>
 
 </div>
 
@@ -161,6 +163,9 @@
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
     
     <script>
+    function goToSearch(){
+      window.location = "/#search"
+    }  
 
     var coll = document.getElementsByClassName("collapsible");
     var i;

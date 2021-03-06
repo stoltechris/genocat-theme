@@ -15,7 +15,13 @@
   }
 }
 
-//sort and filter
+// sort and filter
+#filter, #sort {
+  display: none;
+}
+#filter:target, #sort:target {
+  display: block;
+} 
 .column {
   float: left;
   width: 50%;
@@ -66,7 +72,7 @@ input, textarea, select {
 .hide-loader{
 display:none;
 }
-#demo {
+#results {
   margin-top: 7rem;
 }
 

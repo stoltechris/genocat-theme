@@ -5,7 +5,7 @@ title: About
 
 # Hundreds of ways to visualize genomic data.
 
-This site provides a database of genomic visualization tools. Each tool has been sorted and grouped based on various attributes, and this website has been designed to help you find what you’re looking for. Our review article on genomic visualization tools can be found [here](https://arxiv.org/pdf/1905.02853.pdf).
+This site provides a database of genomic visualization tools. Each tool has been sorted and grouped based on various attributes, and this website has been designed to help you find what you’re looking for. Our review article on genomic visualization tools (*Tasks, Techniques, and Tools for Genomic Data Visualization*) can be found [here](https://arxiv.org/pdf/1905.02853.pdf).
 
 ## Contributing
 
@@ -13,4 +13,8 @@ GenoCAT is a crowdsourced resource. Data visualization tool developers can [add 
 
 Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/hms-dbmi/genocat/issues/new) or [ask us on Twitter](https://twitter.com/ngehlenborg).
 
-Thanks for reading!
+### Credits
+
+The paper was written by Sabrina Nusrat, Theresa Harbig, and Nils Gehlenborg. The original structure of the website was set up by Justine Shih and Claudia Meyer. The current site was designed and developed by Christian Stolte.
+
+### Thanks for reading!

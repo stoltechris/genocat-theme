@@ -12,13 +12,11 @@
         <header class="logo">
           <a href="{{ site.baseurl }}/" title="Home"><img src="/public/header.svg"/></a>
         </header>
-        <!-- <div class="functions"> -->
-          <input class="aside aside-1" type="search" id="mySearch" onkeyup="search()" placeholder="SEARCH"/>
-          <aside class="aside aside-2">SORT</aside>
-          <aside class="aside aside-3">FILTER</aside>
-        <!-- </div> -->
+          <input class="aside aside-1" type="search" id="mySearch" onkeyup="search()" onClick="goToSearch()" placeholder="SEARCH"/>
+          <aside class="aside aside-2"><a href="/#sort" >SORT</a></aside>
+          <aside class="aside aside-3"><a href="/#filter" >FILTER</a></aside>
       </div>
-      <p id="demo"></p>
+      <p id="results"></p>
       <div class="loader hide-loader" id="loader"></div>
 
       {% include sort-and-filter.html %}
@@ -36,7 +34,9 @@
     <script src="{{site.baseurl}}/scripts/search_bar.js"></script>
     <script src="{{site.baseurl}}/scripts/sortBy.js"></script>
     <script>
-
+    function goToSearch(){
+      window.location = "/#search"
+    } 
     var coll = document.getElementsByClassName("collapsible");
     var i;
 

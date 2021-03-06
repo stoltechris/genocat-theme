@@ -58,11 +58,11 @@ function checkbox_filter(tags) {
       j++;
     }
   }
-  document.getElementById("demo").innerHTML = num + " result" + (num > 1 ? "s" : "");
+  document.getElementById("results").innerHTML = num + " result" + (num > 1 ? "s" : "");
 }
 
 // var myCollection = document.getElementsByClassName("filterDiv ");
-// document.getElementById("demo").innerHTML = i + " results";
+// document.getElementById("results").innerHTML = i + " results";
 
 
 // Show filtered elements

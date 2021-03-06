@@ -129,11 +129,9 @@
         <header class="logo">
           <a href="/" title="Home"><img src="/public/header.svg"/></a>
         </header>
-        <!-- <div class="functions"> -->
-          <input class="aside aside-1" type="search" id="mySearch" onkeyup="search()" placeholder="SEARCH"/>
-          <aside class="aside aside-2">SORT</aside>
-          <aside class="aside aside-3">FILTER</aside>
-        <!-- </div> -->
+          <input class="aside aside-1" type="search" id="mySearch" onClick="goToSearch()" placeholder="SEARCH"/>
+          <aside class="aside aside-2"><a href="/#sort" >SORT</a></aside>
+          <aside class="aside aside-3"><a href="/#filter" >FILTER</a></aside>
       </div>
       
 
@@ -150,6 +148,9 @@
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
     
     <script>
+    function goToSearch(){
+      window.location = "/#search"
+    }  
 
     var coll = document.getElementsByClassName("collapsible");
     var i;
