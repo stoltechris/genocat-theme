@@ -1,21 +1,8 @@
 ---
 layout: page
 ---
-<html>
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145092297-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-145092297-1');
-</script>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <style>
+  <!-- <style>
   body {
     font-family: "Lato", sans-serif;
   }
@@ -98,64 +85,60 @@ layout: page
         }
       }
 }
-  </style>
-  </head>
-  <body>
-
+  </style> -->
+  
+  <div class="tool">
     <div>
       <img src = "{{site.baseurl}}{{ page.image }}" class = "center">
       <small>{{page.image_location}}</small>
-      <br><br>
 
     </div>
 
     <div>
       <h2>Methods</h2>
       {% for items in  page.genome_layout %}
-         <a href="{{site.baseurl}}/attributes/layout.html" class="button layout" style="--border-color: #CC79A7; --color: #CC79A7;">{{ items }}</a>
+         <a href="{{site.baseurl}}/attributes/layout/" class="button layout" style="--border-color: #CC79A7; --color: #CC79A7;">{{ items }}</a>
       {%endfor%}
       {% for items in  page.view %}
-         <a href="{{site.baseurl}}/attributes/views.html" class="button layout" style="--border-color: #A4B3B6; --color: #A4B3B6;">{{ items }} view</a>
+         <a href="{{site.baseurl}}/attributes/views/" class="button layout" style="--border-color: #A4B3B6; --color: #A4B3B6;">{{ items }} view</a>
       {%endfor%}
       {% for items in  page.scale %}
-         <a href="{{site.baseurl}}/attributes/scales.html" class="button layout" style="--border-color:  #56B4E9; --color:  #5680E9;">{{ items }} scale</a>
+         <a href="{{site.baseurl}}/attributes/scales/" class="button layout" style="--border-color:  #56B4E9; --color:  #5680E9;">{{ items }} scale</a>
       {%endfor%}
       {% for items in  page.focus %}
-         <a href="{{site.baseurl}}/attributes/focus.html" class="button layout" style="--border-color: #F0E442; --color: #F0E442;">{{ items }} focus</a>
+         <a href="{{site.baseurl}}/attributes/focus/" class="button layout" style="--border-color: #F0E442; --color: #F0E442;">{{ items }} focus</a>
       {%endfor%}
       {% for items in  page.partition %}
-         <a href="{{site.baseurl}}/attributes/partition.html" class="button layout" style="--border-color: #009E73; --color: #009E73;">{{ items }}</a>
+         <a href="{{site.baseurl}}/attributes/partition/" class="button layout" style="--border-color: #009E73; --color: #009E73;">{{ items }}</a>
       {%endfor%}
       {% for items in  page.abstraction %}
-         <a href="{{site.baseurl}}/attributes/abstraction.html" class="button layout" style="--border-color: #0072B2; --color: #0072B2;">{{ items }} abstraction</a>
+         <a href="{{site.baseurl}}/attributes/abstraction/" class="button layout" style="--border-color: #0072B2; --color: #0072B2;">{{ items }} abstraction</a>
       {%endfor%}
       {% for items in  page.arrangement %}
-         <a href="{{site.baseurl}}/attributes/arrangement.html" class="button layout" style="--border-color: #D55E00; --color: #D55E00;">{{ items }} arrangement</a>
+         <a href="{{site.baseurl}}/attributes/arrangement/" class="button layout" style="--border-color: #D55E00; --color: #D55E00;">{{ items }} arrangement</a>
       {%endfor%}
       {% for items in  page.interconnection_type %}
-         <a href="{{site.baseurl}}/attributes/interconnection_type.html" class="button layout" style="--border-color: #E69F00; --color: #E69F00;">{{ items }} interconnection</a>
+         <a href="{{site.baseurl}}/attributes/interconnection_type/" class="button layout" style="--border-color: #E69F00; --color: #E69F00;">{{ items }} interconnection</a>
       {%endfor%}
       {% for items in  page.feature_type %}
-        <a href="{{site.baseurl}}/attributes/type.html" class="button layout" style="--border-color: #013220; --color: #013220;">{{ items }} type</a>
+        <a href="{{site.baseurl}}/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">{{ items }} type</a>
       {%endfor%}
 
-    </div>
-    <div>
       <h2>Tool</h2>
 
           {% for items in  page.access_format %}
-              <button class="button layout" style="--border-color: #0C0032; --color: #0C0032;">Access  Format: {{ items }}</button>
+              <p class="button layout" style="--border-color: #0C0032; --color: #0C0032;">Access  Format: {{ items }}</p>
           {%endfor%}
           {% for items in  page.supported_files %}
-              <button class="button layout" style="--border-color: #240090; --color: #240090;">Supported Files: {{ items }}</button>
+              <p class="button layout" style="--border-color: #240090; --color: #240090;">Supported Files: {{ items }}</p>
           {%endfor%}
           {% for items in  page.license %}
-              <button class="button layout" style="--border-color: #3500D3; --color: #3500D3;">License: {{ items }}</button>
+              <p class="button layout" style="--border-color: #3500D3; --color: #3500D3;">License: {{ items }}</p>
           {%endfor%}
 
           <div class="row">
             <div class="column">
-              <h3>Tool: </h3> {{ page.title }}
+              <h3>Tool name: </h3> {{ page.title }}
             </div>
             <div class="column">
               <h3>Tool Link: </h3> <a href="{{ page.browser }}" target="_blank">{{ page.browser }}</a>
@@ -167,15 +150,17 @@ layout: page
     </div>
     <div>
       <h2>Paper</h2>
-      <h2>{{page.paper_title}}</h2>
-      <br>
+      <h3>{{page.paper_title}}</h3>
+      <p>
       {{ page.citation }}
-      <br><br>
-      Cited by: {{page.citation_count}}
-      <h3>Abstract</h3>
+      <br>
+      Cited by: {{page.citation_count}}</p>
+      <h4>Abstract</h4>
+      <p>
       {{ page.abstract }}
+      </p>
     </div>
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 
-</html>
+</div>

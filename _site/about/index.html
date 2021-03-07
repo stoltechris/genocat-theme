@@ -22,7 +22,7 @@
 
   <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Recursive:wght,CASL@300..800,1&display=swap"> -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Recursive:wght,CASL,CRSV@300..800,0..1,0..1&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Recursive:wght,CASL,CRSV@300..900,0..1,0..1&display=swap">
 
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
   <link rel="shortcut icon" href="/public/favicon.ico">
@@ -32,6 +32,11 @@
   <link rel="manifest" href="/public/site.webmanifest">
 
   <link rel="alternate" type="application/atom+xml" title="GenoCat.tools" href="/atom.xml">
+
+  <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+  <script>
+    lazyload(); console.log("lazy load on");
+  </script>  
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
@@ -46,10 +51,19 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="About" />
 <script type="application/ld+json">
-{"@type":"WebSite","url":"/about/","author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"A database and taxonomy for genomic visualization tools","headline":"About","name":"GenoCat.tools","@context":"https://schema.org"}</script>
+{"headline":"About","url":"/about/","name":"GenoCat.tools","author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"A database and taxonomy for genomic visualization tools","@type":"WebSite","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-145092297-1', 'auto');
+    ga('send', 'pageview');
+  </script>
   
   
 </head>
@@ -102,7 +116,7 @@
     
       
         
-          <a class="sidebar-nav-item" href="/taxonomy_page/">Taxonomy</a>
+          <a class="sidebar-nav-item" href="/taxonomy/">Taxonomy</a>
         
       
     
@@ -129,8 +143,20 @@
       </div>
       
 
-      <article class="main content page">
+      <article class="main page">
+
+        <div id="breadcrumbs">
+
+<a href="/">Home</a>
+
+  
+    / About
+  
+
+</div>
+
          <div class="page">
+
   <h1 class="page-title">About</h1>
   <h1 id="hundreds-of-ways-to-visualize-genomic-data">Hundreds of ways to visualize genomic data.</h1>
 

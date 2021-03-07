@@ -4,7 +4,6 @@ tagline:             'Hundreds of ways to visualize genomic data'
 description:         'A database and taxonomy for genomic visualization tools'
 url:                 ''
 baseurl:             ''
-paginate:            5
 permalink:           pretty
 
 # About/contact
@@ -16,7 +15,6 @@ author:
 # Gems
 plugins:
   - jekyll-gist
-  - jekyll-paginate
   - jekyll-seo-tag
 
 # Optimize Jekyll
@@ -35,7 +33,7 @@ sass:
 
 # Custom vars
 version:             1.0.0
-# google_analytics_id: #UA-XXXX-Y
+google_analytics_id: UA-145092297-1
 
 collections:
   tools:

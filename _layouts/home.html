@@ -16,12 +16,12 @@
         <aside class="aside aside-2" onClick="activate()"><a href="/#sort">SORT</a></aside>
         <aside class="aside aside-3"><a href="/#filter" onClick="scrollToTop()">FILTER</a></aside>
       </div>
-      <p id="results"></p>
-      <div class="loader hide-loader" id="loader"></div>
+      <p><span id="results"> </span> <span class="loader hide-loader" id="loader"></span></p>
+      
 
       {% include sort-and-filter.html %}
 
-      <article class="main content">
+      <article class="main">
          {{ content }}
       </article>
       <footer class="footer">Footer</footer>
@@ -34,11 +34,11 @@
     <script src="{{site.baseurl}}/scripts/search_bar.js"></script>
     <script src="{{site.baseurl}}/scripts/sortBy.js"></script>
     <script>
-
-    function scrollToTop() { 
-      window.scrollTo(0, 0);
-    } 
-    window.onload = scrollToTop();
+      
+    // function scrollToTop() { 
+    //   window.scrollTo(0, 0);
+    // } 
+    // window.onload = scrollToTop();
 
     function goToSearch(){
       window.location = "/#search"
@@ -49,11 +49,11 @@
     for (i = 0; i < coll.length; i++) {
       coll[i].addEventListener("click", function() {
         this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
+        var content = this.parentNode.nextElementSibling;
+        if (content.style.display === "none") {
           content.style.display = "block";
+        } else {
+          content.style.display = "none";
         }
       });
     }

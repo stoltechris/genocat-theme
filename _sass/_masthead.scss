@@ -24,6 +24,10 @@
   top: 0;
   left: 0;
   width: 100%;
+
+  a {
+    color: var(--geno-200);
+  }
 }
 
 .logo {
@@ -95,8 +99,11 @@
   .sidebar-toggle {
     top: 4.5vw;
   }
-  .main {
-    margin-top: 10vw;
+  .aside {
+    line-height: 2.4rem;
+  }
+  .wrapper { 
+    padding-top: var(--spacer-top); 
   }
 }
 
@@ -108,8 +115,9 @@
   .aside { 
     align-self: flex-end; 
     height: calc(var(--spacer-top) * 0.5);
+    line-height: 0.8rem;
   }
-  .main    { order: 5; margin-top: 7vw; }
+  .main    { order: 5;}
   .aside-1 { 
     order: 2; 
 
@@ -144,6 +152,5 @@
     flex: 1 1 0; 
   }
   .aside-1:focus { flex: 1 0 0; }
-  .main { margin-top: 6vw; }
   .aside, .sidebar, .sidebar-nav { height: 3vw; }
 }

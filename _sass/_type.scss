@@ -7,6 +7,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.25;
   color: var(--heading-color);
+  // font-variation-settings: 'slnt' -9, 'CASL' 1, 'CRSV' 1;
 }
 
 h1 {
@@ -112,4 +113,14 @@ a[href^="#fnref:"] {
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
+}
+
+.tool {
+  color: var(--geno-700);
+
+  h2 {
+    color: var(--geno-800);
+    font-weight: 900;
+    text-transform: uppercase;
+  }
 }

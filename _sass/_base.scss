@@ -40,6 +40,8 @@ img {
   border-radius: var(--border-radius);
 }
 
+.tool img { max-width: 90%; }
+
 table {
   margin-bottom: 1rem;
   width: 100%;
@@ -68,4 +70,7 @@ mark {
   padding: .15rem;
   background-color: var(--yellow-100);
   border-radius: .125rem;
+}
+article {
+  display: block;
 }
