@@ -46,7 +46,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Home" />
 <script type="application/ld+json">
-{"headline":"Home","url":"/","name":"GenoCat.tools","author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"A database and taxonomy for genomic visualization tools","@type":"WebSite","@context":"https://schema.org"}</script>
+{"@type":"WebSite","url":"/","author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"A database and taxonomy for genomic visualization tools","headline":"Home","name":"GenoCat.tools","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -93,12 +93,6 @@
       
     
       
-        
-          <a class="sidebar-nav-item" href="/search_page/">Search</a>
-        
-      
-    
-      
     
       
         
@@ -129,17 +123,17 @@
         <header class="logo">
           <a href="/" title="Home"><img src="/public/header.svg"/></a>
         </header>
-          <input class="aside aside-1" type="search" id="mySearch" onkeyup="search()" onClick="goToSearch()" placeholder="SEARCH"/>
-          <aside class="aside aside-2"><a href="/#sort" >SORT</a></aside>
-          <aside class="aside aside-3"><a href="/#filter" >FILTER</a></aside>
+        <input class="aside aside-1" type="search" id="mySearch" onkeyup="search()" onClick="goToSearch()" placeholder="SEARCH"/>
+        <aside class="aside aside-2" onClick="activate()"><a href="/#sort">SORT</a></aside>
+        <aside class="aside aside-3"><a href="/#filter" onClick="scrollToTop()">FILTER</a></aside>
       </div>
       <p id="results"></p>
       <div class="loader hide-loader" id="loader"></div>
 
       <div id="sort">
-  <input type="radio" id="byName" name="sort" checked/><label for="byName">Sort by name</label>
-  <input type="radio" id="byYear" name="sort"/><label for="byYear">Sort by year (most recent)</label>
-  <input type="radio" id="byCitation" name = "sort"/> <label for="byCitation">Sort by citation count</label>
+  <label for="byName"><input type="radio" id="byName" name="sort" checked/> Sort by name</label>
+  <label for="byYear"><input type="radio" id="byYear" name="sort"/> Sort by year (most recent)</label>
+  <label for="byCitation"><input type="radio" id="byCitation" name = "sort"/> Sort by citation count</label>
 </div>
 <div class="column left" id="filter">
   User Preferences
@@ -4570,6 +4564,12 @@
     <script src="/scripts/search_bar.js"></script>
     <script src="/scripts/sortBy.js"></script>
     <script>
+
+    function scrollToTop() { 
+      window.scrollTo(0, 0);
+    } 
+    window.onload = scrollToTop();
+
     function goToSearch(){
       window.location = "/#search"
     } 

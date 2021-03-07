@@ -1,7 +1,9 @@
 // Masthead
 //
-// Super small header above the content for site name and short description.
-
+// header above the content for site name and navigation.
+.wrapper { 
+  padding-top: calc(var(--spacer-top) * 1.6); 
+}
 .wrapper, .head {
   display: flex;  
   flex-flow: row wrap;
@@ -27,7 +29,7 @@
 .logo {
   background: var(--geno-800);
   flex-shrink: 0;
-  height: 18vw;
+  height: var(--spacer-top);
   flex: 1 100%;
 }
 
@@ -40,6 +42,7 @@
   color:var(--geno-100);
   font-family: 'Recursive';
 }
+
 .aside-1 {
   background: var(--geno-650);
   width: 100%;
@@ -61,9 +64,19 @@
 
 .aside-2 {
   background: var(--geno-700);
+  cursor: pointer;
+
+  &:hover {
+    background: var(--geno-800);
+  }
 }
 .aside-3 {
-  background: var(--geno-700)
+  background: var(--geno-700);
+  cursor: pointer;
+
+  &:hover {
+    background: var(--geno-800);
+  }
 }
 
 .aside { 
@@ -71,17 +84,14 @@
   flex: 1 0 0; 
   font-weight: 800;
   font-variation-settings: 'slnt' -7, 'CASL' 0;
-  // margin: auto 0;
+  // height: calc(var(--spacer-top) * 0.6);
 }
 
 @media all and (min-width: 500px) {
   .logo { 
     flex: 3 1 0; 
-    height: 10vw;
   }
-  .sidebar {
-    top: calc(10vw + 1px);
-  }
+  // .aside { height: var(--spacer-top); }
   .sidebar-toggle {
     top: 4.5vw;
   }
@@ -91,13 +101,13 @@
 }
 
 @media all and (min-width: 860px) {
+  // layout with sidebar items along top
   .logo { 
     flex: 2 0 0; 
-    height: 7vw;
   }
   .aside { 
     align-self: flex-end; 
-    height: 3.45vw;
+    height: calc(var(--spacer-top) * 0.5);
   }
   .main    { order: 5; margin-top: 7vw; }
   .aside-1 { 
@@ -132,7 +142,6 @@
 @media all and (min-width: 1400px) {
   .logo { 
     flex: 1 1 0; 
-    height: 6vw;
   }
   .aside-1:focus { flex: 1 0 0; }
   .main { margin-top: 6vw; }

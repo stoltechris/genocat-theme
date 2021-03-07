@@ -41,7 +41,7 @@ footer {
 /* Style and "hide" the sidebar */
 .sidebar {
   position: fixed;
-  top: calc(18vw + 1px);
+  top: calc(var(--spacer-top) + 1px);
   bottom: 0;
   left: -14rem;
   width: 14rem;

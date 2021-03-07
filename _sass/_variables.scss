@@ -70,8 +70,25 @@
   --spacer: 1rem;
   --spacer-2: calc(var(--spacer) * 1.5);
   --spacer-3: calc(var(--spacer) * 3);
+  --spacer-top: 18vw;
+}
+@media all and (min-width: 500px) {
+  :root {
+    --spacer-top: 10vw;    
+  }
 }
 
+@media all and (min-width: 860px) {
+  :root {
+    --spacer-top: 7vw;    
+  }
+}
+
+@media all and (min-width: 1400px) {
+  :root {
+    --spacer-top: 6vw;    
+  }
+}
 // @media (prefers-color-scheme: dark) {
 //   :root {
 //     --body-color: var(--gray-300);
