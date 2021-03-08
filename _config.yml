@@ -40,3 +40,4 @@ collections:
       output: true
   attributes:
       output: true
+theme: jekyll-theme-minimal
