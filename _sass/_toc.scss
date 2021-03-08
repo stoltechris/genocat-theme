@@ -33,6 +33,11 @@
   input { margin-right: 0.3rem; }
 } 
 
+@media (min-width: 500px) {
+  #filter:target, #sort:target {
+    top: var(--spacer-top);
+  }
+}
 input, textarea, select {
   border: 0.1rem solid #DCDCDC;
 }

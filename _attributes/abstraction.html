@@ -13,9 +13,9 @@ categories: attributes
 </p>
 <div>
   <h2 id="None">None</h2>
-
-    <img src = "{{site.baseurl}}/icons/abstraction_none.png" width="120"><br>
-    No part of the genome are abstracted or removed with the following tools.
+  <p>No part of the genome are abstracted or removed with the following tools.</p>
+  <img src = "{{site.baseurl}}/icons/abstraction_none.png" width="120">
+    
 
 {% assign total_no = 0 %}
       {% for post in site.tools %}
@@ -42,7 +42,7 @@ categories: attributes
 </div>
 
 <div>
-  <h2><a id="Partial"></a>Partial</h2>
+  <h2 id="Partial">Partial</h2>
 
     <img src = "{{site.baseurl}}/icons/abstraction_partial.png" width="120">
   
@@ -72,7 +72,7 @@ categories: attributes
   </div>
 </div>
 <div>
-  <h1><a id="Complete"></a>Complete</h1>
+  <h2 id="Complete">Complete</h1>
 
     <img src = "{{site.baseurl}}/icons/abstraction_complete.png" width="120">
     {% assign total_c = 0 %}
@@ -94,6 +94,6 @@ categories: attributes
           {% endif %}
         {% endfor %}
       {% endfor %}
+  </div>
 </div>
-
 <script src="{{site.baseurl}}/scripts/attributes.js"></script>
