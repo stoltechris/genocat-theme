@@ -1,0 +1,2592 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      Arrangement &middot; GenoCat.tools
+    
+  </title>
+
+  
+  <link rel="canonical" href="/attributes/arrangement/">
+  
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Recursive:wght,CASL@300..800,1&display=swap"> -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Recursive:wght,CASL,CRSV@300..900,0..1,0..1&display=swap">
+
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
+  <link rel="manifest" href="/public/site.webmanifest">
+
+  <link rel="alternate" type="application/atom+xml" title="GenoCat.tools" href="/atom.xml">
+
+  <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+  <script>
+    lazyload(); // console.log("lazy load on");
+  </script>  
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Arrangement" />
+<meta name="author" content="Gehlenborg Lab" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The different arrangements can be used to (i) visualize interconnection_type features or (ii) compare two different sequences in the context of comparative genomics." />
+<meta property="og:description" content="The different arrangements can be used to (i) visualize interconnection_type features or (ii) compare two different sequences in the context of comparative genomics." />
+<link rel="canonical" href="/attributes/arrangement/" />
+<meta property="og:url" content="/attributes/arrangement/" />
+<meta property="og:site_name" content="GenoCat.tools" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-08T11:05:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Arrangement" />
+<script type="application/ld+json">
+{"headline":"Arrangement","url":"/attributes/arrangement/","dateModified":"2021-03-08T11:05:00-05:00","datePublished":"2021-03-08T11:05:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"/attributes/arrangement/"},"author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"The different arrangements can be used to (i) visualize interconnection_type features or (ii) compare two different sequences in the context of comparative genomics.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-145092297-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  
+  
+</head>
+
+
+  <body class="sidebar-overlay">
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <!-- <div class="sidebar-item">
+    <p>A database and taxonomy for genomic visualization tools</p>
+  </div> -->
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">About</a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/submission/">Contribute a tool!</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/taxonomy/">Taxonomy</a>
+        
+      
+    
+
+    <!-- <span class="sidebar-nav-item">Currently v1.0.0</span> -->
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2021 Gehlenborg Lab.
+    </p>
+  </div>
+</div>
+
+
+    <div class="wrapper">
+      <div class="head">
+        <header class="logo">
+          <a href="/" title="Home"><img src="/public/header.svg"/></a>
+        </header>
+          <input class="aside aside-1" type="search" id="mySearch" onClick="goToSearch()" placeholder="SEARCH"/>
+          <aside class="aside aside-2"><a href="/#sort" >SORT</a></aside>
+          <aside class="aside aside-3"><a href="/#filter" >FILTER</a></aside>
+      </div>
+      
+
+      <article class="main page">
+
+        <div id="breadcrumbs">
+
+<a href="/">Home</a>
+
+  
+    / <a href="/attributes/">Attributes</a>
+  
+
+  
+    / Arrangement
+  
+
+</div>
+
+         <div class="page">
+
+  <h1 class="page-title">Arrangement</h1>
+  <p>
+The different arrangements can be used to (i) visualize interconnection_type features or (ii) 
+compare two different sequences in the context of comparative genomics.
+</p>
+
+<div> <!-- category start -->
+  <h2 id="Circular Parallel">Circular Parallel</h2>
+    <img src = "/icons/arrangement_circular_parallel.png" width="120">
+    
+     
+  <p class="total"> 2 tools</p>
+  <div class="grid-container"  style="display: none;">
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+        
+        <a class="grid-item" href ="/tools/edgar_genome_browser/"><h4>Edgar Genome Browser</h4>
+          <img  class="lazyload" src="/assets/edgargenomebrowser.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/mizbee/"><h4>MizBee</h4>
+          <img  class="lazyload" src="/assets/Mizbee.jpg">
+        </a>        
+        
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+         
+  </div>    
+</div> <!-- category end -->
+<div> <!-- category start -->
+  <h2 id="Circular Serial">Circular Serial</h2>
+  <p>A serial circular arrangement corresponds to two sequence axes in a “half-circle” layout.</p>
+    <img src = "/icons/arrangement_circular_serial.png" width="120">
+    
+     
+  <p class="total"> 2 tools</p>
+    <div class="grid-container"  style="display: none;">
+      
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/circos/"><h4>Circos</h4>
+          <img  class="lazyload" src="/assets/Circos.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/clico_free_service/"><h4>ClicO Free Service</h4>
+          <img  class="lazyload" src="/assets/clico.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+        
+        <a class="grid-item" href ="/tools/synteny_explorer/"><h4>Synteny Explorer</h4>
+          <img  class="lazyload" src="/assets/syntenyexplorer.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+        
+  </div>     
+</div> <!-- category end -->
+<div> <!-- category start -->
+  <h2 id="Linear Parallel">Linear Parallel</h2>
+    <img src = "/icons/arrangement_linear_parallel.png" width="120">
+    
+     
+  <p class="total"> 29 tools</p>
+    <div class="grid-container"  style="display: none;">
+      
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/apollo/"><h4>Apollo</h4>
+          <img  class="lazyload" src="/assets/apollo.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/bedsect/"><h4>BedSect</h4>
+          <img  class="lazyload" src="/assets/bedsect.png">
+        </a>        
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/cepbrowser/"><h4>CEpBrowser</h4>
+          <img  class="lazyload" src="/assets/cepbrowser.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/cinteny/"><h4>Cinteny</h4>
+          <img  class="lazyload" src="/assets/Cinteny.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/cnvkit/"><h4>CNVkit</h4>
+          <img  class="lazyload" src="/assets/CNV.png">
+        </a>        
+        
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/combo/"><h4>Combo</h4>
+          <img  class="lazyload" src="/assets/Combo.png">
+        </a>        
+        
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/cramer/"><h4>CRAMER</h4>
+          <img  class="lazyload" src="/assets/cramer.png">
+        </a>        
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/crispresso2/"><h4>CRISPResso2</h4>
+          <img  class="lazyload" src="/assets/crispresso2.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/edgar_genome_browser/"><h4>Edgar Genome Browser</h4>
+          <img  class="lazyload" src="/assets/edgargenomebrowser.png">
+        </a>        
+        
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/gbrowse_syn/"><h4>GBrowse_syn</h4>
+          <img  class="lazyload" src="/assets/gbrowse_syn.png">
+        </a>        
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/genome_annotator_light_(gal)/"><h4>Genome Annotator Light (GAL)</h4>
+          <img  class="lazyload" src="/assets/GAL.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/genoplotr/"><h4>genoPlotR</h4>
+          <img  class="lazyload" src="/assets/genoplotr.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/give/"><h4>GIVE</h4>
+          <img  class="lazyload" src="/assets/give.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/microscope/"><h4>MicroScope</h4>
+          <img  class="lazyload" src="/assets/microscope.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+        
+        <a class="grid-item" href ="/tools/mizbee/"><h4>MizBee</h4>
+          <img  class="lazyload" src="/assets/Mizbee.jpg">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/oviz-bio/"><h4>Oviz-Bio</h4>
+          <img  class="lazyload" src="/assets/ovizbio.png">
+        </a>        
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/persephone/"><h4>Persephone</h4>
+          <img  class="lazyload" src="/assets/persephone.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/rideogram/"><h4>RIdeogram</h4>
+          <img  class="lazyload" src="/assets/rideogram.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/scgv/"><h4>SCGV</h4>
+          <img  class="lazyload" src="/assets/scgv.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/sequence_surveyor/"><h4>Sequence Surveyor</h4>
+          <img  class="lazyload" src="/assets/sequencesurveryor.png">
+        </a>        
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/silkdb_3.0/"><h4>SilkDB 3.0</h4>
+          <img  class="lazyload" src="/assets/silk_db_3.png">
+        </a>        
+        
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/spatial_db/"><h4>Spatial DB</h4>
+          <img  class="lazyload" src="/assets/spatialdb.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/svist4get/"><h4>svist4get</h4>
+          <img  class="lazyload" src="/assets/svist4get.png">
+        </a>        
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/swav/"><h4>SWAV</h4>
+          <img  class="lazyload" src="/assets/swav.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/synteny_explorer/"><h4>Synteny Explorer</h4>
+          <img  class="lazyload" src="/assets/syntenyexplorer.png">
+        </a>        
+        
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/tfmotifview/"><h4>TFmotifView</h4>
+          <img  class="lazyload" src="/assets/tfmotifview.png">
+        </a>        
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/trackviewer/"><h4>trackViewer</h4>
+          <img  class="lazyload" src="/assets/trackViewer.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/vcf_plotein/"><h4>VCF Plotein</h4>
+          <img  class="lazyload" src="/assets/vcfplotein.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/vista_synteny/"><h4>Vista Synteny</h4>
+          <img  class="lazyload" src="/assets/vistasynteny.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+          
+  </div>   
+</div> <!-- category end -->
+  
+<div> <!-- category start -->
+  <h2 id="Linear Serial">Linear Serial</h2>
+    <img src = "/icons/arrangement_linear_parallel.png" width="120">
+    
+     
+  <p class="total"> 1 tools</p>
+    <div class="grid-container"  style="display: none;">
+      
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+        
+        <a class="grid-item" href ="/tools/cnvkit/"><h4>CNVkit</h4>
+          <img  class="lazyload" src="/assets/CNV.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+        
+  </div>     
+</div> <!-- category end -->
+
+<div> <!-- category start -->
+  <h2 id="Linear Orthogonal">Linear Orthogonal</h2>
+    <img src = "/icons/arrangement_linear_orthogonal.png" width="120">
+    
+     
+  <p class="total"> 11 tools</p>
+  <div class="grid-container"  style="display: none;">
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+        
+      
+    
+      
+        
+      
+        
+        <a class="grid-item" href ="/tools/combo/"><h4>Combo</h4>
+          <img  class="lazyload" src="/assets/Combo.png">
+        </a>        
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/cooler/"><h4>Cooler</h4>
+          <img  class="lazyload" src="/assets/cooler.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/galaxy_hicexplorer/"><h4>Galaxy HiCExplorer</h4>
+          <img  class="lazyload" src="/assets/hicexplorer.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/gepard/"><h4>Gepard</h4>
+          <img  class="lazyload" src="/assets/gepard.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/higlass/"><h4>HiGlass</h4>
+          <img  class="lazyload" src="/assets/HiGlass.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/hipiler/"><h4>HiPiler</h4>
+          <img  class="lazyload" src="/assets/hipiler.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/juiceboxjs/"><h4>Juiceboxjs</h4>
+          <img  class="lazyload" src="/assets/juiceboxjs.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/my5c/"><h4>my5c</h4>
+          <img  class="lazyload" src="/assets/my5c.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+        
+        <a class="grid-item" href ="/tools/silkdb_3.0/"><h4>SilkDB 3.0</h4>
+          <img  class="lazyload" src="/assets/silk_db_3.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/synmap2/"><h4>SynMap2</h4>
+          <img  class="lazyload" src="/assets/synmap2.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+        <a class="grid-item" href ="/tools/vista_dot/"><h4>Vista Dot</h4>
+          <img  class="lazyload" src="/assets/vistadot.png">
+        </a>        
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+       
+  </div>      
+</div> <!-- category end -->
+<script src="/scripts/attributes.js"></script>
+
+</div>
+
+      </article>
+      <footer class="footer">
+        <img src="/assets/hms.svg" alt="Harvard Medical School" style="max-width: 10rem;">
+        <p>Gehlenborg Lab <br>
+          Department of Biomedical Informatics <br>
+          Harvard Medical School</p>
+      </footer>
+    </div>     
+    
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+    <script>
+    function goToSearch(){
+      window.location = "/#search"
+    }  
+
+    </script>
+
+  </body>
+</html>

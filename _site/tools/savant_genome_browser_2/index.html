@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      Savant Genome Browser 2 &middot; GenoCat.tools
+    
+  </title>
+
+  
+  <link rel="canonical" href="/tools/savant_genome_browser_2/">
+  
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Recursive:wght,CASL@300..800,1&display=swap"> -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Recursive:wght,CASL,CRSV@300..900,0..1,0..1&display=swap">
+
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
+  <link rel="manifest" href="/public/site.webmanifest">
+
+  <link rel="alternate" type="application/atom+xml" title="GenoCat.tools" href="/atom.xml">
+
+  <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+  <script>
+    lazyload(); // console.log("lazy load on");
+  </script>  
+
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Savant Genome Browser 2" />
+<meta name="author" content="Gehlenborg Lab" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A database and taxonomy for genomic visualization tools" />
+<meta property="og:description" content="A database and taxonomy for genomic visualization tools" />
+<link rel="canonical" href="/tools/savant_genome_browser_2/" />
+<meta property="og:url" content="/tools/savant_genome_browser_2/" />
+<meta property="og:site_name" content="GenoCat.tools" />
+<meta property="og:image" content="/assets/savant.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-08T11:05:00-05:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="/assets/savant.png" />
+<meta property="twitter:title" content="Savant Genome Browser 2" />
+<script type="application/ld+json">
+{"image":"/assets/savant.png","headline":"Savant Genome Browser 2","url":"/tools/savant_genome_browser_2/","dateModified":"2021-03-08T11:05:00-05:00","datePublished":"2021-03-08T11:05:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"/tools/savant_genome_browser_2/"},"author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"A database and taxonomy for genomic visualization tools","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-145092297-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  
+  
+</head>
+
+
+  <body class="sidebar-overlay">
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <!-- <div class="sidebar-item">
+    <p>A database and taxonomy for genomic visualization tools</p>
+  </div> -->
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">About</a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/submission/">Contribute a tool!</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/taxonomy/">Taxonomy</a>
+        
+      
+    
+
+    <!-- <span class="sidebar-nav-item">Currently v1.0.0</span> -->
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2021 Gehlenborg Lab.
+    </p>
+  </div>
+</div>
+
+
+    <div class="wrapper">
+      <div class="head">
+        <header class="logo">
+          <a href="/" title="Home"><img src="/public/header.svg"/></a>
+        </header>
+          <input class="aside aside-1" type="search" id="mySearch" onClick="goToSearch()" placeholder="SEARCH"/>
+          <aside class="aside aside-2"><a href="/#sort" >SORT</a></aside>
+          <aside class="aside aside-3"><a href="/#filter" >FILTER</a></aside>
+      </div>
+      
+
+      <article class="main page">
+
+        <div id="breadcrumbs">
+
+<a href="/">Home</a>
+
+  
+    / <a href="/tools/">Tools</a>
+  
+
+  
+    / Savant Genome Browser 2
+  
+
+</div>
+
+         <div class="page">
+
+  <h1 class="page-title">Savant Genome Browser 2</h1>
+    <!-- <style>
+  body {
+    font-family: "Lato", sans-serif;
+  }
+  a{
+    color: black;
+  }
+  /* visited link */
+  a:visited {
+    color: black;
+  }
+  .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+          }
+  .button {
+           background-color: var(--border-color);
+           border: 2px solid var(--border-color);
+           padding: 0.5px 10px;
+           text-align: center;
+           text-decoration: none;
+           display: inline-block;
+           margin: 2px 1px;
+           border-radius: 15px;
+           color: white;
+           font-weight: normal;
+           /* font-size: 10px; */
+         }
+  .button:hover{
+        background-color: white;
+        color: black;
+        }
+  .layout {
+        border-color: var(--border-color);
+        color: white;
+        text-decoration: none;
+        }
+  .layout:visited {
+        background-color: var(--border-color);
+        color: white;
+        }
+  .layout:hover {
+        background-color: var(--border-color);
+        color: white;
+        }
+  .column {
+        float: left;
+        width: 33.33%;
+        word-wrap: break-word;
+      }
+
+      /* Clear floats after the columns */
+  .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+        @media screen and (max-height: 450px) {
+          .sidenav {padding-top: 15px;}
+          .sidenav a {font-size: 18px;}
+        }
+        /* On screens that are less than 700px wide, make the sidebar into a topbar */
+      @media screen and (max-width: 700px) {
+        .sidebar {
+          width: 100%;
+          height: auto;
+          position: relative;
+        }
+        .sidebar a {float: left;}
+        div.content {margin-left: 0;}
+      }
+      /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+      @media screen and (max-width: 400px) {
+        .sidebar a {
+          text-align: center;
+          float: none;
+        }
+      }
+}
+  </style> -->
+  
+  <div class="tool">
+    <div class="section">
+      <img src = "/assets/savant.png" class = "center">
+      <small>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3394255/</small>
+
+    </div>
+
+    <div class="section">
+      <h2>Methods</h2>
+      
+         <a href="/attributes/layout/" class="button layout" style="--border-color: #CC79A7; --color: #CC79A7;">linear</a>
+      
+      
+         <a href="/attributes/views/" class="button layout" style="--border-color: #A4B3B6; --color: #A4B3B6;">multiple view</a>
+      
+      
+         <a href="/attributes/scales/" class="button layout" style="--border-color:  #56B4E9; --color:  #5680E9;">single scale</a>
+      
+      
+         <a href="/attributes/focus/" class="button layout" style="--border-color: #F0E442; --color: #F0E442;">single focus</a>
+      
+      
+         <a href="/attributes/partition/" class="button layout" style="--border-color: #009E73; --color: #009E73;">segregated</a>
+      
+      
+         <a href="/attributes/abstraction/" class="button layout" style="--border-color: #0072B2; --color: #0072B2;">no abstraction</a>
+      
+      
+         <a href="/attributes/arrangement/" class="button layout" style="--border-color: #D55E00; --color: #D55E00;">no arrangement</a>
+      
+      
+         <a href="/attributes/interconnection_type/" class="button layout" style="--border-color: #E69F00; --color: #E69F00;">within interconnection</a>
+      
+      
+        <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">segment sparse type</a>
+      
+        <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">segment contiguous type</a>
+      
+        <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">point sparse type</a>
+      
+        <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">point contiguous type</a>
+      
+    </div>
+    <div class="section">
+      <h2>Tool</h2>
+
+          
+              <p class="button layout" style="--border-color: #0C0032; --color: #0C0032;">Access  Format: web application</p>
+          
+          
+              <p class="button layout" style="--border-color: #240090; --color: #240090;">Supported Files: na</p>
+          
+          
+              <p class="button layout" style="--border-color: #3500D3; --color: #3500D3;">License: open source</p>
+          
+
+          <div class="row">
+            <div class="column">
+              <h3>Tool name: </h3> Savant Genome Browser 2
+            </div>
+            <div class="column">
+              <h3>Tool Link: </h3> <a href="www.savantbrowser.com" target="_blank">www.savantbrowser.com</a>
+            </div>
+            <div class="column">
+              <h3>Documentation: </h3> <a href="n/a" target="_blank">n/a</a>
+            </div>
+          </div>
+    </div>
+  </div>
+  <div class="paper">
+    <h2>Paper</h2>
+    <h3>Savant Genome Browser 2: visualization and analysis for population-scale genomics.</h3>
+    <p><small>Fiume M, Smith EJM, Brook A, Strbenac D, Turner B, Mezlini AM, et al. Savant Genome Browser 2: visualization and analysis for population-scale genomics. Nucleic Acids Res. academic.oup.com; 2012;40: W615–21.</small>
+    
+    <br>
+    Cited by: 305</p>
+    <h4>Abstract</h4>
+    <p>
+    High-throughput sequencing (HTS) technologies are providing an unprecedented capacity for data generation, and there is a corresponding need for efficient data exploration and analysis capabilities. Although most existing tools for HTS data analysis are developed for either automated (e.g. genotyping) or visualization (e.g. genome browsing) purposes, such tools are most powerful when combined. For example, integration of visualization and computation allows users to iteratively refine their analyses by updating computational parameters within the visual framework in real-time. Here we introduce the second version of the Savant Genome Browser, a standalone program for visual and computational analysis of HTS data. Savant substantially improves upon its predecessor and existing tools by introducing innovative visualization modes and navigation interfaces for several genomic datatypes, and synergizing visual and automated analyses in a way that is powerful yet easy even for non-expert users. We also present a number of plugins that were developed by the Savant Community, which demonstrate the power of integrating visual and automated analyses using Savant. The Savant Genome Browser is freely available (open source) at www.savantbrowser.com.
+    </p>
+  </div>
+
+  <a class="u-url" href="/tools/savant_genome_browser_2/" hidden></a>
+
+
+</div>
+
+      </article>
+      <footer class="footer">
+        <img src="/assets/hms.svg" alt="Harvard Medical School" style="max-width: 10rem;">
+        <p>Gehlenborg Lab <br>
+          Department of Biomedical Informatics <br>
+          Harvard Medical School</p>
+      </footer>
+    </div>     
+    
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+    <script>
+    function goToSearch(){
+      window.location = "/#search"
+    }  
+
+    </script>
+
+  </body>
+</html>
