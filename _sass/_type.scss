@@ -14,6 +14,12 @@ h1 {
   font-size: 2rem;
 }
 
+h1.page-title, .filterDiv h4 {
+  font-variation-settings: 'CASL' 1, 'CRSV' 1;
+
+  a { color: var(--geno-200); }
+}
+
 h2 {
   margin-top: 1rem;
   font-size: 1.5rem;
@@ -32,6 +38,7 @@ h4, h5, h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  font-weight: 400;
 }
 
 ul, ol, dl {
@@ -86,7 +93,9 @@ figure {
   margin: 0;
 }
 
-
+small {
+  line-height: 1.25rem;
+}
 // Markdown footnotes
 //
 // See the example content post for an example.
@@ -123,4 +132,8 @@ a[href^="#fnref:"] {
     font-weight: 900;
     text-transform: uppercase;
   }
+}
+.paper h3 {
+  color: var(--geno-700);
+  font-weight: 800;
 }

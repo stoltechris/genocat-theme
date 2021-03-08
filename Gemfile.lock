@@ -83,6 +83,7 @@ GEM
 
 PLATFORMS
   universal-darwin-20
+  x86_64-darwin-17
 
 DEPENDENCIES
   bundler (~> 2.1)

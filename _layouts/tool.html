@@ -88,13 +88,13 @@ layout: page
   </style> -->
   
   <div class="tool">
-    <div>
+    <div class="section">
       <img src = "{{site.baseurl}}{{ page.image }}" class = "center">
       <small>{{page.image_location}}</small>
 
     </div>
 
-    <div>
+    <div class="section">
       <h2>Methods</h2>
       {% for items in  page.genome_layout %}
          <a href="{{site.baseurl}}/attributes/layout/" class="button layout" style="--border-color: #CC79A7; --color: #CC79A7;">{{ items }}</a>
@@ -123,7 +123,8 @@ layout: page
       {% for items in  page.feature_type %}
         <a href="{{site.baseurl}}/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">{{ items }} type</a>
       {%endfor%}
-
+    </div>
+    <div class="section">
       <h2>Tool</h2>
 
           {% for items in  page.access_format %}
@@ -148,19 +149,19 @@ layout: page
             </div>
           </div>
     </div>
-    <div>
-      <h2>Paper</h2>
-      <h3>{{page.paper_title}}</h3>
-      <p>
-      {{ page.citation }}
-      <br>
-      Cited by: {{page.citation_count}}</p>
-      <h4>Abstract</h4>
-      <p>
-      {{ page.abstract }}
-      </p>
-    </div>
+  </div>
+  <div class="paper">
+    <h2>Paper</h2>
+    <h3>{{page.paper_title}}</h3>
+    <p><small>{{ page.citation }}</small>
+    
+    <br>
+    Cited by: {{page.citation_count}}</p>
+    <h4>Abstract</h4>
+    <p>
+    {{ page.abstract }}
+    </p>
+  </div>
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 
-</div>

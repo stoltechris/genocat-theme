@@ -35,7 +35,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
   <script>
-    lazyload(); console.log("lazy load on");
+    lazyload(); // console.log("lazy load on");
   </script>  
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
@@ -51,7 +51,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Home" />
 <script type="application/ld+json">
-{"headline":"Home","url":"/","name":"GenoCat.tools","author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"A database and taxonomy for genomic visualization tools","@type":"WebSite","@context":"https://schema.org"}</script>
+{"@type":"WebSite","url":"/","name":"GenoCat.tools","author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"A database and taxonomy for genomic visualization tools","headline":"Home","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -4054,10 +4054,9 @@
     <script src="/scripts/sortBy.js"></script>
     <script>
       
-    // function scrollToTop() { 
-    //   window.scrollTo(0, 0);
-    // } 
-    // window.onload = scrollToTop();
+    function scrollToTop() { 
+      window.scrollTo(0, 0);
+    } 
 
     function goToSearch(){
       window.location = "/#search"

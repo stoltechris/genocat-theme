@@ -101,7 +101,7 @@ font-size: smaller;
           border: 2px solid var(--geno-250);
           border-radius: 1rem;
           font: 400 .7rem 'Recursive';
-          float:right;
+          float: right;
           height: 1.2rem;
           width: 1.2rem;
         }
@@ -156,11 +156,19 @@ font-size: smaller;
   padding: 0 1rem;
   border-radius: 1rem;
 }
+.tool {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
 
-.left {
-  width: 30%;
-}
-.right {
-  width: 70%;
-  background-color: #F5F5F5;
+  .section {
+    padding: 0 0.5rem;
+  }
+
+  .paper {
+    // grid-column: 1 / span 2;
+    width: 90%;
+
+      p { font-weight: 400; }
+  }
 }
