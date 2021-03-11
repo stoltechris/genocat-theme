@@ -22,7 +22,7 @@ document.getElementById("byName").onclick = function() {
   sortByName();
 }
 
-function click_filter(id) {
+function click_filter(id) { // console.log("clicked ", id);
   var tool = document.getElementById(id);
   var name = tool.getAttribute("name");
   // console.log("name of clicked filter: "+name);

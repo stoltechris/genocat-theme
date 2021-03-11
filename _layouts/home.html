@@ -13,11 +13,10 @@
           <a href="{{ site.baseurl }}/" title="Home"><img src="/public/header.svg"/></a>
         </header>
         <input class="aside aside-1" type="search" id="mySearch" onkeyup="search()" onClick="goToSearch()" placeholder="SEARCH"/>
-        <aside class="aside aside-2" onClick="activate()"><a href="/#sort">SORT</a></aside>
-        <aside class="aside aside-3"><a href="/#filter" onClick="scrollToTop()">FILTER</a></aside>
+        <aside class="aside aside-2" ><a href="/#sort">SORT</a></aside>
+        <aside class="aside aside-3"><a href="/#filter" >FILTER</a></aside>
       </div>
       <p><span id="results"> </span> <span class="loader hide-loader" id="loader"></span></p>
-      
 
       {% include sort-and-filter.html %}
 
@@ -61,8 +60,6 @@
         }
       });
     }
-
     </script>
-
   </body>
 </html>

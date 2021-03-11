@@ -51,7 +51,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Home" />
 <script type="application/ld+json">
-{"headline":"Home","url":"/","name":"GenoCat.tools","author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"A database and taxonomy for genomic visualization tools","@type":"WebSite","@context":"https://schema.org"}</script>
+{"@type":"WebSite","url":"/","name":"GenoCat.tools","author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"A database and taxonomy for genomic visualization tools","headline":"Home","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -110,7 +110,7 @@
     
       
         
-          <a class="sidebar-nav-item" href="/submission/">Contribute a tool!</a>
+          <a class="sidebar-nav-item" href="/submission/">Contribute a tool</a>
         
       
     
@@ -138,11 +138,10 @@
           <a href="/" title="Home"><img src="/public/header.svg"/></a>
         </header>
         <input class="aside aside-1" type="search" id="mySearch" onkeyup="search()" onClick="goToSearch()" placeholder="SEARCH"/>
-        <aside class="aside aside-2" onClick="activate()"><a href="/#sort">SORT</a></aside>
-        <aside class="aside aside-3"><a href="/#filter" onClick="scrollToTop()">FILTER</a></aside>
+        <aside class="aside aside-2" ><a href="/#sort">SORT</a></aside>
+        <aside class="aside aside-3"><a href="/#filter" >FILTER</a></aside>
       </div>
       <p><span id="results"> </span> <span class="loader hide-loader" id="loader"></span></p>
-      
 
       <div id="sort">
   <label for="byName"><input type="radio" id="byName" name="sort" checked/> Sort by name</label>
@@ -153,85 +152,85 @@
   User Preferences
   <details>
     <summary>Usage Format</summary>
-    <input type="checkbox" id="web application" name = "access_format"/><label for="web application">Web Application</label>
-    <input type="checkbox" id="standalone app" name = "access_format"/><label for="standalone app">Standalone App</label>
-    <input type="checkbox" id="programming library" name = "access_format"/><label for="programming library">Programming Library </label>
+    <label for="web application"><input type="checkbox" id="web application" name = "access_format"/>Web Application</label>
+    <label for="standalone app"><input type="checkbox" id="standalone app" name = "access_format"/>Standalone App</label>
+    <label for="programming library"><input type="checkbox" id="programming library" name = "access_format"/>Programming Library </label>
   </details>
   <details>
     <summary>License</summary>
-    <input type="checkbox" id="open source" name = "license_form"/><label for="open source">Open Source</label>
-    <input type="checkbox" id="commercial" name = "license_form"/><label for="commercial">Commercial</label>
-    <input type="checkbox" id="unknown" name = "license_form"/><label for="unknown">Unknown </label>
+    <label for="open source"><input type="checkbox" id="open source" name = "license_form"/>Open Source</label>
+    <label for="commercial"><input type="checkbox" id="commercial" name = "license_form"/>Commercial</label>
+    <label for="unknown"><input type="checkbox" id="unknown" name = "license_form"/>Unknown </label>
   </details>
   <details>
   <summary>Input File Formats</summary>
-  <input type="checkbox" id="notapplicable" name = "supported_files"/><label for="notapplicable">None</label>
-  <input type="checkbox" id="bed" name = "supported_files"/><label for="bed">BED</label>
-  <input type="checkbox" id="fasta" name = "supported_files"/><label for="fasta">FASTA </label>
-  <input type="checkbox" id="sambamcram" name = "supported_files"/><label for="sambamcram">SAM/BAM/CRAM </label>
-  <input type="checkbox" id="vcf" name = "supported_files"/><label for="vcf">VCF</label>
-  <input type="checkbox" id="txttab" name = "supported_files"/><label for="txttab">txt/tab </label>
-  <input type="checkbox" id="other" name = "supported_files"/><label for="other">Other</label>
+  <label for="notapplicable"><input type="checkbox" id="notapplicable" name = "supported_files"/>None</label>
+  <label for="bed"><input type="checkbox" id="bed" name = "supported_files"/>BED</label>
+  <label for="fasta"><input type="checkbox" id="fasta" name = "supported_files"/>FASTA </label>
+  <label for="sambamcram"><input type="checkbox" id="sambamcram" name = "supported_files"/>SAM/BAM/CRAM </label>
+  <label for="vcf"><input type="checkbox" id="vcf" name = "supported_files"/>VCF</label>
+  <label for="txttab"><input type="checkbox" id="txttab" name = "supported_files"/>txt/tab </label>
+  <label for="other"><input type="checkbox" id="other" name = "supported_files"/>Other</label>
 </details>
   <br>
   Data Taxonomy
   <details>
     <summary>Interconnection</summary>
-    <input type="checkbox" id="no" name="interconnection_type"/> <label for="no">None </label>
-    <input type="checkbox" id="within" name="interconnection_type"/><label for="within">Within </label>
-    <input type="checkbox" id="between" name="interconnection_type"/><label for="between">Between </label>
+    <label for="no"><input type="checkbox" id="no" name="interconnection_type"/> None </label>
+    <label for="within"><input type="checkbox" id="within" name="interconnection_type"/>Within </label>
+    <label for="between"><input type="checkbox" id="between" name="interconnection_type"/>Between </label>
   </details>
   <details>
     <summary>Feature Type</summary>
-    <input type="checkbox" id="segment sparse" name="feature_type"/> <label for="segment sparse">Segment Sparse </label>
-    <input type="checkbox" id="segment contiguous" name="feature_type"/><label for="segment contiguous">Segment Contiguous </label>
-    <input type="checkbox" id="point sparse" name="feature_type"/><label for="point sparse">Point Sparse </label>
-    <input type="checkbox" id="point contiguous" name="feature_type"/><label for="point contiguous">Point Contiguous </label>
+    <label for="segment sparse"><input type="checkbox" id="segment sparse" name="feature_type"/> Segment Sparse </label>
+    <label for="segment contiguous"><input type="checkbox" id="segment contiguous" name="feature_type"/>Segment Contiguous </label>
+    <label for="point sparse"><input type="checkbox" id="point sparse" name="feature_type"/>Point Sparse </label>
+    <label for="point contiguous"><input type="checkbox" id="point contiguous" name="feature_type"/>Point Contiguous </label>
   </details>
   <br>
   Coordinate System
   <details>
     <summary>Layout</summary>
-    <input type="checkbox" id="circular" name = "layout"/> <label for="circular">Circular </label>
-    <input type="checkbox" id="linear" name = "layout"/> <label for="linear">Linear </label>
-    <input type="checkbox" id="spacefilling" name = "layout"/> <label for="spacefilling">Space Filling </label>
-    <input type="checkbox" id="spatial" name = "layout"/> <label for="spatial">Spatial </label>
+    <label for="circular"><input type="checkbox" id="circular" name = "layout"/> Circular </label>
+    <label for="linear"><input type="checkbox" id="linear" name = "layout"/> Linear </label>
+    <label for="spacefilling"><input type="checkbox" id="spacefilling" name = "layout"/> Space Filling </label>
+    <label for="spatial"><input type="checkbox" id="spatial" name = "layout"/> Spatial </label>
   </details>
   <details>
     <summary>Partition</summary>
-    <input type="checkbox" id="contiguous" name = "partition"/> <label for="contiguous">Contiguous </label>
-    <input type="checkbox" id="segregated" name = "partition"/> <label for="segregated">Segregated </label>
+    <label for="contiguous"><input type="checkbox" id="contiguous" name = "partition"/> Contiguous </label>
+    <label for="segregated"><input type="checkbox" id="segregated" name = "partition"/> Segregated </label>
   </details>
   <details>
     <summary>Abstraction</summary>
-    <input type="checkbox" id="noab" name = "abstraction"/> <label for="noab"> None </label>
-    <input type="checkbox" id="partialab" name = "abstraction"/> <label for="partialab"> Partial </label>
-    <input type="checkbox" id="completeab" name = "abstraction"/> <label for="completeab"> Complete </label>
+    <label for="noab"><input type="checkbox" id="noab" name = "abstraction"/>  None </label>
+    <label for="partialab"><input type="checkbox" id="partialab" name = "abstraction"/> Partial </label>
+    <label for="completeab"><input type="checkbox" id="completeab" name = "abstraction"/>  Complete </label>
   </details>
   <details>
     <summary>Arrangement</summary>
-    <input type="checkbox" id="linear parallel" name = "arrangement"/> <label for="linear parallel"> Linear Parallel </label>
-    <input type="checkbox" id="linear serial" name = "arrangement"/> <label for="linear serial"> Linear Serial </label>
-    <input type="checkbox" id="linear orthogonal" name = "arrangement"/> <label for="linear orthogonal"> Linear Orthogonal </label>
-    <input type="checkbox" id="circular parallel" name = "arrangement"/> <label for="circular parallel"> Circular Parallel </label>
-    <input type="checkbox" id="circular serial" name = "arrangement"/> <label for="circular serial"> Circular Serial </label>
+    <label for="linear parallel"><input type="checkbox" id="linear parallel" name = "arrangement"/>  Linear Parallel </label>
+    <label for="linear serial"><input type="checkbox" id="linear serial" name = "arrangement"/>  Linear Serial </label>
+    <label for="linear orthogonal"><input type="checkbox" id="linear orthogonal" name = "arrangement"/>  Linear Orthogonal </label>
+    <label for="circular parallel"><input type="checkbox" id="circular parallel" name = "arrangement"/>  Circular Parallel </label>
+    <label for="circular serial"><input type="checkbox" id="circular serial" name = "arrangement"/>  Circular Serial </label>
   </details>
   <br>
   View Configurations
   <details>
     <summary>View</summary>
-    <input type="checkbox" id="single-view" name = "view"/> <label for="single-view"> Single </label>
-    <input type="checkbox" id="multiple-view" name = "view"/> <label for="multiple-view"> Multiple </label>
+    <label for="single-view"> <input type="checkbox" id="single-view" name = "view"/> Single </label>
+    <label for="multiple-view"><input type="checkbox" id="multiple-view" name = "view"/>  Multiple </label>
   </details>
   <details>
     <summary>Scale</summary>
-    <input type="checkbox" id="single-scale" name = "scale"/> <label for="single-scale"> Single </label>
-    <input type="checkbox" id="multiple-scale" name = "scale"/> <label for="multiple-scale"> Multiple </label>
+    <label for="single-scale"><input type="checkbox" id="single-scale" name = "scale"/>  Single </label>
+    <label for="multiple-scale"> <input type="checkbox" id="multiple-scale" name = "scale"/> Multiple </label>
   </details>
   <details>
     <summary>Focus</summary>
-    <input type="checkbox" id="single-focus" name = "focus"/> <label for="single-focus"> Single </label>
-    <input type="checkbox" id="multiple-focus" name = "focus"/> <label for="multiple-focus"> Multiple </label>
+    <label for="single-focus"><input type="checkbox" id="single-focus" name = "focus"/>  Single </label>
+    <label for="multiple-focus"><input type="checkbox" id="multiple-focus" name = "focus"/>  Multiple </label>
   </details>
 </details>
 </div>
@@ -4080,8 +4079,6 @@
         }
       });
     }
-
     </script>
-
   </body>
 </html>
