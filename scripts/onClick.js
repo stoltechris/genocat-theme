@@ -22,6 +22,11 @@ document.getElementById("byName").onclick = function() {
   sortByName();
 }
 
+function openSection(id, el) {
+  document.getElementById(id).classList.toggle("open");
+  el.classList.toggle("act");
+}
+
 function click_filter(id) { // console.log("clicked ", id);
   var tool = document.getElementById(id);
   var name = tool.getAttribute("name");
