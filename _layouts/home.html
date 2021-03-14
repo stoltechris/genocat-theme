@@ -16,8 +16,11 @@
         <aside class="aside aside-2" ><a href="/#sort">SORT</a></aside>
         <aside class="aside aside-3"><a href="/#filter" >FILTER</a></aside>
       </div>
-      <p><span id="results"> </span> <span class="loader hide-loader" id="loader"></span></p>
-
+      <div id="status">
+        <p><span id="results"> </span> <span class="loader hide-loader" id="loader"></span></p>
+        <p id="filterTags"></p>
+        <p id="sortOrder">sorted by name</p>
+      </div>
       {% include sort-and-filter.html %}
 
       <article class="main">

@@ -13,5 +13,5 @@ function search() {
       x[i].style.display = "none";
     }
   }
-  document.getElementById("results").innerHTML = num + " result" + (num > 1 ? "s" : "");
+  document.getElementById("results").innerHTML = num + " tool" + (num != 1 ? "s" : "");
 }

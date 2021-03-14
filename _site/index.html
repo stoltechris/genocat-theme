@@ -141,8 +141,11 @@
         <aside class="aside aside-2" ><a href="/#sort">SORT</a></aside>
         <aside class="aside aside-3"><a href="/#filter" >FILTER</a></aside>
       </div>
-      <p><span id="results"> </span> <span class="loader hide-loader" id="loader"></span></p>
-
+      <div id="status">
+        <p><span id="results"> </span> <span class="loader hide-loader" id="loader"></span></p>
+        <p id="filterTags"></p>
+        <p id="sortOrder">sorted by name</p>
+      </div>
       <div id="sort">
   <label for="byName"><input type="radio" id="byName" name="sort" checked/> Sort by name</label>
   <label for="byYear"><input type="radio" id="byYear" name="sort"/> Sort by year (most recent)</label>

@@ -1,24 +1,24 @@
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
+// function myFunction() {
+//   document.getElementById("myDropdown").classList.toggle("show");
+// }
 
-function filterFunction() {
-  var input, filter, a, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  div = document.getElementById("myDropdown");
-  a = div.getElementsByTagName("a");
-  for (i = 0; i < a.length; i++) {
-    txtValue = a[i].textContent || a[i].innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      a[i].style.display = "";
-    } else {
-      a[i].style.display = "none";
-    }
-  }
-}
+// function filterFunction() {
+//   var input, filter, a, i;
+//   input = document.getElementById("myInput");
+//   filter = input.value.toUpperCase();
+//   div = document.getElementById("myDropdown");
+//   a = div.getElementsByTagName("a");
+//   for (i = 0; i < a.length; i++) {
+//     txtValue = a[i].textContent || a[i].innerText;
+//     if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//       a[i].style.display = "";
+//     } else {
+//       a[i].style.display = "none";
+//     }
+//   }
+// }
 
 
 checkbox_filter([]);
@@ -41,7 +41,7 @@ function checkbox_filter(tags) {
       }
       k=0;
       while (k < tags[j].length) {
-        // console.log("curr tag is "+tags[j][k]);
+        // console.log(/*"curr tag is "+tags[j][k],*/ " all tags: " , tags.flat()); 
         if (tools[i].className.indexOf(tags[j][k]) != -1 || tags[j].length == 0) {
           //if tool contains at least one of the tags
           // console.log("found match: tool is "+tagList[1]+" tag is"+tags[j][k]);
@@ -58,7 +58,8 @@ function checkbox_filter(tags) {
       j++;
     }
   }
-  document.getElementById("results").innerHTML = num + " result" + (num > 1 ? "s" : "");
+  document.getElementById("results").innerHTML = num + " tool" + (num != 1 ? "s" : "");
+  updateFilterTags(tags.flat())
 }
 
 // var myCollection = document.getElementsByClassName("filterDiv ");
@@ -89,4 +90,19 @@ function removeClass(element, name) {
     }
   }
   element.className = arr1.join(" ");
+}
+
+function updateFilterTags(filterList) {
+// console.log(filterList);
+let filterpara = document.getElementById("filterTags");
+let filters = "";
+for(let n = 0; n < filterList.length; n++) {
+    let filterTagHTML = "<span onclick='unclick(\"" + filterList[n] + "\")'>"+ filterList[n] +"</span>";
+    filters += filterTagHTML;
+  }
+  filterpara.innerHTML = filters;
+}
+
+function unclick(id) {
+  document.getElementById(id).click();
 }

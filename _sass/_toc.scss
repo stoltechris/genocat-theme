@@ -95,6 +95,13 @@ input, textarea, select {
   width: 1rem;
 }
 
+#status {
+  width: 100%;
+  position: relative;
+
+  p { display: inline-block; }
+}
+
 .loader {
   border: 5px solid rgba(200,200,200,0.2);
   border-radius: 50%;
@@ -104,8 +111,9 @@ input, textarea, select {
   height: 1.5rem;
   margin-top: -10px;
   animation: spin 2s linear infinite;
-  position: relative;
-  top: 0.5rem;
+  position: absolute;
+  top: 2.5rem;
+  left: 10px;
 }
 
 @keyframes spin {
@@ -119,6 +127,53 @@ display:none;
 #results {
 color: var(--geno-200);
 font-size: smaller;
+}
+
+#filterTags span {
+  background-color: var(--geno-300);
+  color: var(--geno-700);
+  padding: 0.25rem .5rem 0.25rem 0.35rem;
+  border-radius: 0.25rem;
+  font-size: x-small;
+  position: relative;
+  cursor: pointer;
+  margin-left: 0.6rem;
+  max-width: 90px;
+  display: inline-block;
+
+  &::after {
+    right: -0.5rem;
+    bottom: -0.5rem;
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    display: flex;
+    // z-index: 11;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--geno-700);
+    border-radius: 50%;
+    color: var(--geno-250);
+    content: "×";
+    cursor: pointer;
+    font-size: .8rem;
+    opacity: 0.7;
+  }
+
+  &:hover::after {
+    opacity:1;
+  }
+}
+#sortOrder {
+  font-size: smaller;
+  color: var(--geno-800);
+}
+// .panel .close {
+//   display: block;
+// }
+.panel .close
+.panel .close:hover::after { 
+    background-color: var(--primary-highlight);
 }
 
 .imag {
