@@ -50,12 +50,12 @@
 <meta property="og:site_name" content="GenoCat.tools" />
 <meta property="og:image" content="/assets/GBrowse.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-03-14T12:31:41-04:00" />
+<meta property="article:published_time" content="2021-03-15T09:12:13-04:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="/assets/GBrowse.png" />
 <meta property="twitter:title" content="GBrowse" />
 <script type="application/ld+json">
-{"image":"/assets/GBrowse.png","headline":"GBrowse","url":"/tools/gbrowse/","dateModified":"2021-03-14T12:31:41-04:00","datePublished":"2021-03-14T12:31:41-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"/tools/gbrowse/"},"author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"A database and taxonomy for genomic visualization tools","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"image":"/assets/GBrowse.png","headline":"GBrowse","url":"/tools/gbrowse/","dateModified":"2021-03-15T09:12:13-04:00","datePublished":"2021-03-15T09:12:13-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"/tools/gbrowse/"},"author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"A database and taxonomy for genomic visualization tools","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -166,172 +166,101 @@
          <div class="page">
 
   <h1 class="page-title">GBrowse</h1>
-    <!-- <style>
-  body {
-    font-family: "Lato", sans-serif;
-  }
-  a{
-    color: black;
-  }
-  /* visited link */
-  a:visited {
-    color: black;
-  }
-  .center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-          }
-  .button {
-           background-color: var(--border-color);
-           border: 2px solid var(--border-color);
-           padding: 0.5px 10px;
-           text-align: center;
-           text-decoration: none;
-           display: inline-block;
-           margin: 2px 1px;
-           border-radius: 15px;
-           color: white;
-           font-weight: normal;
-           /* font-size: 10px; */
-         }
-  .button:hover{
-        background-color: white;
-        color: black;
-        }
-  .layout {
-        border-color: var(--border-color);
-        color: white;
-        text-decoration: none;
-        }
-  .layout:visited {
-        background-color: var(--border-color);
-        color: white;
-        }
-  .layout:hover {
-        background-color: var(--border-color);
-        color: white;
-        }
-  .column {
-        float: left;
-        width: 33.33%;
-        word-wrap: break-word;
-      }
+  <div class="section">
+  <img src = "/assets/GBrowse.png" class = "center">
+  <small>http://gmod.org/wiki/GBrowse#Screenshots</small>
 
-      /* Clear floats after the columns */
-  .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-        @media screen and (max-height: 450px) {
-          .sidenav {padding-top: 15px;}
-          .sidenav a {font-size: 18px;}
-        }
-        /* On screens that are less than 700px wide, make the sidebar into a topbar */
-      @media screen and (max-width: 700px) {
-        .sidebar {
-          width: 100%;
-          height: auto;
-          position: relative;
-        }
-        .sidebar a {float: left;}
-        div.content {margin-left: 0;}
-      }
-      /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-      @media screen and (max-width: 400px) {
-        .sidebar a {
-          text-align: center;
-          float: none;
-        }
-      }
-}
-  </style> -->
-  
-  <div class="tool">
-    <div class="section">
-      <img src = "/assets/GBrowse.png" class = "center">
-      <small>http://gmod.org/wiki/GBrowse#Screenshots</small>
-
-    </div>
-
-    <div class="section">
-      <h2>Methods</h2>
-      
-         <a href="/attributes/layout/" class="button layout" style="--border-color: #CC79A7; --color: #CC79A7;">linear</a>
-      
-      
-         <a href="/attributes/views/" class="button layout" style="--border-color: #A4B3B6; --color: #A4B3B6;">multiple view</a>
-      
-      
-         <a href="/attributes/scales/" class="button layout" style="--border-color:  #56B4E9; --color:  #5680E9;">multiple scale</a>
-      
-      
-         <a href="/attributes/focus/" class="button layout" style="--border-color: #F0E442; --color: #F0E442;">single focus</a>
-      
-      
-         <a href="/attributes/partition/" class="button layout" style="--border-color: #009E73; --color: #009E73;">segregated</a>
-      
-      
-         <a href="/attributes/abstraction/" class="button layout" style="--border-color: #0072B2; --color: #0072B2;">no abstraction</a>
-      
-      
-         <a href="/attributes/arrangement/" class="button layout" style="--border-color: #D55E00; --color: #D55E00;">no arrangement</a>
-      
-      
-      
-        <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">segment sparse type</a>
-      
-        <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">segment contiguous type</a>
-      
-        <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">point sparse type</a>
-      
-        <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">point contiguous type</a>
-      
-    </div>
-    <div class="section">
-      <h2>Tool</h2>
-
-          
-              <p class="button layout" style="--border-color: #0C0032; --color: #0C0032;">Access  Format: standalone app</p>
-          
-          
-              <p class="button layout" style="--border-color: #240090; --color: #240090;">Supported Files: other</p>
-          
-          
-              <p class="button layout" style="--border-color: #3500D3; --color: #3500D3;">License: GPL, Artistic License</p>
-          
-
-          <div class="row">
-            <div class="column">
-              <h3>Tool name: </h3> GBrowse
-            </div>
-            <div class="column">
-              <h3>Tool Link: </h3> <a href="http://gmod.org/wiki/GBrowse" target="_blank">http://gmod.org/wiki/GBrowse</a>
-            </div>
-            <div class="column">
-              <h3>Documentation: </h3> <a href="http://gmod.org/wiki/GBrowse#Documentation" target="_blank">http://gmod.org/wiki/GBrowse#Documentation</a>
-            </div>
-          </div>
-    </div>
-  </div>
-  <div class="paper">
-    <h2>Paper</h2>
-    <h3>Using the Generic Genome Browser (GBrowse).</h3>
-    <p><small>Donlin MJ. Using the Generic Genome Browser (GBrowse). Curr Protoc Bioinformatics. 2009;Chapter 9: Unit 9.9.</small>
+</div>
+<div class="tool">
+  <div class="section">
+    <h2>Methods</h2>
     
-    <br>
-    Cited by: 127</p>
-    <h4>Abstract</h4>
-    <p>
-    A genome browser is software that allows users to visualize DNA, protein, or other sequence features within the context of a reference sequence, such as a chromosome or contig. The Generic Genome Browser (GBrowse) is an open‐source browser developed as part of the Generic Model Organism Database project (Stein et al., 2002). GBrowse can be configured to display genomic sequence features for any organism and is the browser used for the model organisms Drosophila melanogaster (Grumbling and Strelets, 2006) and Caenorhabditis elegans (Schwarz et al., 2006), among others. The software package can be downloaded from the Web and run on a Windows, Mac OS X, or Unix‐type system. Version 1.64, as described in the original protocol, was released in November 2005, but the software is under active development and new versions are released about every six months. This update includes instructions on updating existing data sources with new files from NCBI. Curr. Protoc. Bioinform. 28:9.9.1‐9.9.25. © 2009 by John Wiley & Sons, Inc
-    </p>
+        <a href="/attributes/layout/" class="button layout" style="color: var(--cat-7)">linear</a>
+    
+    
+        <a href="/attributes/views/" class="button layout" style="color: var(--cat-3)">multiple view</a>
+    
+    
+        <a href="/attributes/scales/" class="button layout" style="color: var(--cat-2)">multiple scale</a>
+    
+    
+        <a href="/attributes/focus/" class="button layout" style="color: var(--cat-1)">single focus</a>
+    
+    
+        <a href="/attributes/partition/" class="button layout" style="color: var(--cat-6)">segregated</a>
+    
+    
+        <a href="/attributes/abstraction/" class="button layout" style="color: var(--cat-5)">no abstraction</a>
+    
+    
+        <a href="/attributes/arrangement/" class="button layout" style="color: var(--cat-4)">no arrangement</a>
+    
+    
+    
+      <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">segment sparse type</a>
+    
+      <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">segment contiguous type</a>
+    
+      <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">point sparse type</a>
+    
+      <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">point contiguous type</a>
+    
   </div>
+  <div class="section">
+    <h2>Tool</h2>
+    <table><tr>
+      <td class="labelCol">Access Format</td>
+      <td>
+        
+        <span> standalone app </span>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="labelCol">Supported Files</td>
+      <td>
+        
+        <span> other </span>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="labelCol">License</td>
+      <td>
+        
+            <span> GPL, Artistic License </span>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="labelCol">Tool name</td>
+      <td><h3>GBrowse</h3></td>
+    </tr>
+    <tr>
+      <td class="labelCol">Tool Link</td>
+      <td><a href="http://gmod.org/wiki/GBrowse" target="_blank">http://gmod.org/wiki/GBrowse</a></td>
+    </tr>
+    <tr>
+      <td class="labelCol">Documentation</td>
+      <td><a href="http://gmod.org/wiki/GBrowse#Documentation" target="_blank">http://gmod.org/wiki/GBrowse#Documentation</a></td>
+    </tr>
+  </table>
+  </div>
+</div>
+<div class="paper">
+  <h2>Paper</h2>
+  <h3>Using the Generic Genome Browser (GBrowse).</h3>
+  <p><small>Donlin MJ. Using the Generic Genome Browser (GBrowse). Curr Protoc Bioinformatics. 2009;Chapter 9: Unit 9.9.</small>
+  
+  <br>
+  Cited by: 127</p>
+  <h4>Abstract</h4>
+  <p>
+  A genome browser is software that allows users to visualize DNA, protein, or other sequence features within the context of a reference sequence, such as a chromosome or contig. The Generic Genome Browser (GBrowse) is an open‐source browser developed as part of the Generic Model Organism Database project (Stein et al., 2002). GBrowse can be configured to display genomic sequence features for any organism and is the browser used for the model organisms Drosophila melanogaster (Grumbling and Strelets, 2006) and Caenorhabditis elegans (Schwarz et al., 2006), among others. The software package can be downloaded from the Web and run on a Windows, Mac OS X, or Unix‐type system. Version 1.64, as described in the original protocol, was released in November 2005, but the software is under active development and new versions are released about every six months. This update includes instructions on updating existing data sources with new files from NCBI. Curr. Protoc. Bioinform. 28:9.9.1‐9.9.25. © 2009 by John Wiley & Sons, Inc
+  </p>
+</div>
 
-  <a class="u-url" href="/tools/gbrowse/" hidden></a>
+<a class="u-url" href="/tools/gbrowse/" hidden></a>
 
 
 </div>

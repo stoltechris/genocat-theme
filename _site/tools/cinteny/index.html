@@ -50,12 +50,12 @@
 <meta property="og:site_name" content="GenoCat.tools" />
 <meta property="og:image" content="/assets/Cinteny.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-03-14T12:31:41-04:00" />
+<meta property="article:published_time" content="2021-03-15T09:12:13-04:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="/assets/Cinteny.png" />
 <meta property="twitter:title" content="Cinteny" />
 <script type="application/ld+json">
-{"image":"/assets/Cinteny.png","headline":"Cinteny","url":"/tools/cinteny/","dateModified":"2021-03-14T12:31:41-04:00","datePublished":"2021-03-14T12:31:41-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"/tools/cinteny/"},"author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"A database and taxonomy for genomic visualization tools","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"image":"/assets/Cinteny.png","headline":"Cinteny","url":"/tools/cinteny/","dateModified":"2021-03-15T09:12:13-04:00","datePublished":"2021-03-15T09:12:13-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"/tools/cinteny/"},"author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"A database and taxonomy for genomic visualization tools","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -166,168 +166,97 @@
          <div class="page">
 
   <h1 class="page-title">Cinteny</h1>
-    <!-- <style>
-  body {
-    font-family: "Lato", sans-serif;
-  }
-  a{
-    color: black;
-  }
-  /* visited link */
-  a:visited {
-    color: black;
-  }
-  .center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-          }
-  .button {
-           background-color: var(--border-color);
-           border: 2px solid var(--border-color);
-           padding: 0.5px 10px;
-           text-align: center;
-           text-decoration: none;
-           display: inline-block;
-           margin: 2px 1px;
-           border-radius: 15px;
-           color: white;
-           font-weight: normal;
-           /* font-size: 10px; */
-         }
-  .button:hover{
-        background-color: white;
-        color: black;
-        }
-  .layout {
-        border-color: var(--border-color);
-        color: white;
-        text-decoration: none;
-        }
-  .layout:visited {
-        background-color: var(--border-color);
-        color: white;
-        }
-  .layout:hover {
-        background-color: var(--border-color);
-        color: white;
-        }
-  .column {
-        float: left;
-        width: 33.33%;
-        word-wrap: break-word;
-      }
+  <div class="section">
+  <img src = "/assets/Cinteny.png" class = "center">
+  <small>https://cinteny.cchmc.org/doc/wholegenome.php</small>
 
-      /* Clear floats after the columns */
-  .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-        @media screen and (max-height: 450px) {
-          .sidenav {padding-top: 15px;}
-          .sidenav a {font-size: 18px;}
-        }
-        /* On screens that are less than 700px wide, make the sidebar into a topbar */
-      @media screen and (max-width: 700px) {
-        .sidebar {
-          width: 100%;
-          height: auto;
-          position: relative;
-        }
-        .sidebar a {float: left;}
-        div.content {margin-left: 0;}
-      }
-      /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-      @media screen and (max-width: 400px) {
-        .sidebar a {
-          text-align: center;
-          float: none;
-        }
-      }
-}
-  </style> -->
-  
-  <div class="tool">
-    <div class="section">
-      <img src = "/assets/Cinteny.png" class = "center">
-      <small>https://cinteny.cchmc.org/doc/wholegenome.php</small>
-
-    </div>
-
-    <div class="section">
-      <h2>Methods</h2>
-      
-         <a href="/attributes/layout/" class="button layout" style="--border-color: #CC79A7; --color: #CC79A7;">linear</a>
-      
-      
-         <a href="/attributes/views/" class="button layout" style="--border-color: #A4B3B6; --color: #A4B3B6;">single view</a>
-      
-      
-         <a href="/attributes/scales/" class="button layout" style="--border-color:  #56B4E9; --color:  #5680E9;">single scale</a>
-      
-      
-         <a href="/attributes/focus/" class="button layout" style="--border-color: #F0E442; --color: #F0E442;">single focus</a>
-      
-      
-         <a href="/attributes/partition/" class="button layout" style="--border-color: #009E73; --color: #009E73;">segregated</a>
-      
-      
-         <a href="/attributes/abstraction/" class="button layout" style="--border-color: #0072B2; --color: #0072B2;">no abstraction</a>
-      
-      
-         <a href="/attributes/arrangement/" class="button layout" style="--border-color: #D55E00; --color: #D55E00;">linear parallel arrangement</a>
-      
-      
-         <a href="/attributes/interconnection_type/" class="button layout" style="--border-color: #E69F00; --color: #E69F00;">between interconnection</a>
-      
-      
-        <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">segment sparse type</a>
-      
-    </div>
-    <div class="section">
-      <h2>Tool</h2>
-
-          
-              <p class="button layout" style="--border-color: #0C0032; --color: #0C0032;">Access  Format: web application</p>
-          
-          
-              <p class="button layout" style="--border-color: #240090; --color: #240090;">Supported Files: other</p>
-          
-          
-              <p class="button layout" style="--border-color: #3500D3; --color: #3500D3;">License: unavailable</p>
-          
-
-          <div class="row">
-            <div class="column">
-              <h3>Tool name: </h3> Cinteny
-            </div>
-            <div class="column">
-              <h3>Tool Link: </h3> <a href="http://cinteny.cchmc.org" target="_blank">http://cinteny.cchmc.org</a>
-            </div>
-            <div class="column">
-              <h3>Documentation: </h3> <a href="https://cinteny.cchmc.org/doc/demo.php" target="_blank">https://cinteny.cchmc.org/doc/demo.php</a>
-            </div>
-          </div>
-    </div>
-  </div>
-  <div class="paper">
-    <h2>Paper</h2>
-    <h3>Cinteny: flexible analysis and visualization of synteny and genome rearrangements in multiple organisms.</h3>
-    <p><small>Sinha AU, Meller J. Cinteny: flexible analysis and visualization of synteny and genome rearrangements in multiple organisms. BMC Bioinformatics. 2007;8: 82.</small>
+</div>
+<div class="tool">
+  <div class="section">
+    <h2>Methods</h2>
     
-    <br>
-    Cited by: 134</p>
-    <h4>Abstract</h4>
-    <p>
-    BACKGROUND: Identifying syntenic regions, i.e., blocks of genes or other markers with evolutionary conserved order, and quantifying evolutionary relatedness between genomes in terms of chromosomal rearrangements is one of the central goals in comparative genomics. However, the analysis of synteny and the resulting assessment of genome rearrangements are sensitive to the choice of a number of arbitrary parameters that affect the detection of synteny blocks. In particular, the choice of a set of markers and the effect of different aggregation strategies, which enable coarse graining of synteny blocks and exclusion of micro-rearrangements, need to be assessed. Therefore, existing tools and resources that facilitate identification, visualization and analysis of synteny need to be further improved to provide a flexible platform for such analysis, especially in the context of multiple genomes. RESULTS: We present a new tool, Cinteny, for fast identification and analysis of synteny with different sets of markers and various levels of coarse graining of syntenic blocks. Using Hannenhalli-Pevzner approach and its extensions, Cinteny also enables interactive determination of evolutionary relationships between genomes in terms of the number of rearrangements (the reversal distance). In particular, Cinteny provides: i) integration of synteny browsing with assessment of evolutionary distances for multiple genomes; ii) flexibility to adjust the parameters and re-compute the results on-the-fly; iii) ability to work with user provided data, such as orthologous genes, sequence tags or other conserved markers. In addition, Cinteny provides many annotated mammalian, invertebrate and fungal genomes that are pre-loaded and available for analysis at http://cinteny.cchmc.org. CONCLUSION: Cinteny allows one to automatically compare multiple genomes and perform sensitivity analysis for synteny block detection and for the subsequent computation of reversal distances. Cinteny can also be used to interactively browse syntenic blocks conserved in multiple genomes, to facilitate genome annotation and validation of assemblies for newly sequenced genomes, and to construct and assess phylogenomic trees.
-    </p>
+        <a href="/attributes/layout/" class="button layout" style="color: var(--cat-7)">linear</a>
+    
+    
+        <a href="/attributes/views/" class="button layout" style="color: var(--cat-3)">single view</a>
+    
+    
+        <a href="/attributes/scales/" class="button layout" style="color: var(--cat-2)">single scale</a>
+    
+    
+        <a href="/attributes/focus/" class="button layout" style="color: var(--cat-1)">single focus</a>
+    
+    
+        <a href="/attributes/partition/" class="button layout" style="color: var(--cat-6)">segregated</a>
+    
+    
+        <a href="/attributes/abstraction/" class="button layout" style="color: var(--cat-5)">no abstraction</a>
+    
+    
+        <a href="/attributes/arrangement/" class="button layout" style="color: var(--cat-4)">linear parallel arrangement</a>
+    
+    
+        <a href="/attributes/interconnection_type/" class="button layout" style="color: var(--cat-8)">between interconnection</a>
+    
+    
+      <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">segment sparse type</a>
+    
   </div>
+  <div class="section">
+    <h2>Tool</h2>
+    <table><tr>
+      <td class="labelCol">Access Format</td>
+      <td>
+        
+        <span> web application </span>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="labelCol">Supported Files</td>
+      <td>
+        
+        <span> other </span>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="labelCol">License</td>
+      <td>
+        
+            <span> unavailable </span>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="labelCol">Tool name</td>
+      <td><h3>Cinteny</h3></td>
+    </tr>
+    <tr>
+      <td class="labelCol">Tool Link</td>
+      <td><a href="http://cinteny.cchmc.org" target="_blank">http://cinteny.cchmc.org</a></td>
+    </tr>
+    <tr>
+      <td class="labelCol">Documentation</td>
+      <td><a href="https://cinteny.cchmc.org/doc/demo.php" target="_blank">https://cinteny.cchmc.org/doc/demo.php</a></td>
+    </tr>
+  </table>
+  </div>
+</div>
+<div class="paper">
+  <h2>Paper</h2>
+  <h3>Cinteny: flexible analysis and visualization of synteny and genome rearrangements in multiple organisms.</h3>
+  <p><small>Sinha AU, Meller J. Cinteny: flexible analysis and visualization of synteny and genome rearrangements in multiple organisms. BMC Bioinformatics. 2007;8: 82.</small>
+  
+  <br>
+  Cited by: 134</p>
+  <h4>Abstract</h4>
+  <p>
+  BACKGROUND: Identifying syntenic regions, i.e., blocks of genes or other markers with evolutionary conserved order, and quantifying evolutionary relatedness between genomes in terms of chromosomal rearrangements is one of the central goals in comparative genomics. However, the analysis of synteny and the resulting assessment of genome rearrangements are sensitive to the choice of a number of arbitrary parameters that affect the detection of synteny blocks. In particular, the choice of a set of markers and the effect of different aggregation strategies, which enable coarse graining of synteny blocks and exclusion of micro-rearrangements, need to be assessed. Therefore, existing tools and resources that facilitate identification, visualization and analysis of synteny need to be further improved to provide a flexible platform for such analysis, especially in the context of multiple genomes. RESULTS: We present a new tool, Cinteny, for fast identification and analysis of synteny with different sets of markers and various levels of coarse graining of syntenic blocks. Using Hannenhalli-Pevzner approach and its extensions, Cinteny also enables interactive determination of evolutionary relationships between genomes in terms of the number of rearrangements (the reversal distance). In particular, Cinteny provides: i) integration of synteny browsing with assessment of evolutionary distances for multiple genomes; ii) flexibility to adjust the parameters and re-compute the results on-the-fly; iii) ability to work with user provided data, such as orthologous genes, sequence tags or other conserved markers. In addition, Cinteny provides many annotated mammalian, invertebrate and fungal genomes that are pre-loaded and available for analysis at http://cinteny.cchmc.org. CONCLUSION: Cinteny allows one to automatically compare multiple genomes and perform sensitivity analysis for synteny block detection and for the subsequent computation of reversal distances. Cinteny can also be used to interactively browse syntenic blocks conserved in multiple genomes, to facilitate genome annotation and validation of assemblies for newly sequenced genomes, and to construct and assess phylogenomic trees.
+  </p>
+</div>
 
-  <a class="u-url" href="/tools/cinteny/" hidden></a>
+<a class="u-url" href="/tools/cinteny/" hidden></a>
 
 
 </div>

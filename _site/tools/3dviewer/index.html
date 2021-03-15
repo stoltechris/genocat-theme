@@ -50,12 +50,12 @@
 <meta property="og:site_name" content="GenoCat.tools" />
 <meta property="og:image" content="/assets/3dviewer.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-03-14T12:31:41-04:00" />
+<meta property="article:published_time" content="2021-03-15T09:12:13-04:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="/assets/3dviewer.png" />
 <meta property="twitter:title" content="3dViewer" />
 <script type="application/ld+json">
-{"image":"/assets/3dviewer.png","headline":"3dViewer","url":"/tools/3dviewer/","dateModified":"2021-03-14T12:31:41-04:00","datePublished":"2021-03-14T12:31:41-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"/tools/3dviewer/"},"author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"A database and taxonomy for genomic visualization tools","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"image":"/assets/3dviewer.png","headline":"3dViewer","url":"/tools/3dviewer/","dateModified":"2021-03-15T09:12:13-04:00","datePublished":"2021-03-15T09:12:13-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"/tools/3dviewer/"},"author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"A database and taxonomy for genomic visualization tools","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -166,178 +166,107 @@
          <div class="page">
 
   <h1 class="page-title">3dViewer</h1>
-    <!-- <style>
-  body {
-    font-family: "Lato", sans-serif;
-  }
-  a{
-    color: black;
-  }
-  /* visited link */
-  a:visited {
-    color: black;
-  }
-  .center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-          }
-  .button {
-           background-color: var(--border-color);
-           border: 2px solid var(--border-color);
-           padding: 0.5px 10px;
-           text-align: center;
-           text-decoration: none;
-           display: inline-block;
-           margin: 2px 1px;
-           border-radius: 15px;
-           color: white;
-           font-weight: normal;
-           /* font-size: 10px; */
-         }
-  .button:hover{
-        background-color: white;
-        color: black;
-        }
-  .layout {
-        border-color: var(--border-color);
-        color: white;
-        text-decoration: none;
-        }
-  .layout:visited {
-        background-color: var(--border-color);
-        color: white;
-        }
-  .layout:hover {
-        background-color: var(--border-color);
-        color: white;
-        }
-  .column {
-        float: left;
-        width: 33.33%;
-        word-wrap: break-word;
-      }
+  <div class="section">
+  <img src = "/assets/3dviewer.png" class = "center">
+  <small>http://bioinfo.au.tsinghua.edu.cn/member/nadhir/HiC3DViewer/</small>
 
-      /* Clear floats after the columns */
-  .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-        @media screen and (max-height: 450px) {
-          .sidenav {padding-top: 15px;}
-          .sidenav a {font-size: 18px;}
-        }
-        /* On screens that are less than 700px wide, make the sidebar into a topbar */
-      @media screen and (max-width: 700px) {
-        .sidebar {
-          width: 100%;
-          height: auto;
-          position: relative;
-        }
-        .sidebar a {float: left;}
-        div.content {margin-left: 0;}
-      }
-      /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-      @media screen and (max-width: 400px) {
-        .sidebar a {
-          text-align: center;
-          float: none;
-        }
-      }
-}
-  </style> -->
-  
-  <div class="tool">
-    <div class="section">
-      <img src = "/assets/3dviewer.png" class = "center">
-      <small>http://bioinfo.au.tsinghua.edu.cn/member/nadhir/HiC3DViewer/</small>
-
-    </div>
-
-    <div class="section">
-      <h2>Methods</h2>
-      
-         <a href="/attributes/layout/" class="button layout" style="--border-color: #CC79A7; --color: #CC79A7;">spatial</a>
-      
-      
-         <a href="/attributes/views/" class="button layout" style="--border-color: #A4B3B6; --color: #A4B3B6;">single view</a>
-      
-      
-         <a href="/attributes/scales/" class="button layout" style="--border-color:  #56B4E9; --color:  #5680E9;">single scale</a>
-      
-      
-         <a href="/attributes/focus/" class="button layout" style="--border-color: #F0E442; --color: #F0E442;">single focus</a>
-      
-      
-         <a href="/attributes/partition/" class="button layout" style="--border-color: #009E73; --color: #009E73;">contiguous</a>
-      
-      
-         <a href="/attributes/abstraction/" class="button layout" style="--border-color: #0072B2; --color: #0072B2;">no abstraction</a>
-      
-      
-         <a href="/attributes/arrangement/" class="button layout" style="--border-color: #D55E00; --color: #D55E00;">no arrangement</a>
-      
-      
-         <a href="/attributes/interconnection_type/" class="button layout" style="--border-color: #E69F00; --color: #E69F00;">no interconnection</a>
-      
-      
-        <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">segment sparse type</a>
-      
-        <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">segment contiguous type</a>
-      
-        <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">point sparse type</a>
-      
-        <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">point contiguous type</a>
-      
-    </div>
-    <div class="section">
-      <h2>Tool</h2>
-
-          
-              <p class="button layout" style="--border-color: #0C0032; --color: #0C0032;">Access  Format: web application</p>
-          
-              <p class="button layout" style="--border-color: #0C0032; --color: #0C0032;">Access  Format: standalone app</p>
-          
-          
-              <p class="button layout" style="--border-color: #240090; --color: #240090;">Supported Files: txttab</p>
-          
-              <p class="button layout" style="--border-color: #240090; --color: #240090;">Supported Files: bed</p>
-          
-          
-              <p class="button layout" style="--border-color: #3500D3; --color: #3500D3;">License: unavailable</p>
-          
-
-          <div class="row">
-            <div class="column">
-              <h3>Tool name: </h3> 3dViewer
-            </div>
-            <div class="column">
-              <h3>Tool Link: </h3> <a href="http://bioinfo.au.tsinghua.edu.cn/member/nadhir/HiC3DViewer/" target="_blank">http://bioinfo.au.tsinghua.edu.cn/member/nadhir/HiC3DViewer/</a>
-            </div>
-            <div class="column">
-              <h3>Documentation: </h3> <a href="http://bioinfo.au.tsinghua.edu.cn/member/nadhir/HiC3DViewer/static/data/UserManual.pdf" target="_blank">http://bioinfo.au.tsinghua.edu.cn/member/nadhir/HiC3DViewer/static/data/UserManual.pdf</a>
-            </div>
-          </div>
-    </div>
-  </div>
-  <div class="paper">
-    <h2>Paper</h2>
-    <h3>HiC-3DViewer: a new tool to visualize Hi-C data in 3D space.</h3>
-    <p><small>Djekidel MN, Wang M, Zhang MQ, Gao J. HiC-3DViewer: a new tool to visualize Hi-C data in 3D space. Quantitative Biology. Springer; 2017;5: 183–190.</small>
+</div>
+<div class="tool">
+  <div class="section">
+    <h2>Methods</h2>
     
-    <br>
-    Cited by: 6</p>
-    <h4>Abstract</h4>
-    <p>
-    Although significant progress has been made to map chromatin structure at unprecedented resolution and scales, we are short of tools that enable the intuitive visualization and navigation along the three-dimensional (3D) structure of chromatins. The available tools people have so far are generally script-based or present basic features that do not easily enable the integration of genomic data along with 3D chromatin structure, hence, many scientists find themselves in the obligation to hack tools designed for other purposes such as tools for protein structure study. We present HiC-3DViewer, a new browser-based interactive tool designed to provide an intuitive environment for investigators to facilitate the 3D exploratory analysis of Hi-C data along with many useful annotation functionalities. Among the key features of HiC-3DViewer relevant to chromatin conformation studies, the most important one is the 1D-to-2D-to-3D mapping, to highlight genomic regions of interest interactively. This feature enables investigators to explore their data at different levels/angels. Additionally, investigators can superpose different genomic signals (such as ChIP-Seq, SNP) on the top of the 3D structure. As a proof of principle we applied HiC-3DViewer to investigate the quality of Hi-C data and to show the spatial binding of GATA1 and GATA2 along the genome. As a user-friendly tool, HiC-3DViewer enables the visualization of inter/intra-chromatin interactions and gives users the flexibility to customize the look-and-feel of the 3D structure with a simple click. HiC-3DViewer is implemented in Javascript and Python, and is freely available at: http://bioinfo.au.tsinghua.edu.cn/member/nadhir/HiC3DViewer/. Supplementary information (User Manual, demo data) is also available at this website.
-    </p>
+        <a href="/attributes/layout/" class="button layout" style="color: var(--cat-7)">spatial</a>
+    
+    
+        <a href="/attributes/views/" class="button layout" style="color: var(--cat-3)">single view</a>
+    
+    
+        <a href="/attributes/scales/" class="button layout" style="color: var(--cat-2)">single scale</a>
+    
+    
+        <a href="/attributes/focus/" class="button layout" style="color: var(--cat-1)">single focus</a>
+    
+    
+        <a href="/attributes/partition/" class="button layout" style="color: var(--cat-6)">contiguous</a>
+    
+    
+        <a href="/attributes/abstraction/" class="button layout" style="color: var(--cat-5)">no abstraction</a>
+    
+    
+        <a href="/attributes/arrangement/" class="button layout" style="color: var(--cat-4)">no arrangement</a>
+    
+    
+        <a href="/attributes/interconnection_type/" class="button layout" style="color: var(--cat-8)">no interconnection</a>
+    
+    
+      <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">segment sparse type</a>
+    
+      <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">segment contiguous type</a>
+    
+      <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">point sparse type</a>
+    
+      <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">point contiguous type</a>
+    
   </div>
+  <div class="section">
+    <h2>Tool</h2>
+    <table><tr>
+      <td class="labelCol">Access Format</td>
+      <td>
+        
+        <span> web application </span>
+        
+        <span> standalone app </span>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="labelCol">Supported Files</td>
+      <td>
+        
+        <span> txttab </span>
+        
+        <span> bed </span>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="labelCol">License</td>
+      <td>
+        
+            <span> unavailable </span>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="labelCol">Tool name</td>
+      <td><h3>3dViewer</h3></td>
+    </tr>
+    <tr>
+      <td class="labelCol">Tool Link</td>
+      <td><a href="http://bioinfo.au.tsinghua.edu.cn/member/nadhir/HiC3DViewer/" target="_blank">http://bioinfo.au.tsinghua.edu.cn/member/nadhir/HiC3DViewer/</a></td>
+    </tr>
+    <tr>
+      <td class="labelCol">Documentation</td>
+      <td><a href="http://bioinfo.au.tsinghua.edu.cn/member/nadhir/HiC3DViewer/static/data/UserManual.pdf" target="_blank">http://bioinfo.au.tsinghua.edu.cn/member/nadhir/HiC3DViewer/static/data/UserManual.pdf</a></td>
+    </tr>
+  </table>
+  </div>
+</div>
+<div class="paper">
+  <h2>Paper</h2>
+  <h3>HiC-3DViewer: a new tool to visualize Hi-C data in 3D space.</h3>
+  <p><small>Djekidel MN, Wang M, Zhang MQ, Gao J. HiC-3DViewer: a new tool to visualize Hi-C data in 3D space. Quantitative Biology. Springer; 2017;5: 183–190.</small>
+  
+  <br>
+  Cited by: 6</p>
+  <h4>Abstract</h4>
+  <p>
+  Although significant progress has been made to map chromatin structure at unprecedented resolution and scales, we are short of tools that enable the intuitive visualization and navigation along the three-dimensional (3D) structure of chromatins. The available tools people have so far are generally script-based or present basic features that do not easily enable the integration of genomic data along with 3D chromatin structure, hence, many scientists find themselves in the obligation to hack tools designed for other purposes such as tools for protein structure study. We present HiC-3DViewer, a new browser-based interactive tool designed to provide an intuitive environment for investigators to facilitate the 3D exploratory analysis of Hi-C data along with many useful annotation functionalities. Among the key features of HiC-3DViewer relevant to chromatin conformation studies, the most important one is the 1D-to-2D-to-3D mapping, to highlight genomic regions of interest interactively. This feature enables investigators to explore their data at different levels/angels. Additionally, investigators can superpose different genomic signals (such as ChIP-Seq, SNP) on the top of the 3D structure. As a proof of principle we applied HiC-3DViewer to investigate the quality of Hi-C data and to show the spatial binding of GATA1 and GATA2 along the genome. As a user-friendly tool, HiC-3DViewer enables the visualization of inter/intra-chromatin interactions and gives users the flexibility to customize the look-and-feel of the 3D structure with a simple click. HiC-3DViewer is implemented in Javascript and Python, and is freely available at: http://bioinfo.au.tsinghua.edu.cn/member/nadhir/HiC3DViewer/. Supplementary information (User Manual, demo data) is also available at this website.
+  </p>
+</div>
 
-  <a class="u-url" href="/tools/3dviewer/" hidden></a>
+<a class="u-url" href="/tools/3dviewer/" hidden></a>
 
 
 </div>

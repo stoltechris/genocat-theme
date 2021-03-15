@@ -50,12 +50,12 @@
 <meta property="og:site_name" content="GenoCat.tools" />
 <meta property="og:image" content="/assets/HiGlass.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-03-14T12:31:41-04:00" />
+<meta property="article:published_time" content="2021-03-15T09:12:13-04:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="/assets/HiGlass.png" />
 <meta property="twitter:title" content="HiGlass" />
 <script type="application/ld+json">
-{"image":"/assets/HiGlass.png","headline":"HiGlass","url":"/tools/higlass/","dateModified":"2021-03-14T12:31:41-04:00","datePublished":"2021-03-14T12:31:41-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"/tools/higlass/"},"author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"A database and taxonomy for genomic visualization tools","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"image":"/assets/HiGlass.png","headline":"HiGlass","url":"/tools/higlass/","dateModified":"2021-03-15T09:12:13-04:00","datePublished":"2021-03-15T09:12:13-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"/tools/higlass/"},"author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"A database and taxonomy for genomic visualization tools","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -166,178 +166,107 @@
          <div class="page">
 
   <h1 class="page-title">HiGlass</h1>
-    <!-- <style>
-  body {
-    font-family: "Lato", sans-serif;
-  }
-  a{
-    color: black;
-  }
-  /* visited link */
-  a:visited {
-    color: black;
-  }
-  .center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-          }
-  .button {
-           background-color: var(--border-color);
-           border: 2px solid var(--border-color);
-           padding: 0.5px 10px;
-           text-align: center;
-           text-decoration: none;
-           display: inline-block;
-           margin: 2px 1px;
-           border-radius: 15px;
-           color: white;
-           font-weight: normal;
-           /* font-size: 10px; */
-         }
-  .button:hover{
-        background-color: white;
-        color: black;
-        }
-  .layout {
-        border-color: var(--border-color);
-        color: white;
-        text-decoration: none;
-        }
-  .layout:visited {
-        background-color: var(--border-color);
-        color: white;
-        }
-  .layout:hover {
-        background-color: var(--border-color);
-        color: white;
-        }
-  .column {
-        float: left;
-        width: 33.33%;
-        word-wrap: break-word;
-      }
+  <div class="section">
+  <img src = "/assets/HiGlass.png" class = "center">
+  <small>https://higlass.io/</small>
 
-      /* Clear floats after the columns */
-  .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-        @media screen and (max-height: 450px) {
-          .sidenav {padding-top: 15px;}
-          .sidenav a {font-size: 18px;}
-        }
-        /* On screens that are less than 700px wide, make the sidebar into a topbar */
-      @media screen and (max-width: 700px) {
-        .sidebar {
-          width: 100%;
-          height: auto;
-          position: relative;
-        }
-        .sidebar a {float: left;}
-        div.content {margin-left: 0;}
-      }
-      /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-      @media screen and (max-width: 400px) {
-        .sidebar a {
-          text-align: center;
-          float: none;
-        }
-      }
-}
-  </style> -->
-  
-  <div class="tool">
-    <div class="section">
-      <img src = "/assets/HiGlass.png" class = "center">
-      <small>https://higlass.io/</small>
-
-    </div>
-
-    <div class="section">
-      <h2>Methods</h2>
-      
-         <a href="/attributes/layout/" class="button layout" style="--border-color: #CC79A7; --color: #CC79A7;">linear</a>
-      
-      
-         <a href="/attributes/views/" class="button layout" style="--border-color: #A4B3B6; --color: #A4B3B6;">multiple view</a>
-      
-      
-         <a href="/attributes/scales/" class="button layout" style="--border-color:  #56B4E9; --color:  #5680E9;">multiple scale</a>
-      
-      
-         <a href="/attributes/focus/" class="button layout" style="--border-color: #F0E442; --color: #F0E442;">multiple focus</a>
-      
-      
-         <a href="/attributes/partition/" class="button layout" style="--border-color: #009E73; --color: #009E73;">contiguous</a>
-      
-      
-         <a href="/attributes/abstraction/" class="button layout" style="--border-color: #0072B2; --color: #0072B2;">no abstraction</a>
-      
-      
-         <a href="/attributes/arrangement/" class="button layout" style="--border-color: #D55E00; --color: #D55E00;">linear orthogonal arrangement</a>
-      
-      
-         <a href="/attributes/interconnection_type/" class="button layout" style="--border-color: #E69F00; --color: #E69F00;">within interconnection</a>
-      
-      
-        <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">segment sparse type</a>
-      
-        <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">segment contiguous type</a>
-      
-        <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">point sparse type</a>
-      
-        <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">point contiguous type</a>
-      
-    </div>
-    <div class="section">
-      <h2>Tool</h2>
-
-          
-              <p class="button layout" style="--border-color: #0C0032; --color: #0C0032;">Access  Format: web application</p>
-          
-              <p class="button layout" style="--border-color: #0C0032; --color: #0C0032;">Access  Format: programming library</p>
-          
-          
-              <p class="button layout" style="--border-color: #240090; --color: #240090;">Supported Files: bed</p>
-          
-              <p class="button layout" style="--border-color: #240090; --color: #240090;">Supported Files: other</p>
-          
-          
-              <p class="button layout" style="--border-color: #3500D3; --color: #3500D3;">License: MIT</p>
-          
-
-          <div class="row">
-            <div class="column">
-              <h3>Tool name: </h3> HiGlass
-            </div>
-            <div class="column">
-              <h3>Tool Link: </h3> <a href="https://higlass.io/" target="_blank">https://higlass.io/</a>
-            </div>
-            <div class="column">
-              <h3>Documentation: </h3> <a href="https://higlass.io/docs" target="_blank">https://higlass.io/docs</a>
-            </div>
-          </div>
-    </div>
-  </div>
-  <div class="paper">
-    <h2>Paper</h2>
-    <h3>HiGlass: web-based visual exploration and analysis of genome interaction maps</h3>
-    <p><small>Kerpedjiev P, Abdennur N, Lekschas F, McCallum C, Dinkla K, Strobelt H, et al. HiGlass: web-based visual exploration and analysis of genome interaction maps. Genome Biol. biorxiv.org; 2018;19: 125.</small>
+</div>
+<div class="tool">
+  <div class="section">
+    <h2>Methods</h2>
     
-    <br>
-    Cited by: 23</p>
-    <h4>Abstract</h4>
-    <p>
-    We present HiGlass, an open source visualization tool built on web technologies that provides a rich interface for rapid, multiplex, and multiscale navigation of 2D genomic maps alongside 1D genomic tracks, allowing users to combine various data types, synchronize multiple visualization modalities, and share fully customizable views with others. We demonstrate its utility in exploring different experimental conditions, comparing the results of analyses, and creating interactive snapshots to share with collaborators and the broader public. HiGlass is accessible online at http://higlass.io and is also available as a containerized application that can be run on any platform.
-    </p>
+        <a href="/attributes/layout/" class="button layout" style="color: var(--cat-7)">linear</a>
+    
+    
+        <a href="/attributes/views/" class="button layout" style="color: var(--cat-3)">multiple view</a>
+    
+    
+        <a href="/attributes/scales/" class="button layout" style="color: var(--cat-2)">multiple scale</a>
+    
+    
+        <a href="/attributes/focus/" class="button layout" style="color: var(--cat-1)">multiple focus</a>
+    
+    
+        <a href="/attributes/partition/" class="button layout" style="color: var(--cat-6)">contiguous</a>
+    
+    
+        <a href="/attributes/abstraction/" class="button layout" style="color: var(--cat-5)">no abstraction</a>
+    
+    
+        <a href="/attributes/arrangement/" class="button layout" style="color: var(--cat-4)">linear orthogonal arrangement</a>
+    
+    
+        <a href="/attributes/interconnection_type/" class="button layout" style="color: var(--cat-8)">within interconnection</a>
+    
+    
+      <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">segment sparse type</a>
+    
+      <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">segment contiguous type</a>
+    
+      <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">point sparse type</a>
+    
+      <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">point contiguous type</a>
+    
   </div>
+  <div class="section">
+    <h2>Tool</h2>
+    <table><tr>
+      <td class="labelCol">Access Format</td>
+      <td>
+        
+        <span> web application </span>
+        
+        <span> programming library </span>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="labelCol">Supported Files</td>
+      <td>
+        
+        <span> bed </span>
+        
+        <span> other </span>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="labelCol">License</td>
+      <td>
+        
+            <span> MIT </span>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="labelCol">Tool name</td>
+      <td><h3>HiGlass</h3></td>
+    </tr>
+    <tr>
+      <td class="labelCol">Tool Link</td>
+      <td><a href="https://higlass.io/" target="_blank">https://higlass.io/</a></td>
+    </tr>
+    <tr>
+      <td class="labelCol">Documentation</td>
+      <td><a href="https://higlass.io/docs" target="_blank">https://higlass.io/docs</a></td>
+    </tr>
+  </table>
+  </div>
+</div>
+<div class="paper">
+  <h2>Paper</h2>
+  <h3>HiGlass: web-based visual exploration and analysis of genome interaction maps</h3>
+  <p><small>Kerpedjiev P, Abdennur N, Lekschas F, McCallum C, Dinkla K, Strobelt H, et al. HiGlass: web-based visual exploration and analysis of genome interaction maps. Genome Biol. biorxiv.org; 2018;19: 125.</small>
+  
+  <br>
+  Cited by: 23</p>
+  <h4>Abstract</h4>
+  <p>
+  We present HiGlass, an open source visualization tool built on web technologies that provides a rich interface for rapid, multiplex, and multiscale navigation of 2D genomic maps alongside 1D genomic tracks, allowing users to combine various data types, synchronize multiple visualization modalities, and share fully customizable views with others. We demonstrate its utility in exploring different experimental conditions, comparing the results of analyses, and creating interactive snapshots to share with collaborators and the broader public. HiGlass is accessible online at http://higlass.io and is also available as a containerized application that can be run on any platform.
+  </p>
+</div>
 
-  <a class="u-url" href="/tools/higlass/" hidden></a>
+<a class="u-url" href="/tools/higlass/" hidden></a>
 
 
 </div>

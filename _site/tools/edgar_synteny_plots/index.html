@@ -50,12 +50,12 @@
 <meta property="og:site_name" content="GenoCat.tools" />
 <meta property="og:image" content="/assets/edgarsyntenymatrix.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-03-14T12:31:41-04:00" />
+<meta property="article:published_time" content="2021-03-15T09:12:13-04:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="/assets/edgarsyntenymatrix.png" />
 <meta property="twitter:title" content="Edgar Synteny Plots" />
 <script type="application/ld+json">
-{"image":"/assets/edgarsyntenymatrix.png","headline":"Edgar Synteny Plots","url":"/tools/edgar_synteny_plots/","dateModified":"2021-03-14T12:31:41-04:00","datePublished":"2021-03-14T12:31:41-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"/tools/edgar_synteny_plots/"},"author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"A database and taxonomy for genomic visualization tools","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"image":"/assets/edgarsyntenymatrix.png","headline":"Edgar Synteny Plots","url":"/tools/edgar_synteny_plots/","dateModified":"2021-03-15T09:12:13-04:00","datePublished":"2021-03-15T09:12:13-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"/tools/edgar_synteny_plots/"},"author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"A database and taxonomy for genomic visualization tools","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -166,168 +166,97 @@
          <div class="page">
 
   <h1 class="page-title">Edgar Synteny Plots</h1>
-    <!-- <style>
-  body {
-    font-family: "Lato", sans-serif;
-  }
-  a{
-    color: black;
-  }
-  /* visited link */
-  a:visited {
-    color: black;
-  }
-  .center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-          }
-  .button {
-           background-color: var(--border-color);
-           border: 2px solid var(--border-color);
-           padding: 0.5px 10px;
-           text-align: center;
-           text-decoration: none;
-           display: inline-block;
-           margin: 2px 1px;
-           border-radius: 15px;
-           color: white;
-           font-weight: normal;
-           /* font-size: 10px; */
-         }
-  .button:hover{
-        background-color: white;
-        color: black;
-        }
-  .layout {
-        border-color: var(--border-color);
-        color: white;
-        text-decoration: none;
-        }
-  .layout:visited {
-        background-color: var(--border-color);
-        color: white;
-        }
-  .layout:hover {
-        background-color: var(--border-color);
-        color: white;
-        }
-  .column {
-        float: left;
-        width: 33.33%;
-        word-wrap: break-word;
-      }
+  <div class="section">
+  <img src = "/assets/edgarsyntenymatrix.png" class = "center">
+  <small>https://edgar.computational.bio.uni-giessen.de/cgi-bin/edgar.cgi</small>
 
-      /* Clear floats after the columns */
-  .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-        @media screen and (max-height: 450px) {
-          .sidenav {padding-top: 15px;}
-          .sidenav a {font-size: 18px;}
-        }
-        /* On screens that are less than 700px wide, make the sidebar into a topbar */
-      @media screen and (max-width: 700px) {
-        .sidebar {
-          width: 100%;
-          height: auto;
-          position: relative;
-        }
-        .sidebar a {float: left;}
-        div.content {margin-left: 0;}
-      }
-      /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-      @media screen and (max-width: 400px) {
-        .sidebar a {
-          text-align: center;
-          float: none;
-        }
-      }
-}
-  </style> -->
-  
-  <div class="tool">
-    <div class="section">
-      <img src = "/assets/edgarsyntenymatrix.png" class = "center">
-      <small>https://edgar.computational.bio.uni-giessen.de/cgi-bin/edgar.cgi</small>
-
-    </div>
-
-    <div class="section">
-      <h2>Methods</h2>
-      
-         <a href="/attributes/layout/" class="button layout" style="--border-color: #CC79A7; --color: #CC79A7;">linear</a>
-      
-      
-         <a href="/attributes/views/" class="button layout" style="--border-color: #A4B3B6; --color: #A4B3B6;">single view</a>
-      
-      
-         <a href="/attributes/scales/" class="button layout" style="--border-color:  #56B4E9; --color:  #5680E9;">single scale</a>
-      
-      
-         <a href="/attributes/focus/" class="button layout" style="--border-color: #F0E442; --color: #F0E442;">single focus</a>
-      
-      
-         <a href="/attributes/partition/" class="button layout" style="--border-color: #009E73; --color: #009E73;">contiguous</a>
-      
-      
-         <a href="/attributes/abstraction/" class="button layout" style="--border-color: #0072B2; --color: #0072B2;">no abstraction</a>
-      
-      
-         <a href="/attributes/arrangement/" class="button layout" style="--border-color: #D55E00; --color: #D55E00;">linear orthogona; arrangement</a>
-      
-      
-         <a href="/attributes/interconnection_type/" class="button layout" style="--border-color: #E69F00; --color: #E69F00;">between interconnection</a>
-      
-      
-        <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">segment contiguous type</a>
-      
-    </div>
-    <div class="section">
-      <h2>Tool</h2>
-
-          
-              <p class="button layout" style="--border-color: #0C0032; --color: #0C0032;">Access  Format: web application</p>
-          
-          
-              <p class="button layout" style="--border-color: #240090; --color: #240090;">Supported Files: other</p>
-          
-          
-              <p class="button layout" style="--border-color: #3500D3; --color: #3500D3;">License: unavailable</p>
-          
-
-          <div class="row">
-            <div class="column">
-              <h3>Tool name: </h3> Edgar Synteny Plots
-            </div>
-            <div class="column">
-              <h3>Tool Link: </h3> <a href="http://genome.lbl.gov/vista/index.shtml" target="_blank">http://genome.lbl.gov/vista/index.shtml</a>
-            </div>
-            <div class="column">
-              <h3>Documentation: </h3> <a href="https://www.uni-giessen.de/fbz/fb08/Inst/bioinformatik/software/EDGAR/documentation" target="_blank">https://www.uni-giessen.de/fbz/fb08/Inst/bioinformatik/software/EDGAR/documentation</a>
-            </div>
-          </div>
-    </div>
-  </div>
-  <div class="paper">
-    <h2>Paper</h2>
-    <h3>ISTA: computational tools for comparative genomics.</h3>
-    <p><small>Frazer KA, Pachter L, Poliakov A, Rubin EM, Dubchak I. VISTA: computational tools for comparative genomics. Nucleic Acids Res. academic.oup.com; 2004;32: W273–9.</small>
+</div>
+<div class="tool">
+  <div class="section">
+    <h2>Methods</h2>
     
-    <br>
-    Cited by: 1310</p>
-    <h4>Abstract</h4>
-    <p>
-    Comparison of DNA sequences from different species is a fundamental method for identifying functional elements in genomes. Here, we describe the VISTA family of tools created to assist biologists in carrying out this task. Our first VISTA server at http://www-gsd.lbl.gov/vista/ was launched in the summer of 2000 and was designed to align long genomic sequences and visualize these alignments with associated functional annotations. Currently the VISTA site includes multiple comparative genomics tools and provides users with rich capabilities to browse pre-computed whole-genome alignments of large vertebrate genomes and other groups of organisms with VISTA Browser, to submit their own sequences of interest to several VISTA servers for various types of comparative analysis and to obtain detailed comparative analysis results for a set of cardiovascular genes. We illustrate capabilities of the VISTA site by the analysis of a 180 kb interval on human chromosome 5 that encodes for the kinesin family member 3A (KIF3A) protein.
-    </p>
+        <a href="/attributes/layout/" class="button layout" style="color: var(--cat-7)">linear</a>
+    
+    
+        <a href="/attributes/views/" class="button layout" style="color: var(--cat-3)">single view</a>
+    
+    
+        <a href="/attributes/scales/" class="button layout" style="color: var(--cat-2)">single scale</a>
+    
+    
+        <a href="/attributes/focus/" class="button layout" style="color: var(--cat-1)">single focus</a>
+    
+    
+        <a href="/attributes/partition/" class="button layout" style="color: var(--cat-6)">contiguous</a>
+    
+    
+        <a href="/attributes/abstraction/" class="button layout" style="color: var(--cat-5)">no abstraction</a>
+    
+    
+        <a href="/attributes/arrangement/" class="button layout" style="color: var(--cat-4)">linear orthogona; arrangement</a>
+    
+    
+        <a href="/attributes/interconnection_type/" class="button layout" style="color: var(--cat-8)">between interconnection</a>
+    
+    
+      <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">segment contiguous type</a>
+    
   </div>
+  <div class="section">
+    <h2>Tool</h2>
+    <table><tr>
+      <td class="labelCol">Access Format</td>
+      <td>
+        
+        <span> web application </span>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="labelCol">Supported Files</td>
+      <td>
+        
+        <span> other </span>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="labelCol">License</td>
+      <td>
+        
+            <span> unavailable </span>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="labelCol">Tool name</td>
+      <td><h3>Edgar Synteny Plots</h3></td>
+    </tr>
+    <tr>
+      <td class="labelCol">Tool Link</td>
+      <td><a href="http://genome.lbl.gov/vista/index.shtml" target="_blank">http://genome.lbl.gov/vista/index.shtml</a></td>
+    </tr>
+    <tr>
+      <td class="labelCol">Documentation</td>
+      <td><a href="https://www.uni-giessen.de/fbz/fb08/Inst/bioinformatik/software/EDGAR/documentation" target="_blank">https://www.uni-giessen.de/fbz/fb08/Inst/bioinformatik/software/EDGAR/documentation</a></td>
+    </tr>
+  </table>
+  </div>
+</div>
+<div class="paper">
+  <h2>Paper</h2>
+  <h3>ISTA: computational tools for comparative genomics.</h3>
+  <p><small>Frazer KA, Pachter L, Poliakov A, Rubin EM, Dubchak I. VISTA: computational tools for comparative genomics. Nucleic Acids Res. academic.oup.com; 2004;32: W273–9.</small>
+  
+  <br>
+  Cited by: 1310</p>
+  <h4>Abstract</h4>
+  <p>
+  Comparison of DNA sequences from different species is a fundamental method for identifying functional elements in genomes. Here, we describe the VISTA family of tools created to assist biologists in carrying out this task. Our first VISTA server at http://www-gsd.lbl.gov/vista/ was launched in the summer of 2000 and was designed to align long genomic sequences and visualize these alignments with associated functional annotations. Currently the VISTA site includes multiple comparative genomics tools and provides users with rich capabilities to browse pre-computed whole-genome alignments of large vertebrate genomes and other groups of organisms with VISTA Browser, to submit their own sequences of interest to several VISTA servers for various types of comparative analysis and to obtain detailed comparative analysis results for a set of cardiovascular genes. We illustrate capabilities of the VISTA site by the analysis of a 180 kb interval on human chromosome 5 that encodes for the kinesin family member 3A (KIF3A) protein.
+  </p>
+</div>
 
-  <a class="u-url" href="/tools/edgar_synteny_plots/" hidden></a>
+<a class="u-url" href="/tools/edgar_synteny_plots/" hidden></a>
 
 
 </div>

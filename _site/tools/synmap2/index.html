@@ -50,12 +50,12 @@
 <meta property="og:site_name" content="GenoCat.tools" />
 <meta property="og:image" content="/assets/synmap2.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-03-14T12:31:41-04:00" />
+<meta property="article:published_time" content="2021-03-15T09:12:13-04:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="/assets/synmap2.png" />
 <meta property="twitter:title" content="SynMap2" />
 <script type="application/ld+json">
-{"image":"/assets/synmap2.png","headline":"SynMap2","url":"/tools/synmap2/","dateModified":"2021-03-14T12:31:41-04:00","datePublished":"2021-03-14T12:31:41-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"/tools/synmap2/"},"author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"A database and taxonomy for genomic visualization tools","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"image":"/assets/synmap2.png","headline":"SynMap2","url":"/tools/synmap2/","dateModified":"2021-03-15T09:12:13-04:00","datePublished":"2021-03-15T09:12:13-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"/tools/synmap2/"},"author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"A database and taxonomy for genomic visualization tools","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -166,172 +166,101 @@
          <div class="page">
 
   <h1 class="page-title">SynMap2</h1>
-    <!-- <style>
-  body {
-    font-family: "Lato", sans-serif;
-  }
-  a{
-    color: black;
-  }
-  /* visited link */
-  a:visited {
-    color: black;
-  }
-  .center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-          }
-  .button {
-           background-color: var(--border-color);
-           border: 2px solid var(--border-color);
-           padding: 0.5px 10px;
-           text-align: center;
-           text-decoration: none;
-           display: inline-block;
-           margin: 2px 1px;
-           border-radius: 15px;
-           color: white;
-           font-weight: normal;
-           /* font-size: 10px; */
-         }
-  .button:hover{
-        background-color: white;
-        color: black;
-        }
-  .layout {
-        border-color: var(--border-color);
-        color: white;
-        text-decoration: none;
-        }
-  .layout:visited {
-        background-color: var(--border-color);
-        color: white;
-        }
-  .layout:hover {
-        background-color: var(--border-color);
-        color: white;
-        }
-  .column {
-        float: left;
-        width: 33.33%;
-        word-wrap: break-word;
-      }
+  <div class="section">
+  <img src = "/assets/synmap2.png" class = "center">
+  <small>https://genomevolution.org/coge/SynMap.pl</small>
 
-      /* Clear floats after the columns */
-  .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-        @media screen and (max-height: 450px) {
-          .sidenav {padding-top: 15px;}
-          .sidenav a {font-size: 18px;}
-        }
-        /* On screens that are less than 700px wide, make the sidebar into a topbar */
-      @media screen and (max-width: 700px) {
-        .sidebar {
-          width: 100%;
-          height: auto;
-          position: relative;
-        }
-        .sidebar a {float: left;}
-        div.content {margin-left: 0;}
-      }
-      /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
-      @media screen and (max-width: 400px) {
-        .sidebar a {
-          text-align: center;
-          float: none;
-        }
-      }
-}
-  </style> -->
-  
-  <div class="tool">
-    <div class="section">
-      <img src = "/assets/synmap2.png" class = "center">
-      <small>https://genomevolution.org/coge/SynMap.pl</small>
-
-    </div>
-
-    <div class="section">
-      <h2>Methods</h2>
-      
-         <a href="/attributes/layout/" class="button layout" style="--border-color: #CC79A7; --color: #CC79A7;">linear</a>
-      
-      
-         <a href="/attributes/views/" class="button layout" style="--border-color: #A4B3B6; --color: #A4B3B6;">single view</a>
-      
-      
-         <a href="/attributes/scales/" class="button layout" style="--border-color:  #56B4E9; --color:  #5680E9;">single scale</a>
-      
-      
-         <a href="/attributes/focus/" class="button layout" style="--border-color: #F0E442; --color: #F0E442;">single focus</a>
-      
-      
-         <a href="/attributes/partition/" class="button layout" style="--border-color: #009E73; --color: #009E73;">contiguous</a>
-      
-      
-         <a href="/attributes/abstraction/" class="button layout" style="--border-color: #0072B2; --color: #0072B2;">no abstraction</a>
-      
-      
-         <a href="/attributes/arrangement/" class="button layout" style="--border-color: #D55E00; --color: #D55E00;">linear orthogonal arrangement</a>
-      
-      
-         <a href="/attributes/interconnection_type/" class="button layout" style="--border-color: #E69F00; --color: #E69F00;">between interconnection</a>
-      
-      
-        <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">segment contiguous type</a>
-      
-    </div>
-    <div class="section">
-      <h2>Tool</h2>
-
-          
-              <p class="button layout" style="--border-color: #0C0032; --color: #0C0032;">Access  Format: web application</p>
-          
-          
-              <p class="button layout" style="--border-color: #240090; --color: #240090;">Supported Files: fasta</p>
-          
-              <p class="button layout" style="--border-color: #240090; --color: #240090;">Supported Files: sambamcram</p>
-          
-              <p class="button layout" style="--border-color: #240090; --color: #240090;">Supported Files: other</p>
-          
-          
-              <p class="button layout" style="--border-color: #3500D3; --color: #3500D3;">License: MIT</p>
-          
-
-          <div class="row">
-            <div class="column">
-              <h3>Tool name: </h3> SynMap2
-            </div>
-            <div class="column">
-              <h3>Tool Link: </h3> <a href="https://genomevolution.org/coge/SynMap.pl" target="_blank">https://genomevolution.org/coge/SynMap.pl</a>
-            </div>
-            <div class="column">
-              <h3>Documentation: </h3> <a href="https://genomevolution.org/wiki/index.php/Tutorials" target="_blank">https://genomevolution.org/wiki/index.php/Tutorials</a>
-            </div>
-          </div>
-    </div>
-  </div>
-  <div class="paper">
-    <h2>Paper</h2>
-    <h3>SynMap2 and SynMap3D: web-based whole-genome synteny browsers.</h3>
-    <p><small>Haug-Baltzell A, Stephens SA, Davey S, Scheidegger CE, Lyons E. SynMap2 and SynMap3D: web-based whole-genome synteny browsers. Bioinformatics. academic.oup.com; 2017;33: 2197–2198.</small>
+</div>
+<div class="tool">
+  <div class="section">
+    <h2>Methods</h2>
     
-    <br>
-    Cited by: 21</p>
-    <h4>Abstract</h4>
-    <p>
-    SUMMARY: Current synteny visualization tools either focus on small regions of sequence and do not illustrate genome-wide trends, or are complicated to use and create visualizations that are difficult to interpret. To address this challenge, The Comparative Genomics Platform (CoGe) has developed two web-based tools to visualize synteny across whole genomes. SynMap2 and SynMap3D allow researchers to explore whole genome synteny patterns (across two or three genomes, respectively) in responsive, web-based visualization and virtual reality environments. Both tools have access to the extensive CoGe genome database (containing over 30 000 genomes) as well as the option for users to upload their own data. By leveraging modern web technologies there is no installation required, making the tools widely accessible and easy to use. AVAILABILITY AND IMPLEMENTATION: Both tools are open source (MIT license) and freely available for use online through CoGe ( https://genomevolution.org ). SynMap2 and SynMap3D can be accessed at http://genomevolution.org/coge/SynMap.pl and http://genomevolution.org/coge/SynMap3D.pl , respectively. Source code is available: https://github.com/LyonsLab/coge .
-    </p>
+        <a href="/attributes/layout/" class="button layout" style="color: var(--cat-7)">linear</a>
+    
+    
+        <a href="/attributes/views/" class="button layout" style="color: var(--cat-3)">single view</a>
+    
+    
+        <a href="/attributes/scales/" class="button layout" style="color: var(--cat-2)">single scale</a>
+    
+    
+        <a href="/attributes/focus/" class="button layout" style="color: var(--cat-1)">single focus</a>
+    
+    
+        <a href="/attributes/partition/" class="button layout" style="color: var(--cat-6)">contiguous</a>
+    
+    
+        <a href="/attributes/abstraction/" class="button layout" style="color: var(--cat-5)">no abstraction</a>
+    
+    
+        <a href="/attributes/arrangement/" class="button layout" style="color: var(--cat-4)">linear orthogonal arrangement</a>
+    
+    
+        <a href="/attributes/interconnection_type/" class="button layout" style="color: var(--cat-8)">between interconnection</a>
+    
+    
+      <a href="/attributes/type/" class="button layout" style="--border-color: #013220; --color: #013220;">segment contiguous type</a>
+    
   </div>
+  <div class="section">
+    <h2>Tool</h2>
+    <table><tr>
+      <td class="labelCol">Access Format</td>
+      <td>
+        
+        <span> web application </span>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="labelCol">Supported Files</td>
+      <td>
+        
+        <span> fasta </span>
+        
+        <span> sambamcram </span>
+        
+        <span> other </span>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="labelCol">License</td>
+      <td>
+        
+            <span> MIT </span>
+        
+      </td>
+    </tr>
+    <tr>
+      <td class="labelCol">Tool name</td>
+      <td><h3>SynMap2</h3></td>
+    </tr>
+    <tr>
+      <td class="labelCol">Tool Link</td>
+      <td><a href="https://genomevolution.org/coge/SynMap.pl" target="_blank">https://genomevolution.org/coge/SynMap.pl</a></td>
+    </tr>
+    <tr>
+      <td class="labelCol">Documentation</td>
+      <td><a href="https://genomevolution.org/wiki/index.php/Tutorials" target="_blank">https://genomevolution.org/wiki/index.php/Tutorials</a></td>
+    </tr>
+  </table>
+  </div>
+</div>
+<div class="paper">
+  <h2>Paper</h2>
+  <h3>SynMap2 and SynMap3D: web-based whole-genome synteny browsers.</h3>
+  <p><small>Haug-Baltzell A, Stephens SA, Davey S, Scheidegger CE, Lyons E. SynMap2 and SynMap3D: web-based whole-genome synteny browsers. Bioinformatics. academic.oup.com; 2017;33: 2197–2198.</small>
+  
+  <br>
+  Cited by: 21</p>
+  <h4>Abstract</h4>
+  <p>
+  SUMMARY: Current synteny visualization tools either focus on small regions of sequence and do not illustrate genome-wide trends, or are complicated to use and create visualizations that are difficult to interpret. To address this challenge, The Comparative Genomics Platform (CoGe) has developed two web-based tools to visualize synteny across whole genomes. SynMap2 and SynMap3D allow researchers to explore whole genome synteny patterns (across two or three genomes, respectively) in responsive, web-based visualization and virtual reality environments. Both tools have access to the extensive CoGe genome database (containing over 30 000 genomes) as well as the option for users to upload their own data. By leveraging modern web technologies there is no installation required, making the tools widely accessible and easy to use. AVAILABILITY AND IMPLEMENTATION: Both tools are open source (MIT license) and freely available for use online through CoGe ( https://genomevolution.org ). SynMap2 and SynMap3D can be accessed at http://genomevolution.org/coge/SynMap.pl and http://genomevolution.org/coge/SynMap3D.pl , respectively. Source code is available: https://github.com/LyonsLab/coge .
+  </p>
+</div>
 
-  <a class="u-url" href="/tools/synmap2/" hidden></a>
+<a class="u-url" href="/tools/synmap2/" hidden></a>
 
 
 </div>

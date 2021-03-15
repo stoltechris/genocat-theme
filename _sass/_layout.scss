@@ -20,9 +20,7 @@ article {
   min-height: 85vh;
 }
 
-.tool div {
-  width: 90%;
-}
+
 #breadcrumbs {
   font-size:small;
   font-weight:500;
@@ -32,6 +30,34 @@ article {
     color: var(--geno-900);
   }
 }
+.tool {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
+
+  div {
+    width: 90%;
+  }
+
+  .section {
+    padding: 0 0.5rem;
+  }
+  .labelCol {
+    color: var(--geno-200);
+    font-size: smaller;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+  }
+}
+.paper {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  background-color: var(--geno-300);
+  color: var(--geno-800);
+
+    p { font-weight: 400; }
+}
+
 footer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

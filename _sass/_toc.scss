@@ -253,19 +253,3 @@ font-size: smaller;
   padding: 0 1rem;
   border-radius: 1rem;
 }
-.tool {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 1rem;
-
-  .section {
-    padding: 0 0.5rem;
-  }
-
-  .paper {
-    // grid-column: 1 / span 2;
-    width: 90%;
-
-      p { font-weight: 400; }
-  }
-}
