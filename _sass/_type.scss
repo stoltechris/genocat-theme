@@ -77,7 +77,7 @@ blockquote {
   padding: .5rem 1rem;
   margin: .8rem 0;
   color: var(--gray-500);
-  border-left: .25rem solid var(--border-color);
+  border-left: 0px solid var(--border-color);
 
   p:last-child {
     margin-bottom: 0;
@@ -136,4 +136,14 @@ a[href^="#fnref:"] {
 .paper h3 {
   color: var(--geno-700);
   font-weight: 800;
+}
+.contribute {
+  
+  h5 {
+  font-weight:400;
+  margin-top: 0.25rem;
+  }
+
+  p.run-in {
+    margin-top: 0;  }
 }
