@@ -27,7 +27,7 @@ function openSection(id, el) {
   el.classList.toggle("act");
 }
 
-function click_filter(id) { // console.log("clicked ", id);
+function click_filter(id) {
   var tool = document.getElementById(id);
   var name = tool.getAttribute("name");
   // console.log("name of clicked filter: "+name);
@@ -41,6 +41,7 @@ function click_filter(id) { // console.log("clicked ", id);
   }
   checkbox_filter(arr);
 }
+
 
 function getNameIndex(name) {
   if (name == "access_format") {
@@ -178,7 +179,10 @@ document.getElementById("within").onclick=function() {
 document.getElementById("between").onclick=function() {
   click_filter("between");
 }
-
+//web app
+document.getElementById("web application").onclick=function() {
+  click_filter("web application");
+}
 //standalone
 document.getElementById("standalone app").onclick=function() {
   click_filter("standalone app");
@@ -239,7 +243,6 @@ document.getElementById("multiple-focus").onclick=function() {
   click_filter("multiple-focus");
 }
 
-
 //pointsparse
 document.getElementById("point sparse").onclick=function() {
   click_filter("point sparse");
@@ -264,4 +267,26 @@ function uncheck(other, arr) {
     }
   }
   return arr;
+}
+
+function clearFilters(){
+  // uncheck checkboxes
+  var filters = document.querySelectorAll("#filter input");
+  filters.forEach(element => element.checked = false);
+  // clear filter badges
+  updateBadges([]);
+  checkbox_filter([]);
+  arr = [];
+  for (var i=0; i < num_categories; i++) {
+    arr.push([]);
+  }
+  // show all tools
+  var tools = document.querySelectorAll(".filterDiv");
+  tools.forEach(tool => {
+    if (tool.className.indexOf("show") == -1) {
+      addClass(tool, 'show');
+    }
+  });
+  // update counter
+  document.getElementById("results").innerHTML = tools.length + " tool" + (tools.length != 1 ? "s" : "");
 }

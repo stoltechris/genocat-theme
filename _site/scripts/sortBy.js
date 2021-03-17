@@ -26,11 +26,9 @@ function sortByName() {
 
 function sortByRecency() {
   var list, switching;
-  // document.getElementById("loader").style.display = "show";
   list = document.getElementsByClassName("filterDiv show");
   switching = true;
   getPubYear(list, switching, []);
-  // document.getElementById("loader").style.display = "none";
   document.getElementById("sortOrder").innerHTML = "sorted by year";
 }
 

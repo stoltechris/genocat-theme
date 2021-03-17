@@ -19,10 +19,11 @@
 #filter, #sort {
   display: none;
   position: fixed;
+  z-index: 3;
 }
 #filter:target, #sort:target {
   color: var(--geno-300);
-  display: grid;
+  display: block;
   background: var(--geno-700);
   top: calc(var(--spacer-top) * 1.7);
   left: 33vw;
@@ -36,7 +37,8 @@
   input { margin-right: 0.3rem; }
 } 
 
-#filter {
+#filter .grid {
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-gap: 0.5rem;
 
