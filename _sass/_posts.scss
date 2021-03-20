@@ -7,6 +7,7 @@
 .post {
   background-color: var(--page-bg);
   margin-bottom: 0;
+  max-width: 100vw;
 
   li + li {
     margin-top: .25rem;

@@ -44,14 +44,16 @@ article {
   }
   .labelCol {
     color: var(--geno-200);
-    font-size: smaller;
+    font-size: x-small;
     text-transform: uppercase;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.06rem;
+  }
+  td {
+    font-size: smaller;
   }
 }
 .paper {
   padding: 0.5rem 1rem;
-  width: 100%;
   background-color: var(--geno-300);
   color: var(--geno-800);
 
