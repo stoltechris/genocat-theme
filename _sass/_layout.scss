@@ -57,6 +57,13 @@ article {
 
     p { font-weight: 400; }
 }
+.page .row .column {
+  padding: 0 .5rem;
+
+  img { margin-bottom: .2rem; }
+
+  p { font-size: smaller; }
+}
 
 footer {
   display: grid;
