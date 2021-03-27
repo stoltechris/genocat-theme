@@ -107,7 +107,7 @@
   .aside {
     line-height: 2.4rem;
   }
-  #status { top: calc(var(--spacer-top) + 1px); }
+  #status { top: var(--spacer-top); }
 
   .wrapper { 
     padding-top: var(--spacer-top); 

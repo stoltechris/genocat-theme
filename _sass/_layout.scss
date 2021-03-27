@@ -124,7 +124,7 @@ footer {
   width: 14rem;
   visibility: hidden;
   overflow-y: auto;
-  font-size: .875rem; /* 15px */
+  // font-size: .95rem; /* 15px */
   color: rgba(255,255,255,.6);
   background-color: var(--geno-900);
   -webkit-transition: all .3s ease-in-out;
@@ -132,14 +132,14 @@ footer {
 }
 @media (min-width: 30em) {
   .sidebar {
-    font-size: .85rem; /* 14px */
+    font-size: 90%; /* 14px */
   }
 }
 
 /* Sidebar content */
 .sidebar a {
   font-weight: normal;
-  color: #fff;
+  color: var(--geno-300);
 }
 .sidebar-item {
   padding: 1rem;
@@ -166,7 +166,8 @@ a.sidebar-nav-item:focus {
   border-color: transparent;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 52em) {
+
   .sidebar-item {
     padding: 1.5rem;
   }
