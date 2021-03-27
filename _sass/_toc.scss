@@ -25,11 +25,17 @@
   color: var(--geno-300);
   display: block;
   background: var(--geno-700);
-  top: calc(var(--spacer-top) * 1.7);
-  left: 33vw;
+  top: calc(var(--spacer-top) * 1.56);
+  left: 33.5vw;
   width: 67vw;
   max-height: 80vh;
   overflow-y:auto;
+
+  .button {
+    background-color: var(--geno-900);
+
+    a { color: var(--geno-200); }
+  }
 
   label {
     display: block;
@@ -97,12 +103,6 @@ input, textarea, select {
   width: 1rem;
 }
 
-#status {
-  width: 100%;
-  position: relative;
-
-  p { display: inline-block; }
-}
 
 .loader {
   border: 5px solid rgba(200,200,200,0.2);
@@ -111,11 +111,8 @@ input, textarea, select {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  margin-top: -10px;
+  margin: -10px 0;
   animation: spin 2s linear infinite;
-  position: absolute;
-  top: 2.5rem;
-  left: 10px;
 }
 
 @keyframes spin {
@@ -128,7 +125,6 @@ display:none;
 }
 #results {
 color: var(--geno-200);
-font-size: smaller;
 }
 
 #filterTags span {
@@ -167,7 +163,6 @@ font-size: smaller;
   }
 }
 #sortOrder {
-  font-size: smaller;
   color: var(--geno-800);
 }
 // .panel .close {
@@ -218,16 +213,15 @@ font-size: smaller;
 
 .content {
           text-align: left;
-          font-size: 90%;
           transition: all ease-in-out 0.5s;
         }
 .button {
           background-color: transparent;
           // border: 2px solid none;
           padding: 0.5px 10px;
-          font: 1rem 'Recursive';
+          font: 90% 'Recursive';
           font-weight: 800;
-          text-align: center;
+          // text-align: center;
           text-decoration: none;
           display: inline-block;
           margin: 2px 1px;
@@ -254,4 +248,10 @@ font-size: smaller;
   background: var(--geno-500);
   padding: 0 1rem;
   border-radius: 1rem;
+}
+
+.tool_img {
+  background-color: var(--geno-100);
+  min-height: 9rem;
+  margin-bottom: 1rem;
 }

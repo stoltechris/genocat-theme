@@ -3,9 +3,9 @@ function search() {
   var num = 0;
   input = document.getElementById("mySearch");
   filter = input.value.toUpperCase();
-  x = document.getElementsByClassName("filterDiv");
-  for (i = 0; i < x.length; i++) {
-    a = x[i].getElementsByTagName("h4")[0];
+  x = document.getElementsByClassName("filterDiv show");
+  for (var i = 0; i < x.length; i++) {
+    a = x[i].getElementsByTagName("h3")[0];
     if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
       x[i].style.display = "";
       num++;

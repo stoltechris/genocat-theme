@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body class="sidebar-overlay">
+  <body class="sidebar-overlay home">
 
     {% include sidebar.html %}
 
@@ -12,9 +12,9 @@
         <header class="logo">
           <a href="{{ site.baseurl }}/" title="Home"><img src="/public/header.svg"/></a>
         </header>
-        <input class="aside aside-1" type="search" id="mySearch" onkeyup="search()" onClick="goToSearch()" placeholder="SEARCH"/>
-        <aside class="aside aside-2" ><a href="/#sort">SORT</a></aside>
-        <aside class="aside aside-3"><a href="/#filter" >FILTER</a></aside>
+        <input class="aside aside-1" type="search" id="mySearch" onClick="goTo('#search')" placeholder="SEARCH" onkeyup="search()" onabort="goTo('#search')"/>
+          <aside class="aside aside-2" onClick="goTo('#sort')"><a href="/#sort">SORT</a></aside>
+          <aside class="aside aside-3" onClick="goTo('#filter')"><a href="/#filter">FILTER</a></aside>
       </div>
       <div id="status">
         <p><span id="results"> </span> <span class="loader hide-loader" id="loader"></span></p>
@@ -41,14 +41,11 @@
     <script src="{{site.baseurl}}/scripts/search_bar.js"></script>
     <script src="{{site.baseurl}}/scripts/sortBy.js"></script>
     <script>
-      
-    function scrollToTop() { 
-      window.scrollTo(0, 0);
-    } 
 
-    function goToSearch(){
-      window.location = "/#search"
-    } 
+    function goTo(place){
+      window.location = "/" + place;
+    }  
+
     var coll = document.getElementsByClassName("collapsible");
     var i;
 

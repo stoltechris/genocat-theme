@@ -1,6 +1,7 @@
 function sortByName() {
   var loader = document.getElementById("loader");
   removeClass(loader, "hide-loader");
+  document.getElementById("sortOrder").innerHTML = "sorting by name";
 
   var list, i, switching, b, shouldSwitch;
   list = document.getElementsByClassName("filterDiv show");
@@ -29,7 +30,7 @@ function sortByRecency() {
   list = document.getElementsByClassName("filterDiv show");
   switching = true;
   getPubYear(list, switching, []);
-  document.getElementById("sortOrder").innerHTML = "sorted by year";
+  document.getElementById("sortOrder").innerHTML = "sorting by year";
 }
 
 function getPubYear(b, switching, years) {
@@ -58,6 +59,7 @@ function getPubYear(b, switching, years) {
       switching = makeSwitch(years, b, switching);
     }
     addClass(loader, "hide-loader");
+    document.getElementById("sortOrder").innerHTML = "sorted by year";
   })
 }
 
@@ -67,7 +69,7 @@ function sortByCitation() {
   switching = true;
   counts = [];
   getCiteCount(counts, list, switching);
-  document.getElementById("sortOrder").innerHTML = "sorted by citation count";
+  document.getElementById("sortOrder").innerHTML = "sorting by citation count";
 }
 
 function getCiteCount(counts, b, switching) {
@@ -95,6 +97,7 @@ function getCiteCount(counts, b, switching) {
       switching = makeSwitch(counts, b, switching);
     }
     addClass(loader, "hide-loader");
+    document.getElementById("sortOrder").innerHTML = "sorted by citation count";
   });
 }
 

@@ -49,11 +49,11 @@
 <meta property="og:url" content="/attributes/type/" />
 <meta property="og:site_name" content="GenoCat.tools" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-03-20T14:29:12-04:00" />
+<meta property="article:published_time" content="2021-03-27T16:13:32-04:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Feature Type" />
 <script type="application/ld+json">
-{"headline":"Feature Type","url":"/attributes/type/","dateModified":"2021-03-20T14:29:12-04:00","datePublished":"2021-03-20T14:29:12-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"/attributes/type/"},"author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"Features can be of different types. Those that only cover one nucleotide are defined as point features while features covering more than one nucleotide are segment features. While there can be gaps between features in sparse sets, contiguous feature sets cover the entire genome.","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"headline":"Feature Type","url":"/attributes/type/","dateModified":"2021-03-27T16:13:32-04:00","datePublished":"2021-03-27T16:13:32-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"/attributes/type/"},"author":{"@type":"Person","name":"Gehlenborg Lab"},"description":"Features can be of different types. Those that only cover one nucleotide are defined as point features while features covering more than one nucleotide are segment features. While there can be gaps between features in sparse sets, contiguous feature sets cover the entire genome.","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -139,9 +139,9 @@
         <header class="logo">
           <a href="/" title="Home"><img src="/public/header.svg"/></a>
         </header>
-          <input class="aside aside-1" type="search" id="mySearch" onClick="goToSearch()" placeholder="SEARCH"/>
-          <aside class="aside aside-2"><a href="/#sort">SORT</a></aside>
-          <aside class="aside aside-3"><a href="/#filter">FILTER</a></aside>
+          <input class="aside aside-1" type="search" id="mySearch" onClick="goTo('#search')" placeholder="SEARCH"/>
+          <aside class="aside aside-2" onClick="goTo('#sort')"><a href="/#sort">SORT</a></aside>
+          <aside class="aside aside-3" onClick="goTo('#filter')"><a href="/#filter">FILTER</a></aside>
       </div>
 
       <article class="main page">
@@ -160,7 +160,7 @@
 
 </div>
 
-         <div class="page">
+         <div class="pages">
 
   <h1 class="page-title">Feature Type</h1>
   <p>Features can be of different types. Those that only cover one nucleotide are defined 
@@ -4347,8 +4347,8 @@
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
     
     <script>
-    function goToSearch(){
-      window.location = "/#search"
+    function goTo(place){
+      window.location = "/" + place;
     }  
 
     </script>

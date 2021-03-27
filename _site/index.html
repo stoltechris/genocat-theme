@@ -69,7 +69,7 @@
 </head>
 
 
-  <body class="sidebar-overlay">
+  <body class="sidebar-overlay home">
 
     <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
      styles, `#sidebar-checkbox` for behavior. -->
@@ -137,9 +137,9 @@
         <header class="logo">
           <a href="/" title="Home"><img src="/public/header.svg"/></a>
         </header>
-        <input class="aside aside-1" type="search" id="mySearch" onkeyup="search()" onClick="goToSearch()" placeholder="SEARCH"/>
-        <aside class="aside aside-2" ><a href="/#sort">SORT</a></aside>
-        <aside class="aside aside-3"><a href="/#filter" >FILTER</a></aside>
+        <input class="aside aside-1" type="search" id="mySearch" onClick="goTo('#search')" placeholder="SEARCH" onkeyup="search()" onabort="goTo('#search')"/>
+          <aside class="aside aside-2" onClick="goTo('#sort')"><a href="/#sort">SORT</a></aside>
+          <aside class="aside aside-3" onClick="goTo('#filter')"><a href="/#filter">FILTER</a></aside>
       </div>
       <div id="status">
         <p><span id="results"> </span> <span class="loader hide-loader" id="loader"></span></p>
@@ -147,6 +147,7 @@
         <p id="sortOrder">sorted by name</p>
       </div>
       <div id="sort">
+  <div class="button"><a href="#">Done</a></div>
   <label for="byName"><input type="radio" id="byName" name="sort" checked/> Sort by name</label>
   <label for="byYear"><input type="radio" id="byYear" name="sort"/> Sort by year (most recent)</label>
   <label for="byCitation"><input type="radio" id="byCitation" name = "sort"/> Sort by citation count</label>
@@ -183,63 +184,63 @@
       <h2 onClick="openSection('data_tax', this)">Data Taxonomy</h2>
       <div id="data_tax">
         <h3>Interconnection</h3>
-        <label for="no"><input type="checkbox" id="no" name="interconnection_type"/> None </label>
+        <label for="no"><input type="checkbox" id="no" name="interconnection_type"/>None</label>
         <label for="within"><input type="checkbox" id="within" name="interconnection_type"/>Within </label>
         <label for="between"><input type="checkbox" id="between" name="interconnection_type"/>Between </label>
       
       
         <h3>Feature Type</h3>
-        <label for="segment sparse"><input type="checkbox" id="segment sparse" name="feature_type"/> Segment Sparse </label>
-        <label for="segment contiguous"><input type="checkbox" id="segment contiguous" name="feature_type"/>Segment Contiguous </label>
-        <label for="point sparse"><input type="checkbox" id="point sparse" name="feature_type"/>Point Sparse </label>
-        <label for="point contiguous"><input type="checkbox" id="point contiguous" name="feature_type"/>Point Contiguous </label>
+        <label for="segment sparse"><input type="checkbox" id="segment sparse" name="feature_type"/>Segment Sparse</label>
+        <label for="segment contiguous"><input type="checkbox" id="segment contiguous" name="feature_type"/>Segment Contiguous</label>
+        <label for="point sparse"><input type="checkbox" id="point sparse" name="feature_type"/>Point Sparse</label>
+        <label for="point contiguous"><input type="checkbox" id="point contiguous" name="feature_type"/>Point Contiguous</label>
       </div>
     </section>
     <section>
       <h2 onClick="openSection('coord_sys', this)">Coordinate System</h2>
       <div id="coord_sys">
         <h3>Layout</h3>
-        <label for="circular"><input type="checkbox" id="circular" name = "layout"/> Circular </label>
-        <label for="linear"><input type="checkbox" id="linear" name = "layout"/> Linear </label>
-        <label for="spacefilling"><input type="checkbox" id="spacefilling" name = "layout"/> Space Filling </label>
-        <label for="spatial"><input type="checkbox" id="spatial" name = "layout"/> Spatial </label>
+        <label for="circular"><input type="checkbox" id="circular" name = "layout"/>Circular</label>
+        <label for="linear"><input type="checkbox" id="linear" name = "layout"/>Linear</label>
+        <label for="spacefilling"><input type="checkbox" id="spacefilling" name = "layout"/>Space Filling</label>
+        <label for="spatial"><input type="checkbox" id="spatial" name = "layout"/>Spatial</label>
       
       
         <h3>Partition</h3>
-        <label for="contiguous"><input type="checkbox" id="contiguous" name = "partition"/> Contiguous </label>
-        <label for="segregated"><input type="checkbox" id="segregated" name = "partition"/> Segregated </label>
+        <label for="contiguous"><input type="checkbox" id="contiguous" name = "partition"/>Contiguous</label>
+        <label for="segregated"><input type="checkbox" id="segregated" name = "partition"/>Segregated</label>
       
       
         <h3>Abstraction</h3>
-        <label for="noab"><input type="checkbox" id="noab" name = "abstraction"/>  None </label>
-        <label for="partialab"><input type="checkbox" id="partialab" name = "abstraction"/> Partial </label>
-        <label for="completeab"><input type="checkbox" id="completeab" name = "abstraction"/>  Complete </label>
+        <label for="noab"><input type="checkbox" id="noab" name = "abstraction"/>None</label>
+        <label for="partialab"><input type="checkbox" id="partialab" name = "abstraction"/>Partial</label>
+        <label for="completeab"><input type="checkbox" id="completeab" name = "abstraction"/>Complete</label>
       
       
         <h3>Arrangement</h3>
-        <label for="linear parallel"><input type="checkbox" id="linear parallel" name = "arrangement"/>  Linear Parallel </label>
-        <label for="linear serial"><input type="checkbox" id="linear serial" name = "arrangement"/>  Linear Serial </label>
-        <label for="linear orthogonal"><input type="checkbox" id="linear orthogonal" name = "arrangement"/>  Linear Orthogonal </label>
-        <label for="circular parallel"><input type="checkbox" id="circular parallel" name = "arrangement"/>  Circular Parallel </label>
-        <label for="circular serial"><input type="checkbox" id="circular serial" name = "arrangement"/>  Circular Serial </label>
+        <label for="linear parallel"><input type="checkbox" id="linear parallel" name = "arrangement"/>Linear Parallel </label>
+        <label for="linear serial"><input type="checkbox" id="linear serial" name = "arrangement"/>Linear Serial </label>
+        <label for="linear orthogonal"><input type="checkbox" id="linear orthogonal" name = "arrangement"/>Linear Orthogonal </label>
+        <label for="circular parallel"><input type="checkbox" id="circular parallel" name = "arrangement"/>Circular Parallel </label>
+        <label for="circular serial"><input type="checkbox" id="circular serial" name = "arrangement"/>Circular Serial </label>
       </div>
     </section>
     <section>
       <h2 onClick="openSection('view_conf', this)">View Configurations</h2>
       <div id="view_conf">
         <h3>View</h3>
-        <label for="single-view"> <input type="checkbox" id="single-view" name = "view"/> Single </label>
-        <label for="multiple-view"><input type="checkbox" id="multiple-view" name = "view"/>  Multiple </label>
+        <label for="single-view"> <input type="checkbox" id="single-view" name = "view"/>Single </label>
+        <label for="multiple-view"><input type="checkbox" id="multiple-view" name = "view"/>Multiple </label>
       
       
         <h3>Scale</h3>
-        <label for="single-scale"><input type="checkbox" id="single-scale" name = "scale"/>  Single </label>
-        <label for="multiple-scale"> <input type="checkbox" id="multiple-scale" name = "scale"/> Multiple </label>
+        <label for="single-scale"><input type="checkbox" id="single-scale" name = "scale"/>Single </label>
+        <label for="multiple-scale"> <input type="checkbox" id="multiple-scale" name = "scale"/>Multiple </label>
       
       
         <h3>Focus</h3>
-        <label for="single-focus"><input type="checkbox" id="single-focus" name = "focus"/>  Single </label>
-        <label for="multiple-focus"><input type="checkbox" id="multiple-focus" name = "focus"/>  Multiple </label>
+        <label for="single-focus"><input type="checkbox" id="single-focus" name = "focus"/>Single </label>
+        <label for="multiple-focus"><input type="checkbox" id="multiple-focus" name = "focus"/>Multiple </label>
       </div>
     </section>
   </div>
@@ -250,7 +251,7 @@
 
   
         <div class="filterDiv 10.1093/nar/gkv476 notapplicable segregated noab no segment sparsepoint sparse unknown within web application spatial single-focus single-view single-scale">
-          <h4><a href="/tools/3d_genome_browser/">3D Genome Browser</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/3d_genome_browser/">3D Genome Browser</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 3<br>
@@ -279,14 +280,14 @@
           <p><a href = "http://3dgb.cs.mcgill.ca/" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/3d_genome_browser/"><img src = "/assets/3D_Genome_Browser.jpg" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1007/s40484-017-0091-8 txttabbed contiguous noab no segment sparsesegment contiguouspoint sparsepoint contiguous unknown no web applicationstandalone app spatial single-focus single-view single-scale">
-          <h4><a href="/tools/3dviewer/">3dViewer</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/3dviewer/">3dViewer</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 6<br>
@@ -317,14 +318,14 @@
           <p><a href = "http://bioinfo.au.tsinghua.edu.cn/member/nadhir/HiC3DViewer/static/data/UserManual.pdf" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/3dviewer/"><img src = "/assets/3dviewer.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1186/1471-2105-13-2 notapplicable  ab no  open source no standalone app linear multiple-focus multiple-view multiple-scale">
-          <h4><a href="/tools/abrowse/">ABrowse</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/abrowse/">ABrowse</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 19<br>
@@ -351,14 +352,14 @@
           </p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/abrowse/"><img src = "/assets/abrowse.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btu531 fastaother segregated partialab no point contiguous open source between standalone app linear single-focus single-view single-scale">
-          <h4><a href="/tools/aliview/">AliView</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/aliview/">AliView</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 606<br>
@@ -387,14 +388,14 @@
           <p><a href = "http://ormbunkar.se/aliview/#TOP_HELP" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/aliview/"><img src = "/assets/aliview.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/nar/gkw022 fasta contiguous noab no point contiguous open source no standalone app linear single-focus single-view single-scale">
-          <h4><a href="/tools/alvis/">Alvis</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/alvis/">Alvis</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 3<br>
@@ -423,14 +424,14 @@
           <p><a href = "https://bitbucket.org/rfs/alvis/src/master/doc/" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/alvis/"><img src = "/assets/alvis.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1371/journal.pcbi.1006790 other contiguous noab linear parallel segment contiguoussegment sparsepoint contiguouspoint sparse open source no web application linear single-focus multiple-view single-scale">
-          <h4><a href="/tools/apollo/">Apollo</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/apollo/">Apollo</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 0<br>
@@ -459,14 +460,14 @@
           <p><a href = "https://genomearchitect.readthedocs.io/en/latest/UsersGuide.html" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/apollo/"><img src = "/assets/apollo.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1186/1471-2105-16-S11-S6 notapplicable contiguous noab no  unknown no standalone app linear single-focus single-view single-scale">
-          <h4><a href="/tools/bactogenie/">BactoGenie</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/bactogenie/">BactoGenie</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 6<br>
@@ -493,14 +494,14 @@
           </p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/bactogenie/"><img src = "/assets/bactogenie.jpg" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.3389/fgene.2020.00003 bed contiguous noab linear parallel segment sparsepoint contiguouspoint sparsesegment contiguous open source no web application linear single-focus multiple-view single-scale">
-          <h4><a href="/tools/bedsect/">BedSect</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/bedsect/">BedSect</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 26<br>
@@ -529,14 +530,14 @@
           <p><a href = "http://imgsb.org/bedsect/help.php" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/bedsect/"><img src = "/assets/bedsect.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btt114 notapplicable segregated noab linear parallel segment sparsesegment contiguouspoint sparsepoint contiguous unknown no web application linear multiplesingle-focus multiple-view multiplesingle-scale">
-          <h4><a href="/tools/cepbrowser/">CEpBrowser</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/cepbrowser/">CEpBrowser</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 6<br>
@@ -569,14 +570,14 @@
           <p><a href = "https://www.cepbrowser.org/cpbrowser/manual.php" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/cepbrowser/"><img src = "/assets/cepbrowser.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/bti054 txttabother segregated noab no segment sparsepoint sparsepoint contiguous unknown no standalone app circular single-focus single-view single-scale">
-          <h4><a href="/tools/cgview/">CGView</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/cgview/">CGView</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 471<br>
@@ -605,14 +606,14 @@
           <p><a href = "http://wishart.biology.ualberta.ca/cgview/application.html" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/cgview/"><img src = "/assets/CGView.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/nar/gkn179 fastaother segregated noab no segment sparsesegment contiguouspoint sparsepoint contiguous unknown no web application circular single-focus single-view single-scale">
-          <h4><a href="/tools/cgview_server/">CGView Server</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/cgview_server/">CGView Server</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 358<br>
@@ -639,14 +640,14 @@
           </p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/cgview_server/"><img src = "/assets/cgview_server.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1186/1471-2105-8-82 other segregated noab linear parallel segment sparse unknown between web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/cinteny/">Cinteny</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/cinteny/">Cinteny</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 134<br>
@@ -675,14 +676,14 @@
           <p><a href = "https://cinteny.cchmc.org/doc/demo.php" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/cinteny/"><img src = "/assets/Cinteny.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1101/gr.092759.109 txttab segregatedcontiguous partialab circular serial segment sparsesegment contiguouspoint sparsepoint contiguous open source withinbetween standalone app circular single-focus single-view single-scale">
-          <h4><a href="/tools/circos/">Circos</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/circos/">Circos</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 4459<br>
@@ -711,14 +712,14 @@
           <p><a href = "http://circos.ca/documentation/" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/circos/"><img src = "/assets/Circos.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btv249 other contiguous noab no segment sparsesegment contiguouspoint sparsepoint contiguous unknown no web application circular single-focus single-view single-scale">
-          <h4><a href="/tools/civi/">Civi</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/civi/">Civi</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 17<br>
@@ -747,14 +748,14 @@
           <p><a href = "http://civi.cmbi.ru.nl/help.html" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/civi/"><img src = "/assets/Civi.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btv433 txttabother segregatedcontiguous partialab circular serial segment sparsesegment contiguouspoint sparsepoint contiguous unknown withinbetween web application circular single-focus single-view single-scale">
-          <h4><a href="/tools/clico_free_service/">ClicO Free Service</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/clico_free_service/">ClicO Free Service</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 35<br>
@@ -781,14 +782,14 @@
           </p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/clico_free_service/"><img src = "/assets/clico.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1371/journal.pcbi.1004873 bedvcfother contiguoussegregated noab linear parallellinear serial segment sparsesegment contiguouspoint sparsepoint contiguous open source no “programming library” linear single-focus single-view single-scale">
-          <h4><a href="/tools/cnvkit/">CNVkit</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/cnvkit/">CNVkit</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 447<br>
@@ -817,14 +818,14 @@
           <p><a href = "https://cnvkit.readthedocs.io/en/stable/quickstart.html" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/cnvkit/"><img src = "/assets/CNV.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btl193 notapplicable  ab linear parallellinear orthogonal  unknown no  linear single-focus single-view single-scale">
-          <h4><a href="/tools/combo/">Combo</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/combo/">Combo</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 63<br>
@@ -851,14 +852,14 @@
           <p><a href = "https://pdfs.semanticscholar.org/1122/9b9f3aacfcbdd39afd73a74466aa19f63284.pdf" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/combo/"><img src = "/assets/Combo.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btz540 other contiguous noab linear orthogonal segment sparsesegment contiguouspoint sparsepoint contiguous open source within programming library linear multiple-focus multiple-view multiple-scale">
-          <h4><a href="/tools/cooler/">Cooler</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/cooler/">Cooler</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 2<br>
@@ -887,14 +888,14 @@
           <p><a href = "https://cooler.readthedocs.io/en/latest/#" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/cooler/"><img src = "/assets/cooler.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btaa146 vcfbedother contiguous noab linear parallel segment sparse open source no “programming library” linear multiple-focus multiple-view multiple-scale">
-          <h4><a href="/tools/cramer/">CRAMER</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/cramer/">CRAMER</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 1<br>
@@ -923,14 +924,14 @@
           <p><a href = "https://github.com/FadyMohareb/cramer" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/cramer/"><img src = "/assets/cramer.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv https://doi.org/10.1038/s41587-019-0032-3 other contiguous noab linear parallel point contiguous open source no “web application”“standalone app” linear single-focus single-view single-scale">
-          <h4><a href="/tools/crispresso2/">CRISPResso2</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/crispresso2/">CRISPResso2</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 101<br>
@@ -961,14 +962,14 @@
           <p><a href = "https://crispresso.pinellolab.partners.org/help" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/crispresso2/"><img src = "/assets/crispresso2.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btr020 bedsambamcramother segregated noab no segment sparsesegment contiguouspoint sparsepoint contiguous open source no web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/dalliance/">Dalliance</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/dalliance/">Dalliance</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 78<br>
@@ -997,14 +998,14 @@
           <p><a href = "https://www.biodalliance.org/started.html" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/dalliance/"><img src = "/assets/dalliance.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1142/9789813207813_0025 other contiguous noab no segment contiguouspoint contiguous open source no standalone app linear single-focus single-view single-scale">
-          <h4><a href="/tools/deep_motif_dashboard/">Deep Motif Dashboard</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/deep_motif_dashboard/">Deep Motif Dashboard</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 45<br>
@@ -1033,14 +1034,14 @@
           <p><a href = "https://github.com/QData/DeepMotif/blob/master/README.md" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/deep_motif_dashboard/"><img src = "/assets/deepmotifdashboard.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/nar/gkw257 txttabsambamcramother segregated noab no point contiguous open source no standalone app linear single-focus multiple-view single-scale">
-          <h4><a href="/tools/deeptools_heatmap/">deepTools Heatmap</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/deeptools_heatmap/">deepTools Heatmap</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 630<br>
@@ -1069,14 +1070,14 @@
           <p><a href = "https://deeptools.readthedocs.io/en/develop/content/tools/plotHeatmap.html" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/deeptools_heatmap/"><img src = "/assets/deeptools.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btn578 other contiguous noab no segment sparsesegment contiguouspoint sparsepoint contiguous open source no standalone app linearcircular single-focus single-view single-scale">
-          <h4><a href="/tools/dnaplotter/">DNAPlotter</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/dnaplotter/">DNAPlotter</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 531<br>
@@ -1107,14 +1108,14 @@
           <p><a href = "http://sanger-pathogens.github.io/Artemis/DNAPlotter/" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/dnaplotter/"><img src = "/assets/DNAPlotter.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1038/nsmb.3180 bedsambamcramother  noab no segment sparsepoint contiguous unknown no standalone app linear single-focus single-view single-scale">
-          <h4><a href="/tools/easeq/">EaSeq</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/easeq/">EaSeq</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 62<br>
@@ -1143,14 +1144,14 @@
           <p><a href = "https://easeq.net/getting-started/" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/easeq/"><img src = "/assets/easeq.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/nar/gkw255 other segregatedcontiguous noab linear parallelcircular parallel segment sparse unknown no web application linearcircular single-focus multiple-view single-scale">
-          <h4><a href="/tools/edgar_genome_browser/">Edgar Genome Browser</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/edgar_genome_browser/">Edgar Genome Browser</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 125<br>
@@ -1181,14 +1182,14 @@
           <p><a href = "https://www.uni-giessen.de/fbz/fb08/Inst/bioinformatik/software/EDGAR/documentation" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/edgar_genome_browser/"><img src = "/assets/edgargenomebrowser.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/nar/gkh458 other contiguous noab linear orthogona; segment contiguous unknown between web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/edgar_synteny_plots/">Edgar Synteny Plots</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/edgar_synteny_plots/">Edgar Synteny Plots</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 1310<br>
@@ -1217,14 +1218,14 @@
           <p><a href = "https://www.uni-giessen.de/fbz/fb08/Inst/bioinformatik/software/EDGAR/documentation" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/edgar_synteny_plots/"><img src = "/assets/edgarsyntenymatrix.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1186/s12864-018-4625-x other segregated noab no point contiguous open source no programming language linear single-focus multiple-view single-scale">
-          <h4><a href="/tools/enrichedheatmap/">EnrichedHeatmap</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/enrichedheatmap/">EnrichedHeatmap</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 7<br>
@@ -1253,14 +1254,14 @@
           <p><a href = "https://bioconductor.org/packages/release/bioc/vignettes/EnrichedHeatmap/inst/doc/EnrichedHeatmap.html" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/enrichedheatmap/"><img src = "/assets/enrichedheatmaps.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/nar/30.1.38 bedsambamcramvcfother segregated noab no segment sparsesegment contiguouspoint sparsepoint contiguous open source between web applicationstandalone app linear single-focus multiple-view multiple-scale">
-          <h4><a href="/tools/ensembl/">Ensembl</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/ensembl/">Ensembl</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 1482<br>
@@ -1291,14 +1292,14 @@
           <p><a href = "https://useast.ensembl.org/info/index.html" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/ensembl/"><img src = "/assets/ensembl.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1038/nmeth.3038 other segregated noab no segment sparsesegment contiguouspoint sparsepoint contiguous open source no web applicationstandalone appprogramming library linear single-focus single-view single-scale">
-          <h4><a href="/tools/epiviz/">EpiViz</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/epiviz/">EpiViz</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 47<br>
@@ -1331,14 +1332,14 @@
           <p><a href = "https://epiviz.github.io/documentation/" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/epiviz/"><img src = "/assets/epiviz.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/nar/gky504 fasta contiguous noab linear orthogonal segment sparsesegment contiguouspoint sparsepoint contiguous open source within web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/galaxy_hicexplorer/">Galaxy HiCExplorer</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/galaxy_hicexplorer/">Galaxy HiCExplorer</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 7<br>
@@ -1367,14 +1368,14 @@
           <p><a href = "https://hicexplorer.usegalaxy.eu/tours/core.galaxy_ui" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/galaxy_hicexplorer/"><img src = "/assets/hicexplorer.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1002/0471250953.bi0909s28 other segregated noab no segment sparsesegment contiguouspoint sparsepoint contiguous open source  standalone app linear single-focus multiple-view multiple-scale">
-          <h4><a href="/tools/gbrowse/">GBrowse</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/gbrowse/">GBrowse</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 127<br>
@@ -1403,14 +1404,14 @@
           <p><a href = "http://gmod.org/wiki/GBrowse#Documentation" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/gbrowse/"><img src = "/assets/GBrowse.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1002/0471250953.bi0912s31 fastaother segregated noab linear parallel segment sparse open source between web application linear multiple-focus multiple-view multiple-scale">
-          <h4><a href="/tools/gbrowse_syn/">GBrowse_syn</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/gbrowse_syn/">GBrowse_syn</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 57<br>
@@ -1439,14 +1440,14 @@
           <p><a href = "http://gmod.org/wiki/GBrowse_syn" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/gbrowse_syn/"><img src = "/assets/gbrowse_syn.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1016/j.ygeno.2019.03.012 fastaother contiguous noab linear parallel segment sparsepoint contiguouspoint sparsesegment contiguous open source no standalone app linear single-focus multiple-view single-scale">
-          <h4><a href="/tools/genome_annotator_light_(gal)/">Genome Annotator Light (GAL)</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/genome_annotator_light_(gal)/">Genome Annotator Light (GAL)</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 2<br>
@@ -1475,14 +1476,14 @@
           <p><a href = "https://github.com/computational-genomics-lab/GAL/blob/master/User_Guide_Latest.pdf" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/genome_annotator_light_(gal)/"><img src = "/assets/GAL.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/bts217 other segregatedcontiguous noab no segment sparsesegment contiguous open source between standalone app circular single-focus single-view single-scale">
-          <h4><a href="/tools/genomering/">GenomeRing</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/genomering/">GenomeRing</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 45<br>
@@ -1511,14 +1512,14 @@
           <p><a href = "https://uni-tuebingen.de/index.php?eID=tx_securedownloads&p=156756&u=0&g=0&t=1564721933&hash=75c3bc2982100e01b583263ea77447020e61d401&file=/fileadmin/Uni_Tuebingen/Fakultaeten/InfoKogni/WSI/IntegTranskript/Softwareprojekte/GenomeRing/howto.pdf" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/genomering/"><img src = "/assets/genomering.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/nar/gkr995 bedfastasambamcramvcfother segregated noab no segment sparsesegment contiguouspoint sparsepoint contiguous open source no web applicationstandalone app linear single-focus single-view single-scale">
-          <h4><a href="/tools/genomeview/">GenomeView</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/genomeview/">GenomeView</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 107<br>
@@ -1549,14 +1550,14 @@
           <p><a href = "http://genomeview.org/content/where-do-i-find-documentation" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/genomeview/"><img src = "/assets/genomeview.jpeg" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btq413 other segregated partialab linear parallel segment sparse open source between “programming library” linear single-focus single-view single-scale">
-          <h4><a href="/tools/genoplotr/">genoPlotR</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/genoplotr/">genoPlotR</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 337<br>
@@ -1585,14 +1586,14 @@
           <p><a href = "http://genoplotr.r-forge.r-project.org" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/genoplotr/"><img src = "/assets/genoplotr.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btr309 vcf segregated noab no segment sparsepoint sparse open source no standalone app linear single-focus single-view single-scale">
-          <h4><a href="/tools/genplay/">GenPlay</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/genplay/">GenPlay</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 22<br>
@@ -1621,14 +1622,14 @@
           <p><a href = "http://genplay.net/wiki/index.php/Documentation" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/genplay/"><img src = "/assets/genplay.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btm039 fasta contiguous noab linear orthogonal segment contiguoussegment sparse open source between standalone app linear single-focus single-view single-scale">
-          <h4><a href="/tools/gepard/">Gepard</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/gepard/">Gepard</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 403<br>
@@ -1657,14 +1658,14 @@
           <p><a href = "https://github.com/univieCUBE/gepard/blob/master/tutorial.html" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/gepard/"><img src = "/assets/gepard.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1186/gb-2012-13-8-r77 other segregatedcontiguous partialab no segment sparsesegment contiguouspoint sparsepoint contiguous open source withinbetween programming library linearcircular single-focus singlemultiple-view single-scale">
-          <h4><a href="/tools/ggbio/">ggBio</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/ggbio/">ggBio</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 145<br>
@@ -1697,14 +1698,14 @@
           <p><a href = "https://bioconductor.org/packages/release/bioc/vignettes/ggbio/inst/doc/ggbio.pdf" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/ggbio/"><img src = "/assets/ggBio.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1186/s13059-018-1465-6 other segregated noab linear parallel segment sparsesegment contiguouspoint sparsepoint contiguous open source within web applicationprogramming library linear single-focus multiple-view multiple-scale">
-          <h4><a href="/tools/give/">GIVE</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/give/">GIVE</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 5<br>
@@ -1735,14 +1736,14 @@
           <p><a href = "https://github.com/Zhong-Lab-UCSD/Genomic-Interactive-Visualization-Engine/tree/master/tutorials" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/give/"><img src = "/assets/give.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1109/TVCG.2010.163 notapplicable contiguous noab no segment sparsesegment contiguous unknown within web applicationstandalone app linear single-focus multiple-view multiple-scale">
-          <h4><a href="/tools/gremlin/">Gremlin</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/gremlin/">Gremlin</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 29<br>
@@ -1773,14 +1774,14 @@
           <p><a href = "http://compbio-research.cs.brown.edu/software/Gremlin/GremlinInteraction.pdf" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/gremlin/"><img src = "/assets/Gremlin.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btq588 other  noab no segment sparsepoint contiguous open source  web applicationprogramming library linearcircular single-focus single-view single-scale">
-          <h4><a href="/tools/gview/">GView</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/gview/">GView</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 114<br>
@@ -1813,14 +1814,14 @@
           <p><a href = "https://www.gview.ca/wiki/GViewDocumentation/WebHome" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/gview/"><img src = "/assets/gview.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1186/s13059-018-1486-1 bedother contiguous noab linear orthogonal segment sparsesegment contiguouspoint sparsepoint contiguous open source within web applicationprogramming library linear multiple-focus multiple-view multiple-scale">
-          <h4><a href="/tools/higlass/">HiGlass</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/higlass/">HiGlass</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 23<br>
@@ -1851,14 +1852,14 @@
           <p><a href = "https://higlass.io/docs" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/higlass/"><img src = "/assets/HiGlass.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btw161 other contiguous noab no segment sparsesegment contiguouspoint sparsepoint contiguous open source no programming library spacefilling single-focus single-view single-scale">
-          <h4><a href="/tools/hilbertcurve/">HilbertCurve</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/hilbertcurve/">HilbertCurve</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 6<br>
@@ -1887,14 +1888,14 @@
           <p><a href = "https://bioconductor.org/packages/release/bioc/vignettes/HilbertCurve/inst/doc/HilbertCurve.html" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/hilbertcurve/"><img src = "/assets/HC.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btp152 other contiguous noab no segment sparsesegment contiguouspoint sparsepoint contiguous open source no programming library spacefilling single-focus single-view single-scale">
-          <h4><a href="/tools/hilbertvis/">HilbertVis</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/hilbertvis/">HilbertVis</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 65<br>
@@ -1923,14 +1924,14 @@
           <p><a href = "https://bioconductor.riken.jp/packages/3.5/bioc/vignettes/HilbertVis/inst/doc/HilbertVis.pdf" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/hilbertvis/"><img src = "/assets/HilbertVis.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1109/TVCG.2017.2745978 other contiguous noab linear orthogonal segment sparsesegment contiguouspoint sparsepoint contiguous open source within web application linear multiple-focus multiple-view multiple-scale">
-          <h4><a href="/tools/hipiler/">HiPiler</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/hipiler/">HiPiler</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 13<br>
@@ -1959,14 +1960,14 @@
           <p><a href = "http://hipiler.higlass.io/docs" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/hipiler/"><img src = "/assets/hipiler.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btx359 notapplicable segregated noab no segment sparsesegment contiguouspoint sparsepoint contiguous unknown between web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/hugin/">HUGIn</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/hugin/">HUGIn</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 31<br>
@@ -1995,14 +1996,14 @@
           <p><a href = "https://yunliweb.its.unc.edu/HUGIn/tutorial_page.php" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/hugin/"><img src = "/assets/hugin.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btw069 bedfastasambamcramvcfother contiguous partialab no segment sparsesegment contiguouspoint sparsepoint contiguous open source no standalone app linear single-focus multiple-view multiple-scale">
-          <h4><a href="/tools/igb/">IGB</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/igb/">IGB</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 94<br>
@@ -2031,14 +2032,14 @@
           <p><a href = "https://wiki.transvar.org/display/igbman/Home" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/igb/"><img src = "/assets/IGB.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bib/bbs017 bedfastasambamcramvcfother contiguous noab no segment sparsesegment contiguouspoint sparsepoint contiguous open source no web applicationstandalone app linear multiple-focus multiple-view multiple-scale">
-          <h4><a href="/tools/integrative_genomics_viewer/">Integrative Genomics Viewer</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/integrative_genomics_viewer/">Integrative Genomics Viewer</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 3693<br>
@@ -2069,14 +2070,14 @@
           <p><a href = "https://software.broadinstitute.org/software/igv/UserGuide" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/integrative_genomics_viewer/"><img src = "/assets/IGV.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/bty220 fastaother segregated partialab no segment sparsesegment contiguous unknown no web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/irscope/">IRScope</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/irscope/">IRScope</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 14<br>
@@ -2103,14 +2104,14 @@
           </p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/irscope/"><img src = "/assets/irscope.jpg" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/nar/gkv401 other segregated noab no segment sparsesegment contiguouspoint sparsepoint contiguous open source no web application linearcircular multiple-focus multiple-view multiple-scale">
-          <h4><a href="/tools/island_viewer/">Island Viewer</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/island_viewer/">Island Viewer</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 244<br>
@@ -2139,14 +2140,14 @@
           </p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/island_viewer/"><img src = "/assets/IslandViewer_example.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btu842 txttabbedother contiguous noab no segment sparsesegment contiguouspoint sparsepoint contiguous open source within standalone app circular single-focus single-view single-scale">
-          <h4><a href="/tools/j-circos/">J-Circos</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/j-circos/">J-Circos</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 30<br>
@@ -2175,14 +2176,14 @@
           <p><a href = "http://www.australianprostatecentre.org/SoftwareAttachments/manual_jcircosv2.pdf" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/j-circos/"><img src = "/assets/jcircos.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btp033 fastaother segregated noab no segment sparsesegment contiguouspoint sparsepoint contiguous open source no standalone app linear single-focus single-view single-scale">
-          <h4><a href="/tools/jalview/">JalView</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/jalview/">JalView</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 4618<br>
@@ -2211,14 +2212,14 @@
           <p><a href = "http://www.jalview.org/Help/Getting-Started" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/jalview/"><img src = "/assets/jalview.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.5808/GI.2017.15.4.178 bedfastasambamcramvcfother segregated noab no segment sparsesegment contiguouspoint sparsepoint contiguous open source no web applicationstandalone app linear single-focus single-view single-scale">
-          <h4><a href="/tools/jbrowse/">JBrowse</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/jbrowse/">JBrowse</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 127<br>
@@ -2249,14 +2250,14 @@
           <p><a href = "https://jbrowse.org/docs/installation.html" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/jbrowse/"><img src = "/assets/jbrowse.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1016/j.cels.2015.07.012 fastaother contiguous noab no segment sparsesegment contiguouspoint sparsepoint contiguous open source within standalone app linear single-focus single-view single-scale">
-          <h4><a href="/tools/juicebox/">JuiceBox</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/juicebox/">JuiceBox</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 189<br>
@@ -2285,14 +2286,14 @@
           <p><a href = "https://github.com/aidenlab/Juicebox/wiki" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/juicebox/"><img src = "/assets/juicebox.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1016/j.cels.2018.01.001 fastaother contiguous noab linear orthogonal segment sparsesegment contiguouspoint sparsepoint contiguous open source within programming language linear single-focus multiple-view multiple-scale">
-          <h4><a href="/tools/juiceboxjs/">Juiceboxjs</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/juiceboxjs/">Juiceboxjs</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 17<br>
@@ -2321,14 +2322,14 @@
           <p><a href = "https://igvteam.github.io/juicebox.js/" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/juiceboxjs/"><img src = "/assets/juiceboxjs.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1158/2159-8290.CD-12-0095 other contiguous noab no segment sparsepoint sparse unknown no web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/lollipop_plot_cbio/">Lollipop Plot cBio</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/lollipop_plot_cbio/">Lollipop Plot cBio</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 4710<br>
@@ -2355,14 +2356,14 @@
           </p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/lollipop_plot_cbio/"><img src = "/assets/Lollipop.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1038/nmeth.3412 notapplicable segregated noab no segment sparsepoint sparse open source no web application linear single-focus multiple-view single-scale">
-          <h4><a href="/tools/magi/">MAGI</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/magi/">MAGI</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 16<br>
@@ -2389,14 +2390,14 @@
           </p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/magi/"><img src = "/assets/magi.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/nar/gkl198 fasta contiguous noab no point sparsepoint contiguous unknown no web applicationstandalone app linear single-focus multiple-view multiple-scale">
-          <h4><a href="/tools/meme/">MEME</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/meme/">MEME</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 1790<br>
@@ -2427,14 +2428,14 @@
           <p><a href = "http://meme-suite.org/doc/overview.html?man_type=web" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/meme/"><img src = "/assets/meme.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1186/s12864-015-1847-z notapplicable contiguous noab no segment sparsesegment contiguouspoint sparsepoint contiguous open source between web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/mexpress/">MEXPRESS</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/mexpress/">MEXPRESS</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 55<br>
@@ -2463,14 +2464,14 @@
           <p><a href = "https://mexpress.be/about.html" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/mexpress/"><img src = "/assets/mexpress.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1186/1471-2164-14-209 other contiguous noab no segment sparse unknown no web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/mgcv/">MGcV</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/mgcv/">MGcV</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 45<br>
@@ -2499,14 +2500,14 @@
           <p><a href = "https://mgcv.cmbi.umcn.nl/help.html#data_input" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/mgcv/"><img src = "/assets/mgcv.jpg" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/nar/gkz926 other contiguous noab linear parallel segment sparsepoint contiguouspoint sparsesegment contiguous open source between web application linearcircular single-focus multiple-view single-scale">
-          <h4><a href="/tools/microscope/">MicroScope</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/microscope/">MicroScope</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 8<br>
@@ -2537,14 +2538,14 @@
           <p><a href = "https://microscope.readthedocs.io/en/v3.14.1/index.html" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/microscope/"><img src = "/assets/microscope.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1109/TVCG.2009.167 txttab contiguous noab circular parallellinear parallel segment sparsepoint sparse open source between standalone app linearcircular single-focus multiple-view multiple-scale">
-          <h4><a href="/tools/mizbee/">MizBee</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/mizbee/">MizBee</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 142<br>
@@ -2575,14 +2576,14 @@
           <p><a href = "http://www.cs.utah.edu/~miriah/mizbee/Video.html" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/mizbee/"><img src = "/assets/Mizbee.jpg" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1186/1741-7007-8-49 fastabedother segregated noab no segment sparsepoint sparsepoint contiguous open source no standalone app linear single-focus multiple-view multiple-scale">
-          <h4><a href="/tools/mochiview/">MochiView</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/mochiview/">MochiView</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 106<br>
@@ -2611,14 +2612,14 @@
           <p><a href = "https://static1.squarespace.com/static/56463117e4b0770d2cd2d163/t/564bbbb1e4b0c03db1589e9a/1447803825330/MochiView_Manual_v1.45.pdf" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/mochiview/"><img src = "/assets/MochiView.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btw474 fastaother contiguous noab no point contiguous open source between standalone appweb application linear single-focus single-view single-scale">
-          <h4><a href="/tools/msaviewer/">MSAViewer</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/msaviewer/">MSAViewer</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 71<br>
@@ -2649,14 +2650,14 @@
           <p><a href = "https://youtu.be/ba4Plz8a2sg" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/msaviewer/"><img src = "/assets/msaviewer.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1038/nmeth1009-690 fastabed contiguous noab linear orthogonal segment sparsesegment contiguouspoint sparsepoint contiguous unknown within web application linear single-focus multiple-view multiple-scale">
-          <h4><a href="/tools/my5c/">my5c</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/my5c/">my5c</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 84<br>
@@ -2683,14 +2684,14 @@
           </p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/my5c/"><img src = "/assets/my5c.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/nar/gkw1071 notapplicable segregated noab no segment sparsesegment contiguouspoint sparsepoint contiguous unknown no web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/ncbi_genome_viewer/">NCBI Genome Viewer</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/ncbi_genome_viewer/">NCBI Genome Viewer</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 1429<br>
@@ -2719,14 +2720,14 @@
           <p><a href = "https://www.ncbi.nlm.nih.gov/genome/gdv/browser/help/" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/ncbi_genome_viewer/"><img src = "/assets/NCBIGenomeBrowser.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1002/0471250953.bi0105s16 notapplicable segregated noab no segment sparsesegment contiguouspoint sparsepoint contiguous unknown no web application linear multiple-focus multiple-view multiple-scale">
-          <h4><a href="/tools/ncbi_sequence_viewer/">NCBI Sequence Viewer</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/ncbi_sequence_viewer/">NCBI Sequence Viewer</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 37<br>
@@ -2755,14 +2756,14 @@
           <p><a href = "https://www.ncbi.nlm.nih.gov/tools/sviewer/" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/ncbi_sequence_viewer/"><img src = "/assets/NCBISequenceViewer.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1186/1471-2164-15-284 txttabsambamcramother contiguous noab no segment contiguous open source within programming language linear multiple-focus multiple-view single-scale">
-          <h4><a href="/tools/ngs.plot/">ngs.plot</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/ngs.plot/">ngs.plot</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 351<br>
@@ -2791,14 +2792,14 @@
           <p><a href = "https://github.com/shenlab-sinai/ngsplot" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/ngs.plot/"><img src = "/assets/ngsplot.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/nar/gkaa371 other contiguous noab linear parallel segment contiguoussegment sparsepoint contiguouspoint sparse open source no web application linear single-focus multiple-view single-scale">
-          <h4><a href="/tools/oviz-bio/">Oviz-Bio</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/oviz-bio/">Oviz-Bio</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 5<br>
@@ -2827,14 +2828,14 @@
           <p><a href = "https://bio.oviz.org/demo-project/analyses/genome-browser" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/oviz-bio/"><img src = "/assets/ovizbio.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv (none) vcfother segregated noab linear parallel segment sparsesegment contiguouspoint sparsepoint contiguous commercial between standalone app linear multiple-focus multiple-view multiple-scale">
-          <h4><a href="/tools/persephone/">Persephone</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/persephone/">Persephone</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 0<br>
@@ -2861,14 +2862,14 @@
           </p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/persephone/"><img src = "/assets/persephone.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1038/nmeth.2646 fasta contiguous noab no point contiguous unknown no web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/plogo/">pLogo</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/plogo/">pLogo</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 137<br>
@@ -2897,14 +2898,14 @@
           <p><a href = "https://plogo.uconn.edu/help/plogomap" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/plogo/"><img src = "/assets/plogo.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1186/s13059-018-1519-9 other segregated noab no segment sparsesegment contiguouspoint sparsepoint contiguous unknown withinbetween web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/psu_3d_genome_browser/">PSU 3D Genome Browser</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/psu_3d_genome_browser/">PSU 3D Genome Browser</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 58<br>
@@ -2933,14 +2934,14 @@
           <p><a href = "http://promoter.bx.psu.edu/hi-c/tutorial.html" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/psu_3d_genome_browser/"><img src = "/assets/3Dgenomebrowser.jpg" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btu205 sambamcramfastaother segregated noab no segment sparsepoint contiguous open source no standalone app linear single-focus single-view single-scale">
-          <h4><a href="/tools/readxplorer/">ReadXplorer</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/readxplorer/">ReadXplorer</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 74<br>
@@ -2969,14 +2970,14 @@
           <p><a href = "https://www.uni-giessen.de/fbz/fb08/Inst/bioinformatik/software/ReadXplorer/documentation" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/readxplorer/"><img src = "/assets/readxplorer.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.7717/peerj-cs.251 other segregated noab linear parallel segment sparse open source no standalone app linear single-focus single-view single-scale">
-          <h4><a href="/tools/rideogram/">RIdeogram</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/rideogram/">RIdeogram</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 5<br>
@@ -3005,14 +3006,14 @@
           <p><a href = "https://cran.r-project.org/web/packages/RIdeogram/vignettes/RIdeogram.html" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/rideogram/"><img src = "/assets/rideogram.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1101/gr.201517.115 notapplicable contiguous noab no segment sparsesegment contiguouspoint sparsepoint contiguous unknown within web application circular single-focus single-view single-scale">
-          <h4><a href="/tools/rondo/">Rondo</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/rondo/">Rondo</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 104<br>
@@ -3041,14 +3042,14 @@
           <p><a href = "https://www.youtube.com/watch?v=s8eorV5aL6U&feature=youtu.be" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/rondo/"><img src = "/assets/Rondo.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btv034 bedfastasambamcramvcfother contiguous noab no segment sparsepoint sparse open source within web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/sashimi_plot/">Sashimi Plot</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/sashimi_plot/">Sashimi Plot</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 8<br>
@@ -3077,14 +3078,14 @@
           <p><a href = "https://software.broadinstitute.org/software/igv/Sashimi" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/sashimi_plot/"><img src = "/assets/Sashimi.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/nar/gks427 na segregated noab no segment sparsesegment contiguouspoint sparsepoint contiguous open source within web application linear single-focus multiple-view single-scale">
-          <h4><a href="/tools/savant_genome_browser_2/">Savant Genome Browser 2</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/savant_genome_browser_2/">Savant Genome Browser 2</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 305<br>
@@ -3111,14 +3112,14 @@
           </p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/savant_genome_browser_2/"><img src = "/assets/savant.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1200/CCI.19.00171 other contiguous noab linear parallel segment contiguoussegment sparsepoint contiguouspoint sparse open no programming library linear single-focus multiple-view single-scale">
-          <h4><a href="/tools/scgv/">SCGV</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/scgv/">SCGV</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 0<br>
@@ -3145,14 +3146,14 @@
           </p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/scgv/"><img src = "/assets/scgv.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1186/1753-6561-8-S2-S8 fasta contiguous noab no point contiguous open source no web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/sequence_bundles/">Sequence Bundles</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/sequence_bundles/">Sequence Bundles</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 7<br>
@@ -3181,14 +3182,14 @@
           <p><a href = "https://www.ebi.ac.uk/goldman-srv/sequencebundles/" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/sequence_bundles/"><img src = "/assets/sequencebundles.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1109/TVCG.2011.232 other contiguous noab linear parallel segment contiguous unknown no standalone app linear single-focus multiple-view single-scale">
-          <h4><a href="/tools/sequence_surveyor/">Sequence Surveyor</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/sequence_surveyor/">Sequence Surveyor</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 44<br>
@@ -3217,14 +3218,14 @@
           <p><a href = "https://graphics.cs.wisc.edu/Vis/SequenceSurveyor/SequenceSurveyor_User.html" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/sequence_surveyor/"><img src = "/assets/sequencesurveryor.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/nar/gkz919 other contiguous noab linear parallellinear orthogonal segment sparsesegment contiguouspoint sparsepoint contiguous open source within web application linear multiple-focus multiple-view multiple-scale">
-          <h4><a href="/tools/silkdb_3.0/">SilkDB 3.0</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/silkdb_3.0/">SilkDB 3.0</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 7<br>
@@ -3253,14 +3254,14 @@
           <p><a href = "https://silkdb.bioinfotoolkits.net/main/help/-1#h-9" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/silkdb_3.0/"><img src = "/assets/silk_db_3.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/nar/gkz934 other segregated noab linear parallel segment sparse open source no web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/spatial_db/">Spatial DB</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/spatial_db/">Spatial DB</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 2<br>
@@ -3289,14 +3290,14 @@
           <p><a href = "http://www.spatialomics.org/SpatialDB/help.php" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/spatial_db/"><img src = "/assets/spatialdb.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1186/gb-2012-13-1-r4 sambamcramother segregated partialab no segment sparse unknown no standalone app linear single-focus single-view single-scale">
-          <h4><a href="/tools/splicegrapher/">SpliceGrapher</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/splicegrapher/">SpliceGrapher</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 103<br>
@@ -3325,14 +3326,14 @@
           <p><a href = "http://splicegrapher.sourceforge.net/userguide.html" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/splicegrapher/"><img src = "/assets/splicegrapher.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btt733 sambamcramvcfother segregated noab no segment sparsesegment contiguouspoint sparsepoint contiguous unknown within standalone app linear single-focus single-view single-scale">
-          <h4><a href="/tools/spliceplot/">SplicePlot</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/spliceplot/">SplicePlot</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 11<br>
@@ -3361,14 +3362,14 @@
           <p><a href = "http://montgomerylab.stanford.edu/spliceplot/index.html#running-spliceplot" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/spliceplot/"><img src = "/assets/spliceplot.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/bts452 fastaother segregated partialab no segment sparse open source no standalone app linear single-focus single-view single-scale">
-          <h4><a href="/tools/spliceseq/">SpliceSeq</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/spliceseq/">SpliceSeq</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 81<br>
@@ -3397,14 +3398,14 @@
           <p><a href = "https://bioinformatics.mdanderson.org/public-software/spliceseq/installation/" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/spliceseq/"><img src = "/assets/spliceseq.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1186/s12859-019-2706-8 other contiguous noab linear parallel segment contiguous open source no standalone app linear single-focus single-view single-scale">
-          <h4><a href="/tools/svist4get/">svist4get</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/svist4get/">svist4get</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 0<br>
@@ -3433,14 +3434,14 @@
           <p><a href = "https://bitbucket.org/artegorov/svist4get/src/eeb5151f49c31fa887dbfc168320c63d66a17334/docs/QSGUIDE.md" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/svist4get/"><img src = "/assets/svist4get.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1038/s41598-019-57038-x fastaother contiguous partialab linear parallel segment sparse open source no web application linear single-focus multiple-view single-scale">
-          <h4><a href="/tools/swav/">SWAV</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/swav/">SWAV</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 2<br>
@@ -3469,14 +3470,14 @@
           <p><a href = "http://swav.popgenetics.net/" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/swav/"><img src = "/assets/swav.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btx144 fastasambamcramother contiguous noab linear orthogonal segment contiguous open source between web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/synmap2/">SynMap2</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/synmap2/">SynMap2</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 21<br>
@@ -3505,14 +3506,14 @@
           <p><a href = "https://genomevolution.org/wiki/index.php/Tutorials" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/synmap2/"><img src = "/assets/synmap2.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1186/1471-2105-9-536 other segregated noab no segment sparse unknown no web applicationstandalone app linear single-focus single-view single-scale">
-          <h4><a href="/tools/syntebase_and_synteview/">SynteBase and SynteView</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/syntebase_and_synteview/">SynteBase and SynteView</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 17<br>
@@ -3543,14 +3544,14 @@
           <p><a href = "http://www.synteview.u-psud.fr/documents.php" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/syntebase_and_synteview/"><img src = "/assets/syntebaseview.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1109/TVCG.2016.2598789 notapplicable segregated noab linear parallelcircular serial segment sparse open source no web application linear single-focus multiple-view single-scale">
-          <h4><a href="/tools/synteny_explorer/">Synteny Explorer</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/synteny_explorer/">Synteny Explorer</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 4<br>
@@ -3577,14 +3578,14 @@
           </p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/synteny_explorer/"><img src = "/assets/syntenyexplorer.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/nar/gkaa252 bed contiguous noab linear parallel point contiguoussegment contiguous open source no web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/tfmotifview/">TFmotifView</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/tfmotifview/">TFmotifView</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 2<br>
@@ -3613,14 +3614,14 @@
           <p><a href = "http://bardet.u-strasbg.fr/tfmotifview/" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/tfmotifview/"><img src = "/assets/tfmotifview.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1038/s41592-019-0430-y bed segregated partialab linear parallel segment sparsepoint contiguouspoint sparsesegment contiguous open source' within “programming library” linear multiple-focus multiple-view multiple-scale">
-          <h4><a href="/tools/trackviewer/">trackViewer</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/trackviewer/">trackViewer</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 14<br>
@@ -3649,14 +3650,14 @@
           <p><a href = "https://bioconductor.org/packages/release/bioc/vignettes/trackViewer/inst/doc/trackViewer.html" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/trackviewer/"><img src = "/assets/trackViewer.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btl151 txttabother contiguous partialab no point contiguous open source no standalone app linear single-focus single-view single-scale">
-          <h4><a href="/tools/two_sample_logo/">Two Sample Logo</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/two_sample_logo/">Two Sample Logo</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 279<br>
@@ -3685,14 +3686,14 @@
           <p><a href = "http://www.twosamplelogo.org/tsl_manual.pdf" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/two_sample_logo/"><img src = "/assets/two.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1101/gr.229102 notapplicable segregated partialab no segment sparsesegment contiguouspoint sparsepoint contiguous unknown no web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/ucsc_genome_browser/">UCSC Genome Browser</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/ucsc_genome_browser/">UCSC Genome Browser</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 6940<br>
@@ -3721,14 +3722,14 @@
           <p><a href = "https://genome.ucsc.edu/goldenPath/help/hgTracksHelp.html" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/ucsc_genome_browser/"><img src = "/assets/UCSC_Genome_Viewer.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1109/TVCG.2013.214 other segregated noab no segment sparsepoint sparse open source no standalone app linear single-focus single-view single-scale">
-          <h4><a href="/tools/variant_view/">Variant View</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/variant_view/">Variant View</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 24<br>
@@ -3757,14 +3758,14 @@
           <p><a href = "https://www.cs.ubc.ca/labs/imager/tr/2013/VariantView/VariantViewSoftware/variant_view/READ_ME.txt" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/variant_view/"><img src = "/assets/variantview.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/btz458 vcf contiguous noab linear parallel point sparse open source no web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/vcf_plotein/">VCF Plotein</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/vcf_plotein/">VCF Plotein</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 26<br>
@@ -3793,14 +3794,14 @@
           <p><a href = "https://vcfplotein.liigh.unam.mx/#/" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/vcf_plotein/"><img src = "/assets/vcfplotein.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1109/TVCG.2015.2467911 notapplicable contiguous partialab no  unknown within web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/vials/">Vials</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/vials/">Vials</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 11<br>
@@ -3827,14 +3828,14 @@
           </p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/vials/"><img src = "/assets/vials.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/nar/gkh458 fastaother contiguous noab linear orthogonal segment contiguous unknown between web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/vista_dot/">Vista Dot</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/vista_dot/">Vista Dot</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 1310<br>
@@ -3863,14 +3864,14 @@
           <p><a href = "http://pipeline.lbl.gov/vista_help/help.html#dotplot" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/vista_dot/"><img src = "/assets/vistadot.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/nar/gkh458 notapplicable segregated noab linear parallel segment sparse unknown between web application linear single-focus multiple-view single-scale">
-          <h4><a href="/tools/vista_synteny/">Vista Synteny</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/vista_synteny/">Vista Synteny</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 1310<br>
@@ -3899,14 +3900,14 @@
           <p><a href = "http://pipeline.lbl.gov/vista_help/help.html#synteny" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/vista_synteny/"><img src = "/assets/vistasynteny.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1093/bioinformatics/16.11.1046 fastaother segregated noab no segment sparsesegment contiguouspoint sparsepoint contiguous unknown no web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/vistapoint/">VistaPoint</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/vistapoint/">VistaPoint</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 889<br>
@@ -3935,14 +3936,14 @@
           <p><a href = "http://pipeline.lbl.gov/vista_help/help.html#vistapoint" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/vistapoint/"><img src = "/assets/vistapoint.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1038/nmeth.1772 notapplicable contiguous partialab no segment sparsesegment contiguouspoint sparsepoint contiguous open source no web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/washu_epigenome_browser/">WashU Epigenome Browser</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/washu_epigenome_browser/">WashU Epigenome Browser</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 191<br>
@@ -3971,14 +3972,14 @@
           <p><a href = "https://epigenomegateway.readthedocs.io/en/latest/" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/washu_epigenome_browser/"><img src = "/assets/washu.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1101/gr.849004 fastaother contiguous noab no point contiguous open source no web application linear single-focus single-view single-scale">
-          <h4><a href="/tools/weblogo/">WebLogo</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/weblogo/">WebLogo</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 7486<br>
@@ -4005,14 +4006,14 @@
           </p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/weblogo/"><img src = "/assets/Weblogo.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
         <div class="filterDiv 10.1101/326470 txttabother segregated noab no segment sparsepoint sparse open source no web application linear multiple-focus multiple-view multiple-scale">
-          <h4><a href="/tools/xena/">Xena</a> <button class="collapsible">i</button></h4>
+          <h3><a href="/tools/xena/">Xena</a> <button class="collapsible">i</button></h3>
   
           <div class="content" style="display: none;">
           <p>Cited by: 35<br>
@@ -4041,9 +4042,9 @@
           <p><a href = "https://ucsc-xena.gitbook.io/project/" target="_blank" class="button blue layout">User Documentation Available</a></p>
           
           </div>
-
+          <div class="tool_img">
           <a href="/tools/xena/"><img src = "/assets/xena.png" class = "lazyload imag"></a>
-          
+          </div>
         </div>
   
   
@@ -4067,14 +4068,11 @@
     <script src="/scripts/search_bar.js"></script>
     <script src="/scripts/sortBy.js"></script>
     <script>
-      
-    function scrollToTop() { 
-      window.scrollTo(0, 0);
-    } 
 
-    function goToSearch(){
-      window.location = "/#search"
-    } 
+    function goTo(place){
+      window.location = "/" + place;
+    }  
+
     var coll = document.getElementsByClassName("collapsible");
     var i;
 

@@ -4,7 +4,7 @@
 
 * {
   box-sizing: border-box;
-  transition: ease-in-out 0.4s all;
+  // transition: ease-in-out 0.4s all;
 }
 
 body {
@@ -41,7 +41,10 @@ img {
   border-radius: var(--border-radius);
 }
 
-.tool img { max-width: 90%; }
+.pages img { 
+  max-width: 90%; 
+  max-height: 70vh;
+}
 
 table {
   margin-bottom: 1rem;

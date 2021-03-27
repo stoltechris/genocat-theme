@@ -1,9 +1,14 @@
 // Masthead
 //
 // header above the content for site name and navigation.
-.wrapper { 
-  padding-top: calc(var(--spacer-top) * 1.6); 
+.home .wrapper { 
+  padding-top: calc(var(--spacer-top) * 2.3); 
 }
+
+.wrapper { 
+  padding-top: calc(var(--spacer-top) * 1.56); 
+}
+
 .wrapper, .head {
   display: flex;  
   flex-flow: row wrap;
@@ -102,9 +107,14 @@
   .aside {
     line-height: 2.4rem;
   }
+  #status { top: calc(var(--spacer-top) + 1px); }
+
   .wrapper { 
     padding-top: var(--spacer-top); 
   }
+  .home .wrapper{
+    padding-top: calc(var(--spacer-top) * 1.9); 
+  } 
 }
 
 @media all and (min-width: 860px) {
